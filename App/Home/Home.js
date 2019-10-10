@@ -104,7 +104,7 @@ export default class Home extends React.Component {
 			modalVisible: false,
 			selected_index: null,
 			select_quantity: 1,
-			shop: null,
+			shop: 1,
 			delivery:1,
 			modalGalleryVisible: true,
 			selected_promotion: "",
@@ -947,24 +947,26 @@ export default class Home extends React.Component {
 						alignItems: "flex-start",
 					}}>
 						
-					<View
-						style={styles.branchView}>
+					{/* start   <View
+						style={styles.branchView}>  end here*/}
+
+
 						{/* <TouchableOpacity
 							onPress={this.onBranchPressed}
 							style={styles.branchButton}> */}
-							<Text
-								style={styles.branchButtonText}>{shop ? shop.name : ""}</Text>
+							{/* start  <Text
+								style={styles.branchButtonText}>{shop ? shop.name : ""}</Text> end here */}
 							{/* <Image
 							source={require("./../../assets/images/group-22.png")}
 							style={styles.branchButtonImage}/> */}
 						{/* </TouchableOpacity> */}
-					</View>
+					{/*start </View> end here */}
 					
 					<View
 						style={{
-							flex: 1,
+							flex: 6,
 						}}/>
-						<SwitchSelector
+						{/* <SwitchSelector
 							options={[
 								{ label: "PickUp", value: 0 },
 								{ label: "Delivery", value: 1 }]}
@@ -980,9 +982,10 @@ export default class Home extends React.Component {
 							fontSize={10 * alpha}
 							height={32 * alpha}
 							onPress={(value) => this._toggleDelivery(value)}
-						/>
+						/> */}
 					</View>
-					<View
+					
+					{/* <View
 						pointerEvents="box-none"
 						style={{
 							height: 14 * alpha,
@@ -1010,7 +1013,7 @@ export default class Home extends React.Component {
 								source={require("./../../assets/images/bitmap-14.png")}
 								style={styles.bitmapImage}/>
 						</View>
-					</View>
+					</View> */}
 					
 				</View>
 				
@@ -1136,7 +1139,8 @@ export default class Home extends React.Component {
 				
 			
 			<View style={styles.bottomAlertView}>
-				{this.renderAlertBar(shop)}
+				{/* remove alert bar at the bottom side */}
+				{/* {this.renderAlertBar(shop)} */}
 				{this.renderBottomBar(cart,shop)}			
 			</View>
 			<Toast ref="toast"
@@ -1338,7 +1342,7 @@ const styles = StyleSheet.create({
 		position: "absolute",
 		left: 0 * alpha,
 		right: 0 * alpha,
-		height: 67 * alpha,
+		height: 0 * alpha,
 		// height: 50 * alpha,
 	},
 	branchView: {
@@ -1472,7 +1476,8 @@ const styles = StyleSheet.create({
 		left: 0 * alpha,
 		right: 0 * alpha,
 		// top: 50 * alpha,
-		top: 67 * alpha,
+		top: 0 * alpha,
+		// top: 67 * alpha,
 		bottom: 0 * alpha,
 		flexDirection: "row",
 	},
