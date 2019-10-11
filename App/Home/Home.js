@@ -227,7 +227,8 @@ export default class Home extends React.Component {
 						index_length = index_length + data[index].products.length
 					}
 					this.setState({
-						products: this.state.menu_banners.concat(items),
+						// products: this.state.menu_banners.concat(items),
+						products: items,
 						data: data
 					}, function () {
 						
@@ -1023,23 +1024,31 @@ export default class Home extends React.Component {
 						style={styles.productsectionView}
 						onLayout={(event) => this.measureView(event)}>
 						<View
+							style={styles.categorylistBannerViewWrapper}>
+							<FlatList 
+								renderItem={this.renderProductlistFlatListCell}
+								data={this.state.menu_banners}
+								style={styles.productlistFlatList}
+								keyExtractor={(item, index) => index.toString()}
+								/>
+						</View>
+						<View
 							style={styles.categorylistFlatListViewWrapper}>
-							<FlatList
+							<FlatList 
+								horizontal={true}
 								renderItem={this.renderCategorylistFlatListCell}
 								data={this.state.data}
 								style={styles.categorylistFlatList}
 								keyExtractor={(item, index) => index.toString()}/>
 						</View>
 						<View
-							style={{
-								flex: 1,
-							}}/>
-						<View
 							style={styles.productlistFlatListViewWrapper}>
+							
 							{this.state.loading ?
 								undefined
 								:
 							<FlatList
+								numColumns={2}
 								renderItem={this.renderProductlistFlatListCell}
 								data={this.state.products}
 								ref={(ref) => { this.flatListRef = ref }}
@@ -1050,7 +1059,6 @@ export default class Home extends React.Component {
 								keyExtractor={(item, index) => index.toString()}/>
 							}
 						</View>
-						{this.renderFeaturedPromo(shop,cart)}
 					</View>
 				}
 				{ this.state.isToggleLocation && (
@@ -1472,22 +1480,22 @@ const styles = StyleSheet.create({
 	},
 	productsectionView: {
 		backgroundColor: "transparent",
-		position: "absolute",
-		left: 0 * alpha,
-		right: 0 * alpha,
-		// top: 50 * alpha,
-		top: 0 * alpha,
-		// top: 67 * alpha,
-		bottom: 0 * alpha,
-		flexDirection: "row",
+		// position: "",
+		flex: 1,
 	},
 	categorylistFlatList: {
 		backgroundColor: "transparent",
 		width: "100%",
 		height: "100%",
+		backgroundColor: "transparent",
+	},
+	categorylistBannerViewWrapper: {
+		width: windowWidth,
+		height: 150 * alpha,
 	},
 	categorylistFlatListViewWrapper: {
-		width: 90 * alpha,
+		width: windowWidth,
+		height: 60 * alpha,
 	},
 	productlistFlatList: {
 		backgroundColor: "white",
@@ -1496,7 +1504,7 @@ const styles = StyleSheet.create({
 	},
 	productlistFlatListViewWrapper: {
 
-		width: 285 * alpha,
+		width: windowWidth,
 		marginBottom: 1 * alpha,
 	},
 	cartView: {
