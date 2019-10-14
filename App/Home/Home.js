@@ -1491,11 +1491,11 @@ const styles = StyleSheet.create({
 	},
 	categorylistBannerViewWrapper: {
 		width: windowWidth,
-		height: 150 * alpha,
+		height: 100 * alpha,
 	},
 	categorylistFlatListViewWrapper: {
 		width: windowWidth,
-		height: 60 * alpha,
+		height: 50 * alpha,
 	},
 	productlistFlatList: {
 		backgroundColor: "white",
