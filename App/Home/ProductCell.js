@@ -101,8 +101,14 @@ export default class ProductCell extends React.Component {
           <View style={styles.lineText}>
             <View style={styles.row}>
               <View style={styles.wrap}>
-                <Text style={styles.titleText}>{this.props.productname}</Text>
-                <Text style={styles.titleText}>{this.props.productname}</Text>
+                <View style={styles.wrapColumn}>
+                  <Text style={styles.titleText}>{this.props.productname}</Text>
+                </View>
+                <View style={styles.wrapColumn2}>
+                  <Text style={styles.titleText2}>
+                    {this.props.productname}
+                  </Text>
+                </View>
               </View>
               <View style={styles.wrap2}>
                 <Text style={styles.priceText}>
@@ -111,62 +117,8 @@ export default class ProductCell extends React.Component {
               </View>
             </View>
           </View>
-
-          <View style={styles.lineText}>
-            <View style={styles.row}>
-              <View style={styles.wrap}>
-                <Text style={styles.titleText}>{this.props.productname}</Text>
-                <Text style={styles.titleText}>{this.props.productname}</Text>
-              </View>
-              <View style={styles.wrap2}>
-                <Text style={styles.priceText}>
-                  ${parseFloat(this.props.productprice).toFixed(2)}
-                </Text>
-              </View>
-            </View>
-          </View>
-
-          {/* <View style={styles.productText}></View> */}
-
-          <View style={styles.lineText}></View>
 
           <View style={styles.detailsView}>
-            {/* <Text style={styles.titleText}>{this.props.productname}</Text> */}
-
-            <Text numberOfLines={2} style={styles.descriptionText}>
-              {this.props.productsummary}
-            </Text>
-
-            {/* <View
-								pointerEvents="box-none"
-								style={{
-									width: 61,
-									height: 28,
-									marginBottom: 2,
-								}}>
-								<TouchableOpacity
-									onPress={this.onAddPressed}
-									style={styles.addButton}>
-									<Image
-										source={require("./../../assets/images/add-5.png")}
-										style={styles.addButtonImage}/>
-								</TouchableOpacity>
-								<View
-									style={styles.selectoptionView}>
-									<TouchableOpacity
-										onPress={this.onButtonPressed}
-										style={styles.optionButton}>
-										<Text
-											style={styles.optionButtonText}>Option</Text>
-									</TouchableOpacity>
-									<View
-										style={styles.badgeView}>
-										<Text
-											style={styles.numberofitemText}>2</Text>
-									</View>
-								</View>
-							</View> */}
-
             <View
               pointerEvents="box-none"
               style={{
@@ -174,8 +126,8 @@ export default class ProductCell extends React.Component {
                 left: 0,
                 top: 0 * alpha,
                 bottom: 0 * alpha,
-                marginTop: 2 * alpha,
-                justifyContent: "space-between"
+                marginTop: 0 * alpha,
+                justifyContent: "center"
               }}
             >
               <Image
@@ -184,6 +136,8 @@ export default class ProductCell extends React.Component {
               />
             </View>
           </View>
+
+          <View style={styles.lineText}></View>
         </View>
         {/* </View> */}
       </TouchableWithoutFeedback>
@@ -196,27 +150,45 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     width: "100%",
-    marginLeft: 10 * alpha
+    marginLeft: 2 * alpha
   },
   wrap: {
-    flex: 2,
-    flexDirection: "column",
-    width: "30%"
+    flex: 4,
+    width: "30%",
+    height: 50 * alpha
+    // backgroundColor: "red"
   },
-  wrap1: {
-    alignItems: "center",
-    justifyContent: "center"
+  wrap2: {
+    flex: 2,
+    alignItems: "flex-end",
+    justifyContent: "center",
+    // backgroundColor: "green",
+    height: 50 * alpha
+  },
+  wrapColumn: {
+    flex: 1,
+    flexDirection: "column",
+    justifyContent: "flex-end",
+    // backgroundColor: "yellow",
+    height: 100 * alpha
+  },
+  wrapColumn2: {
+    flex: 1,
+    flexDirection: "column",
+    // justifyContent: "center",
+    // backgroundColor: "purple",
+    height: 100 * alpha
   },
   productText: {
     backgroundColor: "transparent",
     width: "50%",
-    marginLeft: 10 * alpha
+    marginLeft: 2 * alpha
   },
   lineText: {
     backgroundColor: "black",
     width: "70%",
     height: 1 * alpha,
-    marginLeft: 2 * alpha
+    marginLeft: 10 * alpha
   },
   productcell: {
     backgroundColor: "transparent",
@@ -231,7 +203,7 @@ const styles = StyleSheet.create({
     width: 90 * alpha,
     height: 100 * alpha,
     marginLeft: 70 * alpha,
-    marginTop: 5 * alpha
+    marginTop: 180 * alpha
   },
   soldView: {
     backgroundColor: "rgba(0, 0, 0, 0.7)",
@@ -255,14 +227,14 @@ const styles = StyleSheet.create({
   detailsView: {
     backgroundColor: "transparent",
     width: "60%",
-    height: 89 * alpha,
+    height: 46 * alpha,
     marginLeft: 10 * alpha,
     alignItems: "flex-start"
   },
   titleText: {
     color: "rgb(54, 54, 54)",
     fontFamily: "Helvetica",
-    fontSize: 10 * fontAlpha,
+    fontSize: 8 * fontAlpha,
     fontStyle: "normal",
     fontWeight: "normal",
     textAlign: "left",
@@ -270,12 +242,22 @@ const styles = StyleSheet.create({
     marginLeft: 1 * alpha,
     fontStyle: "italic"
   },
+  titleText2: {
+    color: "rgb(54, 54, 54)",
+    fontFamily: "Helvetica",
+    fontSize: 7.5 * fontAlpha,
+    fontStyle: "normal",
+    fontWeight: "normal",
+    textAlign: "left",
+    backgroundColor: "transparent",
+    marginLeft: 1 * alpha
+  },
   descriptionText: {
     backgroundColor: "transparent",
     opacity: 0.39,
     color: "black",
     fontFamily: "Helvetica",
-    fontSize: 11 * fontAlpha,
+    fontSize: 8 * fontAlpha,
     fontStyle: "normal",
     fontWeight: "normal",
     textAlign: "left",
@@ -287,11 +269,12 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     color: "rgb(54, 54, 54)",
     fontFamily: "SFProText-Medium",
-    fontSize: 10 * fontAlpha,
+    fontSize: 8 * fontAlpha,
     fontStyle: "normal",
     fontWeight: "bold",
     textAlign: "left",
-    width: "70%"
+    width: "70%",
+    fontStyle: "italic"
   },
   addButton: {
     backgroundColor: "transparent",
