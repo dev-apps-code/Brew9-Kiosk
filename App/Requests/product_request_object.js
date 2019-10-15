@@ -7,7 +7,7 @@ class ProductRequestObject extends BaseRequestObject{
     }
 
     getUrlString() {
-        return `shops/${this.url_id}/products/`
+        return `shops/${this.url_id}/products_kiosk/`
     }
 }
 export default ProductRequestObject

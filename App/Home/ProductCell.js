@@ -106,18 +106,17 @@ export default class ProductCell extends React.Component {
                 </View>
                 <View style={styles.wrapColumn2}>
                   <Text style={styles.titleText2}>
-                    {this.props.productname}
+                    {this.props.item.menu_remarks}
                   </Text>
                 </View>
               </View>
               <View style={styles.wrap2}>
                 <Text style={styles.priceText}>
-                  ${parseFloat(this.props.productprice).toFixed(2)}
+                  {parseFloat(this.props.productprice).toFixed(2)}
                 </Text>
               </View>
             </View>
-          </View>
-
+          </View>          
           <View style={styles.detailsView}>
             <View
               pointerEvents="box-none"
@@ -134,12 +133,15 @@ export default class ProductCell extends React.Component {
                 source={{ uri: this.props.productimage }}
                 style={styles.productimageImage}
               />
+            {/* <View style={{width:"100%",height:20*alpha,backgroundColor:'red'}}></View> */}
             </View>
+      
           </View>
-
-          <View style={styles.lineText}></View>
+          
+          <View style={styles.lineText}></View>          
+          
         </View>
-        {/* </View> */}
+        
       </TouchableWithoutFeedback>
     );
   }
@@ -200,9 +202,9 @@ const styles = StyleSheet.create({
   productimageImage: {
     backgroundColor: "transparent",
     resizeMode: "cover",
-    width: 90 * alpha,
+    width: 80 * alpha,
     height: 100 * alpha,
-    marginLeft: 70 * alpha,
+    marginLeft: 60 * alpha,
     marginTop: 180 * alpha
   },
   soldView: {
@@ -228,7 +230,6 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     width: "60%",
     height: 46 * alpha,
-    marginLeft: 10 * alpha,
     alignItems: "flex-start"
   },
   titleText: {
@@ -274,7 +275,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "left",
     width: "70%",
-    fontStyle: "italic"
+    fontFamily: "SFProText-MediumItalic"
   },
   addButton: {
     backgroundColor: "transparent",

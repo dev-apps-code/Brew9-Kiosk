@@ -142,7 +142,7 @@ export default class Home extends React.Component {
 			  errorMessage: 'Oops, this will not work on Sketch in an Android emulator. Try it on your device!',
 			});
 		  } else {
-			this.getLocationAsync();
+			// this.getLocationAsync();
 		  }
 		const { dispatch } = this.props
 		dispatch(createAction('members/loadCurrentUserFromCache')({}))
@@ -222,7 +222,7 @@ export default class Home extends React.Component {
 					var index_length = 0
 					for(var index in data) {
 						data[index].selected = index == 0 ? true : false
-						data[index].scroll_index = index_length + menu_banners.length
+						data[index].scroll_index = parseInt(index_length/2)
 						items = items.concat(data[index].products)						
 						index_length = index_length + data[index].products.length
 					}
@@ -304,8 +304,11 @@ export default class Home extends React.Component {
 		let viewable = viewableItems.viewableItems
 		let data = [...this.state.data]
 
-		var first_index = viewable[0].index
-		var last_index = viewable[viewable.length-1].index
+		var first_index = parseInt(viewable[0].index/2)
+		var last_index =  Math.floor(viewable[(viewable.length)-1].index/2)
+
+		console.log("first index",first_index)
+		console.log("last index",last_index)
 
 		for (var index in data) {
 			data[index].selected = false
@@ -1032,10 +1035,12 @@ export default class Home extends React.Component {
 								keyExtractor={(item, index) => index.toString()}
 								/>
 						</View>
+						<View style={{flexDirection:'row',marginTop:10*alpha}}>
+							
 						<View
 							style={styles.categorylistFlatListViewWrapper}>
 							<FlatList 
-								horizontal={true}
+								horizontal={false}
 								renderItem={this.renderCategorylistFlatListCell}
 								data={this.state.data}
 								style={styles.categorylistFlatList}
@@ -1058,6 +1063,7 @@ export default class Home extends React.Component {
 								onViewableItemsChanged={this.reachProductIndex}
 								keyExtractor={(item, index) => index.toString()}/>
 							}
+						</View>
 						</View>
 					</View>
 				}
@@ -1307,11 +1313,7 @@ export default class Home extends React.Component {
 			url: this.state.selected_promotion,
 		}]	 
 		return <Modal visible={this.state.isPromoToggle} style={{margin: 0, flex:1, backgroundColor: "rgba(0, 0, 0, 0.8)"}}>
-			<TouchableOpacity
-					onPress={this.onClosePressed}
-					style={styles.closeGalleryButton}>
-					<Text style={styles.closeGalleryButtonText}>X</Text>
-				</TouchableOpacity>
+		
 				{/* <ImageViewer backgroundColor={""} imageUrls={images}/> */}
 				<ScrollView
             style={{}}>
@@ -1320,6 +1322,11 @@ export default class Home extends React.Component {
                 width={windowWidth}
                 style={styles.bannerImage}/>
         </ScrollView>
+		<TouchableOpacity
+					onPress={this.onClosePressed}
+					style={styles.closeGalleryButton}>
+					<Text style={styles.closeGalleryButtonText}>X</Text>
+				</TouchableOpacity>
 		</Modal>
 	}
 			
@@ -1339,7 +1346,7 @@ const styles = StyleSheet.create({
 		marginLeft: 8 * alpha,
 	},
 	page1View: {
-		backgroundColor: "rgb(243, 243, 243)",
+		backgroundColor: "white",
 		flex: 1,
 	},
 	topsectionView: {
@@ -1481,30 +1488,32 @@ const styles = StyleSheet.create({
 	productsectionView: {
 		backgroundColor: "transparent",
 		// position: "",
-		flex: 1,
+		height: windowHeight - 100*alpha,
 	},
 	categorylistFlatList: {
 		backgroundColor: "transparent",
 		width: "100%",
 		height: "100%",
-		backgroundColor: "transparent",
+		backgroundColor: "white",
+	},
+	productViewWrapper:{
+		flex: 1,
 	},
 	categorylistBannerViewWrapper: {
 		width: windowWidth,
-		height: 100 * alpha,
+		height: 100*alpha,
+		marginBottom:10*alpha,		
 	},
 	categorylistFlatListViewWrapper: {
-		width: windowWidth,
-		height: 50 * alpha,
+		width: 70*alpha,
+		// height: windowHeight,
 	},
 	productlistFlatList: {
 		backgroundColor: "white",
 		width: "100%",
-		height: "100%",
 	},
 	productlistFlatListViewWrapper: {
-
-		width: windowWidth,
+		flex:1,
 		marginBottom: 1 * alpha,
 	},
 	cartView: {
@@ -1750,7 +1759,7 @@ const styles = StyleSheet.create({
 	},
 
 	closeGalleryButton: {
-		backgroundColor: "transparent",
+		backgroundColor: "black",
 		borderRadius: 12.5 * alpha,
 		flexDirection: "row",
 		alignItems: "center",
@@ -1759,7 +1768,7 @@ const styles = StyleSheet.create({
 		position: "absolute",
 		width: 25 * alpha,
 		height: 25 * alpha,
-		top: 51 * alpha,
+		top: 15 * alpha,
 		right: 23 * alpha,
 	},
 	closeGalleryButtonImage: {

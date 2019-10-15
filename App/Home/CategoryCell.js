@@ -32,23 +32,29 @@ export default class CategoryCell extends React.Component {
 
     return (
       <TouchableWithoutFeedback onPress={this.onCategoryCellPress}>
-        <View
-          navigation={this.props.navigation}
-          style={
-            this.props.selected
-              ? [styles.categorycell, styles.selected]
-              : styles.categorycell
-          }
-        >
-          {this.props.selected ? <View style={styles.selectbarView} /> : null}
-          <Text
+        <View style={styles.container}>
+          <View style={styles.verticalLineView}></View>
+          <View
+            navigation={this.props.navigation}
             style={
-              this.props.selected ? styles.labelText_selected : styles.labelText
+              this.props.selected
+                ? [styles.categorycell, styles.selected]
+                : styles.categorycell
             }
           >
-            {categoryname}
-          </Text>
+        
+            <Text
+              numberOfLines={3}
+              style={
+                this.props.selected ? styles.labelText_selected : styles.labelText
+              }
+            >
+              {categoryname}
+            </Text>
+          </View>
+
         </View>
+     
       </TouchableWithoutFeedback>
     );
   }
@@ -57,13 +63,22 @@ export default class CategoryCell extends React.Component {
 const styles = StyleSheet.create({
   categorycell: {
     backgroundColor: "transparent",
-    width: 150 * alpha,
-    height: "100%",
+    flex: 1,
+    marginTop:10*alpha,
+    marginBottom:10*alpha,
     alignItems: "center",
     justifyContent: "center"
   },
   selected: {
-    backgroundColor: "white"
+
+  },
+  verticalLineView:{
+    backgroundColor: "black", 
+    position: "absolute",
+    right:0,
+    top:0,
+    height:"100%",
+    width:1,
   },
   selectbarView: {
     backgroundColor: "rgb(0, 178, 227)",
@@ -71,60 +86,31 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     width: "100%",
-    height: 3 * alpha
+    height: 1 * alpha
   },
   labelText: {
     backgroundColor: "transparent",
     color: "rgb(78, 77, 77)",
     fontFamily: "Helvetica",
-    fontSize: 10 * fontAlpha,
+    fontSize: 8 * fontAlpha,
     fontStyle: "normal",
     fontWeight: "normal",
-    textAlign: "left",
-    marginLeft: 14 * alpha,
-    marginRight: 7 * alpha,
-    width: 100 * alpha,
-    height: 12 * alpha
+    textAlign: "center",
+    marginLeft: 10 * alpha,
+    marginRight: 10 * alpha,
   },
-  labelImageText: {
-    backgroundColor: "transparent",
-    color: "rgb(78, 77, 77)",
-    fontFamily: "Helvetica",
-    fontSize: 10 * fontAlpha,
-    fontStyle: "normal",
-    fontWeight: "normal",
-    textAlign: "left",
-    flex: 1,
-    marginLeft: 2 * alpha,
-    marginRight: 7 * alpha,
-    flexWrap: "wrap"
-  },
+
   labelText_selected: {
     backgroundColor: "transparent",
-    color: "rgb(78, 77, 77)",
+    color: "rgb(0, 178, 227)",
     fontFamily: "Helvetica",
-    fontSize: 10 * fontAlpha,
+    fontSize: 8 * fontAlpha,
     fontStyle: "normal",
     fontWeight: "normal",
-    textAlign: "left",
-    marginLeft: 14 * alpha,
-    marginRight: 7 * alpha,
-    width: 100 * alpha,
-    height: 12 * alpha
-  },
-  labelImageText_selected: {
-    backgroundColor: "transparent",
-    color: "rgb(78, 77, 77)",
-    fontFamily: "Helvetica",
-    fontSize: 10 * fontAlpha,
-    fontStyle: "normal",
-    fontWeight: "normal",
-    textAlign: "left",
-    flex: 1,
-    marginLeft: 2 * alpha,
-    marginRight: 7 * alpha,
-    flexWrap: "wrap"
-  },
+    textAlign: "center",
+    marginLeft: 10 * alpha,
+    marginRight: 10 * alpha,
+  },  
   imageImage: {
     resizeMode: "center",
     backgroundColor: "transparent",
