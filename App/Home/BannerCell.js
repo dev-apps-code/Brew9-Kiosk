@@ -27,7 +27,7 @@ export default class BannerCell extends React.Component {
 
     render() {
         return <TouchableWithoutFeedback
-            onPress={this.onBannerCellPress}>
+            onPress={this.onBannerCellPress} style={styles.bannercell}>
             <View
                 navigation={this.props.navigation}
                 style={styles.bannercell}>
@@ -41,8 +41,9 @@ export default class BannerCell extends React.Component {
 
 const styles = StyleSheet.create({
     bannercell: {
-        backgroundColor: "transparent",
+        backgroundColor: "red",
         width: "100%",
+        height: 150 * alpha,
         flex: 1,
     },
     bannerImage: {

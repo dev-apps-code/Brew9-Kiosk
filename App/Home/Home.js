@@ -17,6 +17,7 @@ import {
 	TouchableHighlight,
 	TextInput,
 	ScrollView, 
+	StatusBar,
 	TouchableWithoutFeedback,
 	ActivityIndicator,
 	Platform
@@ -937,7 +938,7 @@ export default class Home extends React.Component {
 		let show_promo = false
 		
 		return <View style={styles.page1View}>	
-						
+			<StatusBar hidden={true} backgroundColor="blue" barStyle="light-content" />
 			<View style={styles.topsectionView}>
 				
 				<View
@@ -947,8 +948,6 @@ export default class Home extends React.Component {
 						marginLeft: 10 * alpha,
 						marginRight: 10 * alpha,
 						marginTop: 8 * alpha,
-						flexDirection: "row",
-						alignItems: "flex-start",
 					}}>
 						
 					{/* start   <View
@@ -1031,6 +1030,7 @@ export default class Home extends React.Component {
 							<FlatList 
 								renderItem={this.renderProductlistFlatListCell}
 								data={this.state.menu_banners}
+								horizontal={false}
 								style={styles.productlistFlatList}
 								keyExtractor={(item, index) => index.toString()}
 								/>
@@ -1126,7 +1126,7 @@ export default class Home extends React.Component {
 				</View>
 				)}
 				
-				<Animated.View
+				{/* <Animated.View
 					style={[styles.cartsummaryviewView,this.moveAnimation.getLayout()]} >
 					<View
 						style={styles.clearAllView}>
@@ -1149,7 +1149,7 @@ export default class Home extends React.Component {
 							keyExtractor={(item, index) => index.toString()}/>
 					</View>
 				</Animated.View>
-				
+				 */}
 				
 			
 			<View style={styles.bottomAlertView}>
@@ -1501,6 +1501,7 @@ const styles = StyleSheet.create({
 	},
 	categorylistBannerViewWrapper: {
 		width: windowWidth,
+		backgroundColor: "blue",
 		height: 100*alpha,
 		marginBottom:10*alpha,		
 	},
