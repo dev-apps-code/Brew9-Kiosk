@@ -151,7 +151,11 @@ export default class Home extends React.Component {
 	}
 
 	componentDidMount() {
-		this.loadShops(true)
+
+		this.interval = setInterval(() => {
+			this.loadShops(true)
+		}, 30000);
+	
 		// this.loadStorePushToken()
 	}
 
@@ -1021,7 +1025,7 @@ export default class Home extends React.Component {
 					
 				</View>
 				
-				{this.state.loading ? <View style={[styles.loadingIndicator]}><ActivityIndicator size="large" /></View>
+				{this.state.loading ? <View style={[styles.loadingIndicator]}><ActivityIndicator animating={false} size="large" /></View>
 					:
 					<View
 						style={styles.productsectionView}
@@ -1586,7 +1590,7 @@ const styles = StyleSheet.create({
 	},
 	shoppingCartText: {
 		color: "rgb(57, 57, 57)",
-		fontFamily: NON_TITLE_FONT,
+		fontFamily: "SFProText-Medium",
 		fontSize: 12 * alpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -1597,7 +1601,7 @@ const styles = StyleSheet.create({
 	},
 	totalpriceText: {
 		color: "rgb(57, 57, 57)",
-		fontFamily: NON_TITLE_FONT,
+		fontFamily: "SFProText-Medium",
 		fontSize: 18 * alpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -1620,7 +1624,7 @@ const styles = StyleSheet.create({
 	},
 	numberofitemText: {
 		color: "rgb(255, 251, 251)",
-		fontFamily: NON_TITLE_FONT,
+		fontFamily: "SFProText-Medium",
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -1643,7 +1647,7 @@ const styles = StyleSheet.create({
 	},
 	checkoutButtonText: {
 		color: "white",
-		fontFamily: NON_TITLE_FONT,
+		fontFamily: "SFProText-Medium",
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
