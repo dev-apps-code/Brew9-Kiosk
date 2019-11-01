@@ -103,7 +103,7 @@ export default class ProductCell extends React.Component {
             <View style={styles.row}>
               <View style={styles.wrap}>
                 <View style={styles.wrapColumn}>
-                  <Text style={styles.titleText}>{this.props.productname}</Text>
+                  <Text adjustsFontSizeToFit numberOfLines={3} style={styles.titleText}>{this.props.productname}</Text>
                 </View>
                 <View style={styles.wrapColumn2}>
                   <Text style={styles.titleText2}>
@@ -181,11 +181,6 @@ const styles = StyleSheet.create({
     // justifyContent: "center",
     // backgroundColor: "purple",
     height: 100 * alpha
-  },
-  productText: {
-    backgroundColor: "transparent",
-    width: "50%",
-    marginLeft: 2 * alpha
   },
   lineText: {
     backgroundColor: "black",
