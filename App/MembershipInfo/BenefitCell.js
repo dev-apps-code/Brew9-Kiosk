@@ -8,6 +8,7 @@
 
 import { StyleSheet, TouchableWithoutFeedback, Text, View, Image } from "react-native"
 import React from "react"
+import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 
 
 export default class BenefitCell extends React.Component {
@@ -65,7 +66,7 @@ const styles = StyleSheet.create({
 	descriptionText: {
 		backgroundColor: "transparent",
 		color: "rgb(68, 67, 67)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
 	amountText: {
 		backgroundColor: "transparent",
 		color: "rgb(0, 178, 227)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 15,
 		fontStyle: "normal",
 		fontWeight: "normal",

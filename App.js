@@ -396,7 +396,9 @@ export default class App extends React.Component {
       "SFProText-Regular": require("./assets/fonts/SFProText-Regular.ttf"),
       "SFProText-RegularItalic": require("./assets/fonts/SFProText-RegularItalic.ttf"),
       "SFProText-Semibold": require("./assets/fonts/SFProText-Semibold.ttf"),
-      "SFProText-SemiboldItalic": require("./assets/fonts/SFProText-SemiboldItalic.ttf")
+      "SFProText-SemiboldItalic": require("./assets/fonts/SFProText-SemiboldItalic.ttf"),
+      "ClanPro-News": require("./assets/fonts/ClanPro-News.ttf"),
+      "ClanPro-Book": require("./assets/fonts/ClanPro-Book.ttf")
     });
     this.setState({
       fontsReady: true

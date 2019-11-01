@@ -9,6 +9,7 @@
 import { Image, ScrollView, Text, TouchableOpacity, View, StyleSheet } from "react-native"
 import React from "react"
 import { alpha, fontAlpha } from "../Common/size"
+import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 
 export default class VoucherDetail extends React.Component {
 
@@ -273,7 +274,7 @@ const styles = StyleSheet.create({
 	},
 	titleText: {
 		color: "rgb(68, 68, 68)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 16 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -288,7 +289,7 @@ const styles = StyleSheet.create({
 	},
 	currenrcyText: {
 		color: "rgb(0, 178, 227)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 9 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -310,7 +311,7 @@ const styles = StyleSheet.create({
 	},
 	descriptionText: {
 		color: "rgb(124, 124, 124)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -359,7 +360,7 @@ const styles = StyleSheet.create({
 	},
 	termsButtonText: {
 		color: "rgb(136, 133, 133)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 10 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -384,7 +385,7 @@ const styles = StyleSheet.create({
 	},
 	textText: {
 		color: "rgb(0, 178, 227)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 9 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -549,7 +550,7 @@ const styles = StyleSheet.create({
 	},
 	useButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",

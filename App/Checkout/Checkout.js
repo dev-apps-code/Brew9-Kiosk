@@ -18,6 +18,7 @@ import ActivateAccountRequestObject from '../Requests/activate_account_request_o
 import LoginWithSmsRequestObject from "../Requests/login_with_sms_request_object"
 import {createAction, Storage} from "../Utils"
 import { commonStyles } from "../Common/common_style"
+import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 
 @connect(({ members,shops }) => ({
 	currentMember: members.profile,
@@ -662,7 +663,7 @@ const styles = StyleSheet.create({
 	},
 	branchText: {
 		color: "rgb(54, 54, 54)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 18 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -685,7 +686,7 @@ const styles = StyleSheet.create({
 	},
 	distance1kmPleaseText: {
 		color: "rgb(163, 163, 163)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 10 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -725,7 +726,7 @@ const styles = StyleSheet.create({
 	selfPickUpText: {
 		backgroundColor: "transparent",
 		color: "rgb(70, 76, 84)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -735,7 +736,7 @@ const styles = StyleSheet.create({
 	selfPickUpText_selected: {
 		backgroundColor: "transparent",
 		color: "rgb(0, 178, 227)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -777,7 +778,7 @@ const styles = StyleSheet.create({
 	},
 	pickupbuttonButtonText: {
 		color: "white",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -814,7 +815,7 @@ const styles = StyleSheet.create({
 	},
 	deliveryText: {
 		color: "rgb(70, 76, 84)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * alpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -824,7 +825,7 @@ const styles = StyleSheet.create({
 	},
 	deliveryText_selected: {
 		color: "rgb(0, 178, 227)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * alpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -846,7 +847,7 @@ const styles = StyleSheet.create({
 	},
 	deliverybuttonButtonText: {
 		color: "white",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -863,7 +864,7 @@ const styles = StyleSheet.create({
 	},
 	contactText: {
 		color: "rgb(54, 54, 54)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -874,7 +875,7 @@ const styles = StyleSheet.create({
 		backgroundColor: "transparent",
 		padding: 0,
 		color: "rgb(54, 54, 54)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 11 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -900,7 +901,7 @@ const styles = StyleSheet.create({
 	},
 	autoFillButtonText: {
 		color: "rgb(0, 178, 227)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 10 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -924,7 +925,7 @@ const styles = StyleSheet.create({
 	},
 	orderCapacityText: {
 		color: "rgb(54, 54, 54)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 18 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -948,7 +949,7 @@ const styles = StyleSheet.create({
 	},
 	orders34CupsText: {
 		color: "rgb(55, 56, 57)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -958,7 +959,7 @@ const styles = StyleSheet.create({
 	},
 	estimated15MinsToText: {
 		color: "rgb(79, 76, 76)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -972,7 +973,7 @@ const styles = StyleSheet.create({
 	},
 	orderConfirmationText: {
 		color: "rgb(54, 54, 54)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 18 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -991,7 +992,7 @@ const styles = StyleSheet.create({
 	},
 	nameTwoText: {
 		color: "rgb(54, 54, 54)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 16 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1001,7 +1002,7 @@ const styles = StyleSheet.create({
 	},
 	quantityTwoText: {
 		color: "rgb(54, 54, 54)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1011,7 +1012,7 @@ const styles = StyleSheet.create({
 	},
 	rm20TwoText: {
 		color: "rgb(54, 54, 54)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1025,7 +1026,7 @@ const styles = StyleSheet.create({
 	},
 	promoCodeText: {
 		color: "rgb(99, 97, 97)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 13 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1034,7 +1035,7 @@ const styles = StyleSheet.create({
 	},
 	statusText: {
 		color: "rgb(181, 181, 181)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1063,7 +1064,7 @@ const styles = StyleSheet.create({
 	},
 	voucherButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1071,7 +1072,7 @@ const styles = StyleSheet.create({
 	},
 	summaryText: {
 		color: "rgb(135, 135, 135)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1088,7 +1089,7 @@ const styles = StyleSheet.create({
 	},
 	paymentMethodText: {
 		color: "rgb(54, 54, 54)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 16 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1118,7 +1119,7 @@ const styles = StyleSheet.create({
 	},
 	paymenttypeText: {
 		color: 'rgb(85,85,85)',
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1147,7 +1148,7 @@ const styles = StyleSheet.create({
 	},
 	paymentButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1162,7 +1163,7 @@ const styles = StyleSheet.create({
 	},
 	remarkText: {
 		color: "rgb(54, 54, 54)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 16 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1171,7 +1172,7 @@ const styles = StyleSheet.create({
 	},
 	remarksText: {
 		color: "rgb(54, 54, 54)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1202,7 +1203,7 @@ const styles = StyleSheet.create({
 	},
 	remarkButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1220,7 +1221,7 @@ const styles = StyleSheet.create({
 	},
 	priceText: {
 		color: "rgb(54, 54, 54)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 18 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -1243,7 +1244,7 @@ const styles = StyleSheet.create({
 	},
 	payNowButtonText: {
 		color: "white",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 16 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -1257,7 +1258,7 @@ const styles = StyleSheet.create({
 	},
 	nameText: {
 		color: "rgb(54, 54, 54)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 16 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1266,7 +1267,7 @@ const styles = StyleSheet.create({
 	},
 	variantText: {
 		color: "rgb(148, 148, 148)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 13 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1280,7 +1281,7 @@ const styles = StyleSheet.create({
 	quantityText: {
 		backgroundColor: "transparent",
 		color: "rgb(54, 54, 54)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1289,7 +1290,7 @@ const styles = StyleSheet.create({
 	},
 	cartpriceText: {
 		color: "rgb(54, 54, 54)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",

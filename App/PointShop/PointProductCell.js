@@ -9,6 +9,7 @@
 import {TouchableWithoutFeedback, TouchableOpacity, Image, StyleSheet, View, Text, ScrollView} from "react-native"
 import React from "react"
 import { alpha, fontAlpha } from "../Common/size";
+import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 
 export default class PointProductCell extends React.Component {
 
@@ -141,7 +142,7 @@ const styles = StyleSheet.create({
 	},
 	sectionheadertitleText: {
 		color: "rgb(0, 178, 227)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 16 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -151,7 +152,7 @@ const styles = StyleSheet.create({
 	},
 	viewmoreButtonText: {
 		color: "rgb(164, 164, 164)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",

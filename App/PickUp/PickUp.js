@@ -10,6 +10,7 @@ import { StyleSheet, View, Image, TouchableOpacity, Text } from "react-native"
 import React from "react"
 import {alpha, fontAlpha} from "../Common/size";
 import { ScrollView } from "react-native-gesture-handler";
+import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 
 export default class PickUp extends React.Component {
 
@@ -518,7 +519,7 @@ const styles = StyleSheet.create({
 	},
 	youHavenTMakeAnyText: {
 		color: "rgb(134, 134, 134)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -528,7 +529,7 @@ const styles = StyleSheet.create({
 	grabYoursNowText: {
 		backgroundColor: "transparent",
 		color: "rgb(134, 134, 134)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -552,7 +553,7 @@ const styles = StyleSheet.create({
 	},
 	orderButtonText: {
 		color: "rgb(254, 254, 254)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -569,7 +570,7 @@ const styles = StyleSheet.create({
 	},
 	orderHistoryButtonText: {
 		color: "rgb(176, 176, 176)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 13 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",

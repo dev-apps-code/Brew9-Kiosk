@@ -9,6 +9,7 @@
 import { View, Image, StyleSheet, Text, TouchableOpacity } from "react-native"
 import React from "react"
 import { alpha, fontAlpha } from "../Common/size";
+import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 
 export default class FeaturedPromotionDetail extends React.Component {
 
@@ -96,7 +97,7 @@ const styles = StyleSheet.create({
 	},
 	labelText: {
 		color: "black",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -106,7 +107,7 @@ const styles = StyleSheet.create({
 	},
 	titleText: {
 		color: "black",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 24 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -139,7 +140,7 @@ const styles = StyleSheet.create({
 	},
 	descriptionText: {
 		color: "black",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",

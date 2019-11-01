@@ -54,5 +54,6 @@ const styles = StyleSheet.create({
         marginRight: 5 * alpha,
         marginTop: 5 * alpha,
         marginBottom: 10 * alpha,
+        width: 365 * alpha,
     },
 })

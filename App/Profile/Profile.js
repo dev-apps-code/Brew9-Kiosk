@@ -13,6 +13,7 @@ import {connect} from "react-redux";
 import {KURL_INFO} from "../Utils/server";
 import {createAction} from '../Utils'
 import ProfileRequestObject from '../Requests/profile_request_object.js'
+import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 @connect(({ members }) => ({
 	members:members,
 	company_id:members.company_id,
@@ -789,7 +790,7 @@ const styles = StyleSheet.create({
 	nameText: {
 		backgroundColor: "transparent",
 		color: "rgb(51, 49, 49)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 16 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -797,7 +798,7 @@ const styles = StyleSheet.create({
 	},
 	levelButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -821,7 +822,7 @@ const styles = StyleSheet.create({
 	memberText: {
 		backgroundColor: "transparent",
 		color: "rgb(51, 49, 49)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 15 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -829,7 +830,7 @@ const styles = StyleSheet.create({
 	},
 	vipButtonText: {
 		color: "rgb(108, 108, 108)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 8 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -872,7 +873,7 @@ const styles = StyleSheet.create({
 	},
 	pointText: {
 		color: "rgb(32, 32, 32)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 13 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -897,7 +898,7 @@ const styles = StyleSheet.create({
 	},
 	pointbuttonButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -919,7 +920,7 @@ const styles = StyleSheet.create({
 	rewardText: {
 		backgroundColor: "transparent",
 		color: "rgb(32, 32, 32)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 13 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -928,7 +929,7 @@ const styles = StyleSheet.create({
 	},
 	rewardbuttonButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -965,7 +966,7 @@ const styles = StyleSheet.create({
 	currencyText: {
 		backgroundColor: "transparent",
 		color: "rgb(32, 32, 32)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 8 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -986,7 +987,7 @@ const styles = StyleSheet.create({
 	walletText: {
 		backgroundColor: "transparent",
 		color: "rgb(32, 32, 32)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 13 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1007,7 +1008,7 @@ const styles = StyleSheet.create({
 	},
 	buttonButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1049,7 +1050,7 @@ const styles = StyleSheet.create({
 	},
 	pointshopbuttonButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1072,7 +1073,7 @@ const styles = StyleSheet.create({
 	},
 	clubbuttonButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1087,7 +1088,7 @@ const styles = StyleSheet.create({
 	pointRewardText: {
 		backgroundColor: "transparent",
 		color: "rgb(54, 54, 54)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 13 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -1105,7 +1106,7 @@ const styles = StyleSheet.create({
 	},
 	vipClubText: {
 		color: "rgb(54, 54, 54)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 13 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -1126,7 +1127,7 @@ const styles = StyleSheet.create({
 	},
 	memberbuttonButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1156,7 +1157,7 @@ const styles = StyleSheet.create({
 	memberStatusText: {
 		backgroundColor: "transparent",
 		color: "rgb(54, 54, 54)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -1166,7 +1167,7 @@ const styles = StyleSheet.create({
 	upgradeMemberText: {
 		backgroundColor: "transparent",
 		color: "rgb(184, 180, 180)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 11 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -1190,7 +1191,7 @@ const styles = StyleSheet.create({
 	},
 	orderbuttonButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1208,7 +1209,7 @@ const styles = StyleSheet.create({
 	orderHistoryText: {
 		backgroundColor: "transparent",
 		color: "rgb(54, 54, 54)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -1234,7 +1235,7 @@ const styles = StyleSheet.create({
 	},
 	personalbuttonButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1266,7 +1267,7 @@ const styles = StyleSheet.create({
 	personalInfoText: {
 		backgroundColor: "transparent",
 		color: "rgb(54, 54, 54)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -1291,7 +1292,7 @@ const styles = StyleSheet.create({
 	},
 	qrbuttonButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1323,7 +1324,7 @@ const styles = StyleSheet.create({
 	qrCodeText: {
 		backgroundColor: "transparent",
 		color: "rgb(54, 54, 54)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -1332,7 +1333,7 @@ const styles = StyleSheet.create({
 	},
 	qrDescriptionText: {
 		color: "rgb(184, 180, 180)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 11 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -1360,7 +1361,7 @@ const styles = StyleSheet.create({
 	},
 	redeembuttonButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1388,7 +1389,7 @@ const styles = StyleSheet.create({
 	redeemStationText: {
 		backgroundColor: "transparent",
 		color: "rgb(54, 54, 54)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -1397,7 +1398,7 @@ const styles = StyleSheet.create({
 	},
 	redeemDescriptionText: {
 		color: "rgb(184, 180, 180)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 11 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -1425,7 +1426,7 @@ const styles = StyleSheet.create({
 	},
 	notificationbuttonButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1439,7 +1440,7 @@ const styles = StyleSheet.create({
 	},
 	notificationText: {
 		color: "rgb(54, 54, 54)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -1468,7 +1469,7 @@ const styles = StyleSheet.create({
 	},
 	aboutbuttonButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -1482,7 +1483,7 @@ const styles = StyleSheet.create({
 	},
 	aboutText: {
 		color: "rgb(54, 54, 54)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",

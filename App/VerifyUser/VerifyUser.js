@@ -19,6 +19,7 @@ import {createAction, Storage} from "../Utils"
 import CountDown from 'react-native-countdown-component'
 import {KURL_INFO, KURL_TERMS_OF_SERVICE, KURL_PRIVACY_POLICY, KURL_EULA} from "../Utils/server"
 import Hyperlink from 'react-native-hyperlink'
+import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 
 @connect(({ members }) => ({
 	members: members.profile,
@@ -336,7 +337,7 @@ const styles = StyleSheet.create({
 	},
 	closeButtonText: {
 		color: "black",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 18 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -352,7 +353,7 @@ const styles = StyleSheet.create({
 	},
 	welcomeText: {
 		color: "black",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 25 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -363,7 +364,7 @@ const styles = StyleSheet.create({
 	},
 	messageText: {
 		color: "black", 
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 16 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -406,7 +407,7 @@ const styles = StyleSheet.create({
 	},
 	textInputTextInput: {
 		color: "rgb(46, 46, 46)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -437,7 +438,7 @@ const styles = StyleSheet.create({
 	},
 	sendButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -455,7 +456,7 @@ const styles = StyleSheet.create({
 	},
 	countdownText: {
         color: "rgb(98, 97, 97)",
-        fontFamily: "Helvetica",
+        fontFamily: TITLE_FONT,
         fontSize: 12 * fontAlpha,
         fontStyle: "normal",
         fontWeight: "normal",
@@ -475,7 +476,7 @@ const styles = StyleSheet.create({
 	activationCodeTextInput: {
 
 		color: "rgb(46, 46, 46)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -502,7 +503,7 @@ const styles = StyleSheet.create({
 	},
 	verifyButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -525,7 +526,7 @@ const styles = StyleSheet.create({
 	},
 	termsAndConditionsButtonText: {
 		color: "white",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 13 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -539,7 +540,7 @@ const styles = StyleSheet.create({
 		width: windowWidth,
 		marginBottom: 40 * alpha,
 		color: "rgb(90, 90, 90)", 
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		textAlign: "center",
@@ -548,14 +549,14 @@ const styles = StyleSheet.create({
 	},
 	phoneCountryCodeText: {
 		marginLeft: 0 * alpha,
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		color: "black",
 	},
 	errorMessageText: {
 		color: "white",
 		fontSize: 12 * fontAlpha,
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontStyle: "normal",
 		fontWeight: "normal",
 		textAlign: "center",
