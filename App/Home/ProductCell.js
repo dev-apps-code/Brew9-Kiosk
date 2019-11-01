@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
   },
   productimageImage: {
     backgroundColor: "transparent",
-    resizeMode: "resize",
+    resizeMethod:'scale',
     width: 80 * alpha,
     height: 100 * alpha,
     marginLeft: 60 * alpha,
