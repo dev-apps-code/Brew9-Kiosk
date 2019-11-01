@@ -414,7 +414,7 @@ export default class Home extends React.Component {
 	}
 
 	renderProductlistFlatListCell = ({ item, index }) => {
-
+		console.log(`item.image.url ${item.image.url} ${item.name}`)
 		if (item) {
 			if (item.clazz == "product") {
 				return <ProductCell
