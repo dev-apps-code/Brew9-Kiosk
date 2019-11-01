@@ -13,6 +13,7 @@ import {connect} from "react-redux";
 import QrCodeRequestObject from "../Requests/qr_code_request_object";
 import {createAction} from "../Utils";
 import QRCode from 'react-native-qrcode-svg';
+import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 
 @connect(({ members }) => ({
 	members: members.profile
@@ -382,7 +383,7 @@ const styles = StyleSheet.create({
 	},
 	nicknameText: {
 		color: "rgb(69, 67, 67)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 15 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -415,7 +416,7 @@ const styles = StyleSheet.create({
 	},
 	selectwalletButtonText: {
 		color: "white",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -432,7 +433,7 @@ const styles = StyleSheet.create({
 	},
 	payByBrew9WalletText: {
 		color: "rgb(69, 67, 67)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -442,7 +443,7 @@ const styles = StyleSheet.create({
 	},
 	payByBrew9WalletTextDisabled: {
 		color: "rgb(186, 179, 179)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -453,7 +454,7 @@ const styles = StyleSheet.create({
 	balanceText: {
 		backgroundColor: "transparent",
 		color: "rgb(186, 179, 179)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 13 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -480,7 +481,7 @@ const styles = StyleSheet.create({
 	},
 	scanQrcodeToEarnText: {
 		color: "rgb(62, 61, 61)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 11 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -492,7 +493,7 @@ const styles = StyleSheet.create({
 	autoText: {
 		backgroundColor: "transparent",
 		color: "rgb(192, 192, 192)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 11 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",

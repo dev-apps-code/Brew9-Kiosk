@@ -13,6 +13,7 @@ import {alpha, fontAlpha} from "../Common/size";
 import TopUpProductsRequestObject from "../Requests/top_up_products_request_object";
 import {createAction} from "../Utils";
 import {connect} from "react-redux";
+import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 
 @connect(({ members }) => ({
 	members: members.profile
@@ -251,7 +252,7 @@ const styles = StyleSheet.create({
 	},
 	topupButtonText: {
 		color: "white",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",

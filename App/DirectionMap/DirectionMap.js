@@ -11,6 +11,7 @@ import React from "react"
 import { alpha, fontAlpha } from "../Common/size";
 import MapView from 'react-native-maps';
 import openMap from 'react-native-open-maps';
+import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 
 export default class DirectionMap extends React.Component {
 
@@ -164,7 +165,7 @@ const styles = StyleSheet.create({
 	},
 	nameText: {
 		color: "black",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 18 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -173,7 +174,7 @@ const styles = StyleSheet.create({
 	},
 	addressText: {
 		color: "rgb(151, 151, 151)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",

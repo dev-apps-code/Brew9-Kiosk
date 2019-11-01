@@ -17,6 +17,7 @@ import LoginWithSmsRequestObject from "../Requests/login_with_sms_request_object
 import CountDown from 'react-native-countdown-component'
 import Toast, {DURATION} from 'react-native-easy-toast'
 import HudLoading from "../Components/HudLoading"
+import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 
 @connect(({ members }) => ({
     members: members.profile,
@@ -205,7 +206,7 @@ const styles = StyleSheet.create({
     },
     enterCodeText: {
         color: "rgb(46, 46, 46)",
-        fontFamily: "SFProText-Medium",
+        fontFamily: NON_TITLE_FONT,
         fontSize: 16 * fontAlpha,
         fontStyle: "normal",
         fontWeight: "bold",
@@ -215,7 +216,7 @@ const styles = StyleSheet.create({
     },
     messageText: {
         color: "rgb(145, 145, 145)",
-        fontFamily: "Helvetica",
+        fontFamily: TITLE_FONT,
         fontSize: 12 * fontAlpha,
         fontStyle: "normal",
         fontWeight: "normal",
@@ -231,7 +232,7 @@ const styles = StyleSheet.create({
     },
     codeText: {
         backgroundColor: "transparent",
-        fontFamily: "Helvetica",
+        fontFamily: TITLE_FONT,
         fontSize: 32 * fontAlpha,
         color: "black"
     },
@@ -258,7 +259,7 @@ const styles = StyleSheet.create({
     },
     submitButtonText: {
         color: "white",
-        fontFamily: "SFProText-Medium",
+        fontFamily: NON_TITLE_FONT,
         fontSize: 12 * fontAlpha,
         fontStyle: "normal",
         fontWeight: "bold",
@@ -266,7 +267,7 @@ const styles = StyleSheet.create({
     },
     instructionText: {
         color: "rgb(98, 97, 97)",
-        fontFamily: "Helvetica",
+        fontFamily: TITLE_FONT,
         fontSize: 13 * fontAlpha,
         fontStyle: "normal",
         fontWeight: "normal",
@@ -290,7 +291,7 @@ const styles = StyleSheet.create({
     },
     reSendButtonText: {
         color: "rgb(0, 178, 227)",
-        fontFamily: "Helvetica",
+        fontFamily: TITLE_FONT,
         fontSize: 10 * fontAlpha,
         fontStyle: "normal",
         fontWeight: "normal",
@@ -298,7 +299,7 @@ const styles = StyleSheet.create({
     },
     countdownText: {
         color: "rgb(98, 97, 97)",
-        fontFamily: "Helvetica",
+        fontFamily: TITLE_FONT,
         fontSize: 12 * fontAlpha,
         fontStyle: "normal",
         fontWeight: "normal",

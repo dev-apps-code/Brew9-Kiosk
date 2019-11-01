@@ -17,6 +17,7 @@ import {connect} from "react-redux"
 import {createAction, Storage} from "../Utils"
 import Toast, {DURATION} from 'react-native-easy-toast'
 import HudLoading from "../Components/HudLoading"
+import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 
 @connect(({ members }) => ({
 	members: members.profile,
@@ -327,7 +328,7 @@ const styles = StyleSheet.create({
 	welcomeText: {
 		backgroundColor: "transparent",
 		color: "white",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 25 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -338,7 +339,7 @@ const styles = StyleSheet.create({
 	instructionText: {
 		backgroundColor: "transparent",
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 16 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -369,7 +370,7 @@ const styles = StyleSheet.create({
 	},
 	phoneCountryCodeText: {
 		marginLeft: 0 * alpha,
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 	},
 	bitmapImage: {
@@ -383,7 +384,7 @@ const styles = StyleSheet.create({
 		backgroundColor: "transparent",
 		padding: 0,
 		color: "black",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -408,7 +409,7 @@ const styles = StyleSheet.create({
 		backgroundColor: "transparent",
 		padding: 0,
 		color: "rgb(46, 46, 46)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 20 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -420,7 +421,7 @@ const styles = StyleSheet.create({
 	instructionTwoText: {
 		backgroundColor: "transparent",
 		color: "white",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 13 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -440,7 +441,7 @@ const styles = StyleSheet.create({
 	},
 	facebookbuttonButtonText: {
 		color: "white",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -479,7 +480,7 @@ const styles = StyleSheet.create({
 	facebookText: {
 		backgroundColor: "transparent",
 		color: "white",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",

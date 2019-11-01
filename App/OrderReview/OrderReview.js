@@ -9,6 +9,7 @@
 import React from "react"
 import {View, Text, StyleSheet, ScrollView, TouchableOpacity, Image} from "react-native"
 import {alpha, fontAlpha} from "../Common/size";
+import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 
 
 export default class OrderReview extends React.Component {
@@ -190,7 +191,7 @@ const styles = StyleSheet.create({
 	commentText: {
 		backgroundColor: "transparent",
 		color: "rgb(54, 54, 54)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 16 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -199,7 +200,7 @@ const styles = StyleSheet.create({
 	},
 	satisfactionText: {
 		color: "rgb(158, 157, 157)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 16 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -230,7 +231,7 @@ const styles = StyleSheet.create({
 	},
 	nameText: {
 		color: "rgb(54, 54, 54)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 15 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -241,7 +242,7 @@ const styles = StyleSheet.create({
 	},
 	levelText: {
 		color: "rgb(158, 157, 157)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 16 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -268,7 +269,7 @@ const styles = StyleSheet.create({
 	fromText: {
 		backgroundColor: "transparent",
 		color: "rgb(54, 54, 54)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 15 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -277,7 +278,7 @@ const styles = StyleSheet.create({
 	dateText: {
 		backgroundColor: "transparent",
 		color: "rgb(200, 200, 200)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 13 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -287,7 +288,7 @@ const styles = StyleSheet.create({
 	messageText: {
 		backgroundColor: "transparent",
 		color: "rgb(158, 157, 157)",
-		fontFamily: "Helvetica",
+		fontFamily: TITLE_FONT,
 		fontSize: 16 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",

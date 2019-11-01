@@ -15,6 +15,7 @@ import VoucherRequestObject from "../Requests/voucher_request_object";
 import UsedVoucher from "./UsedVoucher"
 import ValidVoucher from "./ValidVoucher"
 import {KURL_INFO} from "../Utils/server";
+import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 
 @connect(({ members }) => ({
     members: members.profile
@@ -459,7 +460,7 @@ const styles = StyleSheet.create({
     },
     usedButtonText: {
         color: "rgb(118, 118, 118)",
-        fontFamily: "SFProText-Medium",
+        fontFamily: NON_TITLE_FONT,
         fontSize: 16 * fontAlpha,
         fontStyle: "normal",
         fontWeight: "bold",
@@ -495,7 +496,7 @@ const styles = StyleSheet.create({
     },
     howToUseButtonText: {
         color: "rgb(151, 151, 151)",
-        fontFamily: "Helvetica",
+        fontFamily: TITLE_FONT,
         fontSize: 11 * fontAlpha,
         fontStyle: "normal",
         fontWeight: "normal",
@@ -528,7 +529,7 @@ const styles = StyleSheet.create({
     noRewardAvailableText: {
         backgroundColor: "transparent",
         color: "rgb(190, 190, 190)",
-        fontFamily: "Helvetica",
+        fontFamily: TITLE_FONT,
         fontSize: 12 * fontAlpha,
         fontStyle: "normal",
         fontWeight: "normal",
@@ -553,7 +554,7 @@ const styles = StyleSheet.create({
     },
     redeemrewardButtonText: {
         color: "rgb(82, 82, 82)",
-        fontFamily: "SFProText-Medium",
+        fontFamily: NON_TITLE_FONT,
         fontSize: 15 * fontAlpha,
         fontStyle: "normal",
         fontWeight: "bold",

@@ -11,6 +11,7 @@ import React from "react"
 import { alpha, fontAlpha } from "../Common/size";
 import {connect} from "react-redux";
 import {KURL_INFO} from "../Utils/server";
+import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 
 @connect(({ members }) => ({
 	members: members.profile
@@ -370,7 +371,7 @@ const styles = StyleSheet.create({
 	},
 	availableBalanceText: {
 		color: "rgb(58, 58, 58)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -390,7 +391,7 @@ const styles = StyleSheet.create({
 	currencyText: {
 		backgroundColor: "transparent",
 		color: "rgb(58, 58, 58)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 11 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -423,7 +424,7 @@ const styles = StyleSheet.create({
 	},
 	topUpButtonText: {
 		color: "white",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 15 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -481,7 +482,7 @@ const styles = StyleSheet.create({
 	transactionHistoryText: {
 		backgroundColor: "transparent",
 		color: "rgb(41, 41, 41)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -506,7 +507,7 @@ const styles = StyleSheet.create({
 	},
 	faqButtonText: {
 		color: "white",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "normal",
@@ -528,7 +529,7 @@ const styles = StyleSheet.create({
 	},
 	faqText: {
 		color: "rgb(41, 41, 41)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -556,7 +557,7 @@ const styles = StyleSheet.create({
 	},
 	changePasswordText: {
 		color: "rgb(41, 41, 41)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -585,7 +586,7 @@ const styles = StyleSheet.create({
 	resetPasswordText: {
 		backgroundColor: "transparent",
 		color: "rgb(41, 41, 41)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",

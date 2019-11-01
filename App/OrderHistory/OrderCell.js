@@ -9,6 +9,7 @@
 import { Text, Image, TouchableWithoutFeedback, TouchableOpacity, View, StyleSheet } from "react-native"
 import React from "react"
 import { alpha, fontAlpha } from "../Common/size";
+import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 
 export default class OrderCell extends React.Component {
 
@@ -180,7 +181,7 @@ const styles = StyleSheet.create({
 	puchongBranchText: {
 		backgroundColor: "transparent",
 		color: "rgb(59, 59, 59)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 13 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -189,7 +190,7 @@ const styles = StyleSheet.create({
 	},
 	completeButtonText: {
 		color: "rgb(149, 149, 149)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 10 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -330,7 +331,7 @@ const styles = StyleSheet.create({
 	},
 	reviewButtonText: {
 		color: "rgb(94, 94, 94)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -373,7 +374,7 @@ const styles = StyleSheet.create({
 	},
 	receiptButtonText: {
 		color: "rgb(0, 178, 227)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",

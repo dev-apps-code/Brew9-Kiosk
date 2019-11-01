@@ -15,6 +15,7 @@ import {
 } from "react-native";
 import React from "react";
 import { alpha, fontAlpha, windowWidth } from "../Common/size";
+import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 
 export default class CategoryCell extends React.Component {
   constructor(props) {
@@ -91,7 +92,7 @@ const styles = StyleSheet.create({
   labelText: {
     backgroundColor: "transparent",
     color: "rgb(78, 77, 77)",
-    fontFamily: "Helvetica",
+    fontFamily: TITLE_FONT,
     fontSize: 8 * fontAlpha,
     fontStyle: "normal",
     fontWeight: "normal",
@@ -103,7 +104,7 @@ const styles = StyleSheet.create({
   labelText_selected: {
     backgroundColor: "transparent",
     color: "rgb(0, 178, 227)",
-    fontFamily: "Helvetica",
+    fontFamily: TITLE_FONT,
     fontSize: 8 * fontAlpha,
     fontStyle: "normal",
     fontWeight: "normal",

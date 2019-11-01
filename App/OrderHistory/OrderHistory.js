@@ -11,6 +11,7 @@ import {Text, View, FlatList, Image, StyleSheet, TouchableOpacity} from "react-n
 import React from "react"
 import { alpha, fontAlpha } from "../Common/size";
 import { connect } from "react-redux";
+import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 
 @connect(({ members }) => ({
 	members:members
@@ -245,7 +246,7 @@ const styles = StyleSheet.create({
 	purchaseHistoryText: {
 		backgroundColor: "transparent",
 		color: "rgb(59, 59, 59)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 13 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -255,7 +256,7 @@ const styles = StyleSheet.create({
 	seeAllText: {
 		backgroundColor: "transparent",
 		color: "rgb(102, 101, 101)",
-		fontFamily: "SFProText-Medium",
+		fontFamily: NON_TITLE_FONT,
 		fontSize: 10 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
