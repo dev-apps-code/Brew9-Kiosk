@@ -107,7 +107,9 @@ export default class ProductCell extends React.Component {
                 </View>
                 <View style={styles.wrapColumn2}>
                   <Text style={styles.titleText2}>
-                    {this.props.item.menu_remarks}
+                    {/* {this.props.item.menu_remarks} */}
+                    {/* {this.props.productStatus} */}
+                    Status
                   </Text>
                 </View>
               </View>
@@ -230,7 +232,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     color: "rgb(54, 54, 54)",
-    fontFamily: TITLE_FONT,
+    fontFamily: "ClanPro-MediumItalic",
     fontSize: 8 * fontAlpha,
     fontStyle: "normal",
     fontWeight: "normal",
@@ -242,7 +244,7 @@ const styles = StyleSheet.create({
   titleText2: {
     color: "rgb(54, 54, 54)",
     fontFamily: TITLE_FONT,
-    fontSize: 7.5 * fontAlpha,
+    fontSize: 8 * fontAlpha,
     fontStyle: "normal",
     fontWeight: "normal",
     textAlign: "left",
