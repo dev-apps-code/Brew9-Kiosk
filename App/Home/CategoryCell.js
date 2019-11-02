@@ -63,7 +63,7 @@ export default class CategoryCell extends React.Component {
 
 const styles = StyleSheet.create({
   categorycell: {
-    backgroundColor: "transparent",
+    backgroundColor: "rgba(0,0,0,0)",
     flex: 1,
     marginTop:10*alpha,
     marginBottom:10*alpha,
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     height: 1 * alpha
   },
   labelText: {
-    backgroundColor: "transparent",
+    backgroundColor: "rgba(255, 255, 255, 1)",
     color: "rgb(78, 77, 77)",
     fontFamily: TITLE_FONT,
     fontSize: 8 * fontAlpha,
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
   },
 
   labelText_selected: {
-    backgroundColor: "transparent",
+    backgroundColor: "rgba(255, 255, 255, 1)",
     color: "rgb(0, 178, 227)",
     fontFamily: TITLE_FONT,
     fontSize: 8 * fontAlpha,
@@ -112,11 +112,11 @@ const styles = StyleSheet.create({
     marginLeft: 10 * alpha,
     marginRight: 10 * alpha,
   },  
-  imageImage: {
-    resizeMode: "center",
-    backgroundColor: "transparent",
-    width: 20 * alpha,
-    height: 20 * alpha,
-    marginLeft: 7 * alpha
-  }
+  // imageImage: {
+  //   resizeMode: "center",
+  //   backgroundColor: "transparent",
+  //   width: 20 * alpha,
+  //   height: 20 * alpha,
+  //   marginLeft: 7 * alpha
+  // }
 });

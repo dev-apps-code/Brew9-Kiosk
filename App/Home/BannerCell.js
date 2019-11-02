@@ -41,13 +41,13 @@ export default class BannerCell extends React.Component {
 
 const styles = StyleSheet.create({
     bannercell: {
-        backgroundColor: "transparent",
+        backgroundColor: "rgba(255, 255, 255, 1)",
         width: "100%",
         height: 150 * alpha,
         flex: 1,
     },
     bannerImage: {
-        backgroundColor: "transparent",
+        backgroundColor: "rgba(255, 255, 255, 1)",
         resizeMode: "cover",
         height: 150 * alpha,
         marginLeft: 5 * alpha,

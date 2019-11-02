@@ -190,14 +190,14 @@ const styles = StyleSheet.create({
     marginLeft: 10 * alpha
   },
   productcell: {
-    backgroundColor: "transparent",
+    backgroundColor: "rgba(255, 255, 255, 1)",
     width: "50%",
     height: 200 * alpha,
     flexDirection: "column",
     alignItems: "flex-start"
   },
   productimageImage: {
-    backgroundColor: "transparent",
+    backgroundColor: "rgba(0,0,0,0)",
     resizeMode: "cover",
     width: 80 * alpha,
     height: 100 * alpha,
@@ -215,7 +215,7 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   soldtextText: {
-    backgroundColor: "transparent",
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
     color: "white",
     fontFamily: TITLE_FONT,
     fontSize: 13 * fontAlpha,
@@ -224,7 +224,7 @@ const styles = StyleSheet.create({
     textAlign: "center"
   },
   detailsView: {
-    backgroundColor: "transparent",
+    backgroundColor: "rgba(0,0,0,0)",
     width: "60%",
     height: 46 * alpha,
     alignItems: "flex-start"
@@ -236,7 +236,7 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     fontWeight: "normal",
     textAlign: "left",
-    backgroundColor: "transparent",
+    backgroundColor: "rgba(255, 255, 255, 1)",
     marginLeft: 1 * alpha,
     fontStyle: "italic"
   },
@@ -247,7 +247,7 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     fontWeight: "normal",
     textAlign: "left",
-    backgroundColor: "transparent",
+    backgroundColor: "rgba(255, 255, 255, 1)",
     marginLeft: 1 * alpha
   },
   descriptionText: {
@@ -264,7 +264,7 @@ const styles = StyleSheet.create({
     marginTop: 5 * alpha
   },
   priceText: {
-    backgroundColor: "transparent",
+    backgroundColor: "rgba(255, 255, 255, 1)",
     color: "rgb(54, 54, 54)",
     fontFamily: NON_TITLE_FONT,
     fontSize: 8 * fontAlpha,
