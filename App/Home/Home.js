@@ -151,11 +151,10 @@ export default class Home extends React.Component {
 	}
 
 	componentDidMount() {
-
+		this.loadShops(true)
 		this.interval = setInterval(() => {
 			this.loadShops(true)
 		}, 30000);
-	
 		// this.loadStorePushToken()
 	}
 
@@ -428,7 +427,7 @@ export default class Home extends React.Component {
 					index={index}
 					item={item}
 					productname={item.name}
-					productStatus={item.status}
+					productstatus={item.status}
 					productprice={item.price}
 					productimage={item.image.url}
 					productquantity={item.quantity}

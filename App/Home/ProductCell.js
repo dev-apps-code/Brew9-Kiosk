@@ -108,8 +108,7 @@ export default class ProductCell extends React.Component {
                 <View style={styles.wrapColumn2}>
                   <Text style={styles.titleText2}>
                     {/* {this.props.item.menu_remarks} */}
-                    {/* {this.props.productStatus} */}
-                    Status
+                    {this.props.productstatus}
                   </Text>
                 </View>
               </View>
