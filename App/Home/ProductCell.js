@@ -55,7 +55,7 @@ export default class ProductCell extends React.Component {
     return (
       <TouchableWithoutFeedback onPress={this.onProductCellPress}>
         <View navigation={this.props.navigation} style={styles.productcell}>
-          <Image
+          {/* <Image
             source={require("../../assets/images/background.png")}
             style={{
               overflow: "hidden",
@@ -66,7 +66,7 @@ export default class ProductCell extends React.Component {
               width: "100%",
               height: "100%"
             }}
-          />
+          /> */}
 
           <View
             pointerEvents="box-none"
@@ -201,7 +201,7 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     width: 80 * alpha,
     height: 100 * alpha,
-    marginLeft: 60 * alpha,
+    marginLeft: 30 * alpha,
     marginTop: 180 * alpha
   },
   soldView: {
