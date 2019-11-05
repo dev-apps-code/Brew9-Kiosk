@@ -212,14 +212,9 @@ const styles = StyleSheet.create({
     marginBottom:10 * alpha
   },
   productimageImage: {
-<<<<<<< HEAD
-    backgroundColor: "transparent",
-    resizeMethod:'scale',
-=======
     backgroundColor: "rgba(0,0,0,0)",
     // backgroundColor:"red",
     resizeMode: "cover",
->>>>>>> b561b7d6b3aa773bc77bd1bcffe645b2101867a5
     width: 80 * alpha,
     height: 110 * alpha,
     marginLeft: 30 * alpha,
