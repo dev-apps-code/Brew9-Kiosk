@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>93E60B3A-EE23-449C-A627-6BE944D79013</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>93E60B3A-EE23-449C-A627-6BE944D79013.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>brew9-menu project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>brew9-menu</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace brew9-menu with scheme brew9-menu and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>594291354.95494604</real>
+			<key>timeStoppedRecording</key>
+			<real>594291355.26659501</real>
+			<key>title</key>
+			<string>Building workspace brew9-menu with scheme brew9-menu and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>93E60B3A-EE23-449C-A627-6BE944D79013</string>
+		</dict>
+		<key>BFA13D29-3AE3-47C1-8487-1BB335506171</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>BFA13D29-3AE3-47C1-8487-1BB335506171.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>brew9-menu project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>brew9-menu</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace brew9-menu with scheme brew9-menu and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>594291821.80960596</real>
+			<key>timeStoppedRecording</key>
+			<real>594291827.25941801</real>
+			<key>title</key>
+			<string>Building workspace brew9-menu with scheme brew9-menu and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>BFA13D29-3AE3-47C1-8487-1BB335506171</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
