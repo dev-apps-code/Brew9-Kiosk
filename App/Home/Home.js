@@ -944,86 +944,6 @@ export default class Home extends React.Component {
 		
 		return <View style={styles.page1View}>	
 			<StatusBar hidden={true} backgroundColor="blue" barStyle="light-content" />
-			<View style={styles.topsectionView}>
-				
-				<View
-					pointerEvents="box-none"
-					style={{
-						height: 31 * alpha,
-						marginLeft: 10 * alpha,
-						marginRight: 10 * alpha,
-						marginTop: 8 * alpha,
-					}}>
-						
-					{/* start   <View
-						style={styles.branchView}>  end here*/}
-
-
-						{/* <TouchableOpacity
-							onPress={this.onBranchPressed}
-							style={styles.branchButton}> */}
-							{/* start  <Text
-								style={styles.branchButtonText}>{shop ? shop.name : ""}</Text> end here */}
-							{/* <Image
-							source={require("./../../assets/images/group-22.png")}
-							style={styles.branchButtonImage}/> */}
-						{/* </TouchableOpacity> */}
-					{/*start </View> end here */}
-					
-					<View
-						style={{
-							flex: 6,
-						}}/>
-						{/* <SwitchSelector
-							options={[
-								{ label: "PickUp", value: 0 },
-								{ label: "Delivery", value: 1 }]}
-							initial={0}
-							value={delivery}
-							textColor={"#4E4D4D"}
-							selectedColor={"#FFFFFF"}
-							buttonColor={"#2A2929"}
-							borderColor={"#979797"}
-							backgroundColor={"#D8D8D8"}
-							style={styles.pickUpDeliveryView}
-							textStyle={styles.optionText}
-							fontSize={10 * alpha}
-							height={32 * alpha}
-							onPress={(value) => this._toggleDelivery(value)}
-						/> */}
-					</View>
-					
-					{/* <View
-						pointerEvents="box-none"
-						style={{
-							height: 14 * alpha,
-							marginLeft: 10 * alpha,
-							marginRight: 19 * alpha,
-							marginTop: 7 * alpha,
-							flexDirection: "row",
-							alignItems: "flex-start",
-						}}>
-						<Text
-							style={styles.distance1kmText}>Distance {shop ? shop.distance : "0"}m</Text>
-						<View
-							style={{
-								flex: 1,
-							}}/>
-						<View
-							style={styles.moreView}>
-							<TouchableOpacity
-								onPress={this.onMorePressed}
-								style={styles.moreButton}>
-								<Text
-									style={styles.moreButtonText}>More</Text>
-							</TouchableOpacity>
-							<Image
-								source={require("./../../assets/images/bitmap-14.png")}
-								style={styles.bitmapImage}/>
-						</View>
-					</View> */}
-					
-				</View>
 				
 				{this.state.loading ? <View style={[styles.loadingIndicator]}><ActivityIndicator animating={false} size="large" /></View>
 					:
@@ -1492,6 +1412,7 @@ const styles = StyleSheet.create({
 	},
 	productsectionView: {
 		backgroundColor: "rgba(255, 255, 255, 1)",
+		// backgroundColor: "red",
 		// position: "",
 		height: windowHeight - 100*alpha,
 	},
