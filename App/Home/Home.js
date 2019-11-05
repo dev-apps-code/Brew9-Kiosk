@@ -152,6 +152,9 @@ export default class Home extends React.Component {
 
 	componentDidMount() {
 		this.loadShops(true)
+		this.interval = setInterval(() => {
+			this.loadShops(true)
+		}, 30000);
 		// this.loadStorePushToken()
 	}
 
@@ -424,6 +427,7 @@ export default class Home extends React.Component {
 					index={index}
 					item={item}
 					productname={item.name}
+					productstatus={item.status}
 					productprice={item.price}
 					productimage={item.image.url}
 					productquantity={item.quantity}
@@ -940,88 +944,8 @@ export default class Home extends React.Component {
 		
 		return <View style={styles.page1View}>	
 			<StatusBar hidden={true} backgroundColor="blue" barStyle="light-content" />
-			<View style={styles.topsectionView}>
 				
-				<View
-					pointerEvents="box-none"
-					style={{
-						height: 31 * alpha,
-						marginLeft: 10 * alpha,
-						marginRight: 10 * alpha,
-						marginTop: 8 * alpha,
-					}}>
-						
-					{/* start   <View
-						style={styles.branchView}>  end here*/}
-
-
-						{/* <TouchableOpacity
-							onPress={this.onBranchPressed}
-							style={styles.branchButton}> */}
-							{/* start  <Text
-								style={styles.branchButtonText}>{shop ? shop.name : ""}</Text> end here */}
-							{/* <Image
-							source={require("./../../assets/images/group-22.png")}
-							style={styles.branchButtonImage}/> */}
-						{/* </TouchableOpacity> */}
-					{/*start </View> end here */}
-					
-					<View
-						style={{
-							flex: 6,
-						}}/>
-						{/* <SwitchSelector
-							options={[
-								{ label: "PickUp", value: 0 },
-								{ label: "Delivery", value: 1 }]}
-							initial={0}
-							value={delivery}
-							textColor={"#4E4D4D"}
-							selectedColor={"#FFFFFF"}
-							buttonColor={"#2A2929"}
-							borderColor={"#979797"}
-							backgroundColor={"#D8D8D8"}
-							style={styles.pickUpDeliveryView}
-							textStyle={styles.optionText}
-							fontSize={10 * alpha}
-							height={32 * alpha}
-							onPress={(value) => this._toggleDelivery(value)}
-						/> */}
-					</View>
-					
-					{/* <View
-						pointerEvents="box-none"
-						style={{
-							height: 14 * alpha,
-							marginLeft: 10 * alpha,
-							marginRight: 19 * alpha,
-							marginTop: 7 * alpha,
-							flexDirection: "row",
-							alignItems: "flex-start",
-						}}>
-						<Text
-							style={styles.distance1kmText}>Distance {shop ? shop.distance : "0"}m</Text>
-						<View
-							style={{
-								flex: 1,
-							}}/>
-						<View
-							style={styles.moreView}>
-							<TouchableOpacity
-								onPress={this.onMorePressed}
-								style={styles.moreButton}>
-								<Text
-									style={styles.moreButtonText}>More</Text>
-							</TouchableOpacity>
-							<Image
-								source={require("./../../assets/images/bitmap-14.png")}
-								style={styles.bitmapImage}/>
-						</View>
-					</View> */}
-					
-				</View>
-				
-				{this.state.loading ? <View style={[styles.loadingIndicator]}><ActivityIndicator size="large" /></View>
+				{this.state.loading ? <View style={[styles.loadingIndicator]}><ActivityIndicator animating={false} size="large" /></View>
 					:
 					<View
 						style={styles.productsectionView}
@@ -1487,7 +1411,8 @@ const styles = StyleSheet.create({
 		height: 4 * alpha,
 	},
 	productsectionView: {
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(255, 255, 255, 1)",
+		// backgroundColor: "red",
 		// position: "",
 		height: windowHeight - 100*alpha,
 	},
@@ -1502,7 +1427,7 @@ const styles = StyleSheet.create({
 	},
 	categorylistBannerViewWrapper: {
 		width: windowWidth,
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(255, 255, 255, 1)",
 		height: 100*alpha,
 		marginBottom:10*alpha,		
 	},
@@ -1530,7 +1455,7 @@ const styles = StyleSheet.create({
 		height:windowHeight * alpha,
 	},
 	totalAmountView: {
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(0,0,0,0)",
 		width: 280 * alpha,
 		height: 61 * alpha,
 	},
@@ -1550,7 +1475,7 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 	},
 	shopppingCartButton: {
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(0,0,0,0)",
 		borderRadius: 22.5,
 		flexDirection: "row",
 		alignItems: "center",
@@ -1586,23 +1511,23 @@ const styles = StyleSheet.create({
 	},
 	shoppingCartText: {
 		color: "rgb(57, 57, 57)",
-		fontFamily: NON_TITLE_FONT,
+		fontFamily: "SFProText-Medium",
 		fontSize: 12 * alpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
 		textAlign: "center",
 		marginLeft: 10 * alpha,
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(255, 255, 255, 1)",
 		alignSelf: "center",
 	},
 	totalpriceText: {
 		color: "rgb(57, 57, 57)",
-		fontFamily: NON_TITLE_FONT,
+		fontFamily: "SFProText-Medium",
 		fontSize: 18 * alpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
 		textAlign: "left",
-		backgroundColor: "transparent",
+		backgroundColor: "rgb(231, 230, 230)",
 		marginTop: 20 * alpha,
 	},
 	badgeView: {
@@ -1620,12 +1545,12 @@ const styles = StyleSheet.create({
 	},
 	numberofitemText: {
 		color: "rgb(255, 251, 251)",
-		fontFamily: NON_TITLE_FONT,
+		fontFamily: "SFProText-Medium",
 		fontSize: 12 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
 		textAlign: "center",
-		backgroundColor: "transparent",
+		backgroundColor: "rgb(0, 178, 227)",
 		marginLeft: 6 * alpha,
 		marginRight: 6 * alpha,
 	},
@@ -1643,7 +1568,7 @@ const styles = StyleSheet.create({
 	},
 	checkoutButtonText: {
 		color: "white",
-		fontFamily: NON_TITLE_FONT,
+		fontFamily: "SFProText-Medium",
 		fontSize: 14 * fontAlpha,
 		fontStyle: "normal",
 		fontWeight: "bold",
@@ -1786,13 +1711,13 @@ const styles = StyleSheet.create({
 		textAlign: "left",
 	},
 	contentScrollView: {
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(255, 255, 255, 1)",
 		flex: 1,
 		marginTop: 5 * alpha,
 		maxHeight:250 * alpha,
 	},
 	productView: {
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(255, 255, 255, 1)",
 		width: "100%",
 		flex: 1,
 		marginLeft: 19 * alpha,
@@ -1805,7 +1730,7 @@ const styles = StyleSheet.create({
 		fontStyle: "normal",
 		fontWeight: "normal",
 		textAlign: "left",
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(255, 255, 255, 1)",
 		marginRight: 28 * alpha,
 	},
 	descriptionHeaderText: {
@@ -1815,7 +1740,7 @@ const styles = StyleSheet.create({
 		fontStyle: "normal",
 		fontWeight: "normal",
 		textAlign: "left",
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(255, 255, 255, 1)",
 		marginRight: 28 * alpha,
 		marginTop: 10 * alpha,
 	},
@@ -1826,7 +1751,7 @@ const styles = StyleSheet.create({
 		fontStyle: "normal",
 		fontWeight: "normal",
 		textAlign: "left",
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(255, 255, 255, 1)",
 		marginRight: 28 * alpha,
 		marginTop: 5 * alpha,
 		marginBottom: 5 * alpha
@@ -1839,7 +1764,7 @@ const styles = StyleSheet.create({
 		marginTop: 3 * alpha,
 	},
 	ingredientText: {
-		backgroundColor: "transparent",
+		backgroundColor: "rgb(245, 245, 245)",
 		color: "rgb(167, 167, 167)",
 		fontFamily: TITLE_FONT,
 		fontSize: 9 * fontAlpha,
@@ -1868,7 +1793,7 @@ const styles = StyleSheet.create({
 		marginRight: 5 * alpha,
 	},
 	optionsTwoView: {
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(255, 255, 255, 1)",
 		marginTop: 5 * alpha,
 		alignItems: "flex-start",
 		borderRadius:7.0,
@@ -1881,11 +1806,11 @@ const styles = StyleSheet.create({
 		fontStyle: "normal",
 		fontWeight: "normal",
 		textAlign: "left",
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(255, 255, 255, 1)",
 		marginLeft: 20 * alpha,
 	},
 	optionchoiceView: {
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(255, 255, 255, 1)",
 		flexWrap: 'wrap',
 		marginLeft: 20 * alpha,
 		marginRight: 20 * alpha,
@@ -2079,7 +2004,7 @@ const styles = StyleSheet.create({
 		textAlign: "center",
 	},
 	bottomView: {
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(255, 255, 255, 1)",
 		height: 113 * alpha,
 		justifyContent: "flex-end",
 	},
@@ -2090,14 +2015,14 @@ const styles = StyleSheet.create({
 		marginBottom: 12 * alpha,
 	},
 	summaryView: {
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(255, 255, 255, 1)",
 		height: 37 * alpha,
 		marginLeft: 20 * alpha,
 		marginRight: 20 * alpha,
 		marginBottom: 12 * alpha,
 	},
 	priceText: {
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(255, 255, 255, 1)",
 		color: "rgb(0, 178, 227)",
 		fontFamily: TITLE_FONT,
 		fontSize: 18 * fontAlpha,
@@ -2107,12 +2032,12 @@ const styles = StyleSheet.create({
 		alignSelf: "flex-start",
 	},
 	controlView: {
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(255, 255, 255, 1)",
 		width: 74 * alpha,
 		height: 23 * alpha,
 	},
 	quantityText: {
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(255, 255, 255, 1)",
 		color: "rgb(85, 83, 81)",
 		fontFamily: TITLE_FONT,
 		fontSize: 16 * fontAlpha,
@@ -2121,7 +2046,7 @@ const styles = StyleSheet.create({
 		textAlign: "left",
 	},
 	removeButton: {
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(255, 255, 255, 1)",
 		flexDirection: "row",
 		alignItems: "center",
 		justifyContent: "center",
@@ -2140,7 +2065,7 @@ const styles = StyleSheet.create({
 		textAlign: "left",
 	},
 	addButton: {
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(255, 255, 255, 1)",
 		flexDirection: "row",
 		alignItems: "center",
 		justifyContent: "center",
@@ -2160,7 +2085,7 @@ const styles = StyleSheet.create({
 		resizeMode: "contain",
 	},
 	optionsText: {
-		backgroundColor: "transparent",
+		backgroundColor: "rgba(255, 255, 255, 1)",
 		color: "rgb(141, 141, 141)",
 		fontFamily: "Helvetica-LightOblique",
 		fontSize: 8 * fontAlpha,

@@ -55,7 +55,7 @@ export default class ProductCell extends React.Component {
     return (
       <TouchableWithoutFeedback onPress={this.onProductCellPress}>
         <View navigation={this.props.navigation} style={styles.productcell}>
-          <Image
+          {/* <Image
             source={require("../../assets/images/background.png")}
             style={{
               overflow: "hidden",
@@ -66,7 +66,7 @@ export default class ProductCell extends React.Component {
               width: "100%",
               height: "100%"
             }}
-          />
+          /> */}
 
           <View
             pointerEvents="box-none"
@@ -99,15 +99,15 @@ export default class ProductCell extends React.Component {
             )}
           </View>
 
-          <View style={styles.lineText}>
+          {/* <View style={styles.lineText}>
             <View style={styles.row}>
               <View style={styles.wrap}>
                 <View style={styles.wrapColumn}>
-                  <Text style={styles.titleText}>{this.props.productname}</Text>
+                  <Text adjustsFontSizeToFit numberOfLines={3} style={styles.titleText}>{this.props.productname}</Text>
                 </View>
                 <View style={styles.wrapColumn2}>
                   <Text style={styles.titleText2}>
-                    {this.props.item.menu_remarks}
+                    {this.props.productstatus}
                   </Text>
                 </View>
               </View>
@@ -117,9 +117,11 @@ export default class ProductCell extends React.Component {
                 </Text>
               </View>
             </View>
-          </View>          
+          </View>           */}
+
+
           <View style={styles.detailsView}>
-            <View
+            <View 
               pointerEvents="box-none"
               style={{
                 position: "absolute",
@@ -136,10 +138,16 @@ export default class ProductCell extends React.Component {
               />
             {/* <View style={{width:"100%",height:20*alpha,backgroundColor:'red'}}></View> */}
             </View>
-      
           </View>
-          
-          <View style={styles.lineText}></View>          
+          <View style={styles.productDetail}>
+            <Text adjustsFontSizeToFit numberOfLines={3} style={styles.titleText}>{this.props.productname}</Text>
+            <Text style={styles.priceText}>
+              ${parseFloat(this.props.productprice).toFixed(2)}
+            </Text>
+          </View>
+          {/* <View style={styles.titlecenter}>
+            
+          </View> */}
           
         </View>
         
@@ -149,6 +157,11 @@ export default class ProductCell extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  productDetail: {
+    width: "70%",
+    marginLeft: 22 * alpha,
+    marginTop: 70 * alpha
+  },
   row: {
     flex: 1,
     flexDirection: "row",
@@ -182,11 +195,6 @@ const styles = StyleSheet.create({
     // backgroundColor: "purple",
     height: 100 * alpha
   },
-  productText: {
-    backgroundColor: "transparent",
-    width: "50%",
-    marginLeft: 2 * alpha
-  },
   lineText: {
     backgroundColor: "black",
     width: "70%",
@@ -194,19 +202,28 @@ const styles = StyleSheet.create({
     marginLeft: 10 * alpha
   },
   productcell: {
-    backgroundColor: "transparent",
-    width: "50%",
+    backgroundColor: "rgba(255, 255, 255, 1)",
+    // backgroundColor: "yellow",
+    width: "45%",
     height: 200 * alpha,
     flexDirection: "column",
-    alignItems: "flex-start"
+    alignItems: "flex-start",
+    marginLeft: 10 * alpha,
+    marginBottom:10 * alpha
   },
   productimageImage: {
+<<<<<<< HEAD
     backgroundColor: "transparent",
     resizeMethod:'scale',
+=======
+    backgroundColor: "rgba(0,0,0,0)",
+    // backgroundColor:"red",
+    resizeMode: "cover",
+>>>>>>> b561b7d6b3aa773bc77bd1bcffe645b2101867a5
     width: 80 * alpha,
-    height: 100 * alpha,
-    marginLeft: 60 * alpha,
-    marginTop: 180 * alpha
+    height: 110 * alpha,
+    marginLeft: 30 * alpha,
+    marginTop: 70 * alpha
   },
   soldView: {
     backgroundColor: "rgba(0, 0, 0, 0.7)",
@@ -219,7 +236,7 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   soldtextText: {
-    backgroundColor: "transparent",
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
     color: "white",
     fontFamily: TITLE_FONT,
     fontSize: 13 * fontAlpha,
@@ -228,30 +245,26 @@ const styles = StyleSheet.create({
     textAlign: "center"
   },
   detailsView: {
-    backgroundColor: "transparent",
+    backgroundColor: "rgba(0,0,0,0)",
     width: "60%",
     height: 46 * alpha,
-    alignItems: "flex-start"
+    alignItems: "center"
   },
   titleText: {
+    color: "rgb(54, 54, 54)",
+    fontFamily: TITLE_FONT,
+    fontSize: 10 * fontAlpha,
+    textAlign: "center",
+    backgroundColor: "rgba(255, 255, 255, 1)"
+  },
+  titleText2: {
     color: "rgb(54, 54, 54)",
     fontFamily: TITLE_FONT,
     fontSize: 8 * fontAlpha,
     fontStyle: "normal",
     fontWeight: "normal",
     textAlign: "left",
-    backgroundColor: "transparent",
-    marginLeft: 1 * alpha,
-    fontStyle: "italic"
-  },
-  titleText2: {
-    color: "rgb(54, 54, 54)",
-    fontFamily: TITLE_FONT,
-    fontSize: 7.5 * fontAlpha,
-    fontStyle: "normal",
-    fontWeight: "normal",
-    textAlign: "left",
-    backgroundColor: "transparent",
+    backgroundColor: "rgba(255, 255, 255, 1)",
     marginLeft: 1 * alpha
   },
   descriptionText: {
@@ -268,15 +281,13 @@ const styles = StyleSheet.create({
     marginTop: 5 * alpha
   },
   priceText: {
-    backgroundColor: "transparent",
+    backgroundColor: "rgba(255, 255, 255, 1)",
     color: "rgb(54, 54, 54)",
-    fontFamily: NON_TITLE_FONT,
-    fontSize: 8 * fontAlpha,
-    fontStyle: "normal",
+    fontFamily: TITLE_FONT,
+    fontSize: 12 * fontAlpha,
     fontWeight: "bold",
-    textAlign: "left",
-    width: "70%",
-    fontFamily: "SFProText-MediumItalic"
+    textAlign: "center",
+    marginTop: 3 * alpha
   },
   addButton: {
     backgroundColor: "transparent",

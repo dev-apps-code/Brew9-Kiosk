@@ -43,15 +43,30 @@ export default class CategoryCell extends React.Component {
                 : styles.categorycell
             }
           >
-        
+            {this.props.selected ? <View style={styles.selectbarView} /> : null}
+            <View style={{ flex: 1, padding: 7 * alpha }}>
+            {/* <Text style={styles.textWrapper}> */}
+            {categoryImage && (
+              <Image
+                style={styles.categoryIconImage}
+                source={{ uri: categoryImage }}
+              />
+            )}
             <Text
-              numberOfLines={3}
               style={
-                this.props.selected ? styles.labelText_selected : styles.labelText
+                this.props.selected && categoryImage
+                  ? styles.labelImageText_selected
+                  : !this.props.selected && categoryImage
+                  ? styles.labelImageText
+                  : this.props.selected
+                  ? styles.labelText_selected
+                  : styles.labelText
               }
             >
               {categoryname}
             </Text>
+            {/* </Text> */}
+            </View>
           </View>
 
         </View>
@@ -64,9 +79,19 @@ export default class CategoryCell extends React.Component {
 const styles = StyleSheet.create({
   categorycell: {
     backgroundColor: "transparent",
+    width: "100%",
+    // height: 54 * alpha,
     flex: 1,
-    marginTop:10*alpha,
-    marginBottom:10*alpha,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  categorycell_selected: {
+    backgroundColor: "white",
+    width: "100%",
+    flex: 1,
+    // height: 54 * alpha,
+    flexDirection: "row",
     alignItems: "center",
     justifyContent: "center"
   },
@@ -83,40 +108,38 @@ const styles = StyleSheet.create({
   },
   selectbarView: {
     backgroundColor: "rgb(0, 178, 227)",
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    width: "100%",
-    height: 1 * alpha
+    width: 3 * alpha,
+    height: "100%"
   },
   labelText: {
     backgroundColor: "transparent",
-    color: "rgb(78, 77, 77)",
+    color: "rgb(135, 135, 135)",
     fontFamily: TITLE_FONT,
-    fontSize: 8 * fontAlpha,
+    fontSize: 12 * fontAlpha,
     fontStyle: "normal",
     fontWeight: "normal",
-    textAlign: "center",
-    marginLeft: 10 * alpha,
-    marginRight: 10 * alpha,
+    textAlign: "left",
+    width: "100%",
+    flex: 1,
+    marginRight: 7 * alpha,
+    flexWrap: "wrap"
   },
-
   labelText_selected: {
     backgroundColor: "transparent",
-    color: "rgb(0, 178, 227)",
+    color: "rgb(54, 54, 54)",
     fontFamily: TITLE_FONT,
-    fontSize: 8 * fontAlpha,
+    fontSize: 12 * fontAlpha,
     fontStyle: "normal",
     fontWeight: "normal",
-    textAlign: "center",
-    marginLeft: 10 * alpha,
-    marginRight: 10 * alpha,
-  },  
-  imageImage: {
+    textAlign: "left",
+    flex: 1,
+    marginRight: 7 * alpha,
+    flexWrap: "wrap"
+  },
+  categoryIconImage: {
     resizeMode: "center",
     backgroundColor: "transparent",
-    width: 20 * alpha,
-    height: 20 * alpha,
-    marginLeft: 7 * alpha
+    width: 18 * alpha,
+    height: 18 * alpha
   }
 });
