@@ -8,7 +8,7 @@
 
 import React from "react"
 import { TouchableWithoutFeedback, Image, View, StyleSheet } from "react-native"
-import { alpha, fontAlpha } from "../Common/size";
+import { alpha, fontAlpha ,windowWidth} from "../Common/size";
 
 export default class BannerCell extends React.Component {
 
@@ -32,8 +32,8 @@ export default class BannerCell extends React.Component {
                 navigation={this.props.navigation}
                 style={styles.bannercell}>
                 <Image
-                source={require("./../../assets/images/brew-bgd_logo2.jpg")}
-                    style={styles.bannerImage}/>
+                source={{uri: this.props.bannerImage}}
+                    style={styles.bannerImage}/> 
             </View>
         </TouchableWithoutFeedback>
     }
@@ -41,16 +41,16 @@ export default class BannerCell extends React.Component {
 
 const styles = StyleSheet.create({
     bannercell: {
-        backgroundColor: "rgba(255, 255, 255, 1)",
+        backgroundColor: "red",
         
-        // height: 150 * alpha,
+         height: 140 * alpha,
         flex: 1,
+        width: windowWidth ,
     },
     bannerImage: {
         backgroundColor: "rgb(0, 178, 227)",
-        resizeMode: "contain",
-        height: 120 * alpha,
-        marginBottom: 10 * alpha,
-        width: 365 * alpha,
+        resizeMode: "center",
+        height: 140 * alpha,
+        width: windowWidth ,
     },
 })

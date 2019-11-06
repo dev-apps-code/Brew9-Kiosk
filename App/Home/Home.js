@@ -392,7 +392,7 @@ export default class Home extends React.Component {
 	}
 
 	renderProductlistFlatListCell = ({ item, index }) => {
-		console.log(`item.image.url ${item.image.url} ${item.name}`)
+
 		if (item) {
 			if (item.clazz == "product") {
 				return <ProductCell
@@ -408,17 +408,18 @@ export default class Home extends React.Component {
 					productsummary={item.summary}
 					productvariant={item.variants}
 					productenable={item.enabled}
+					productstatus={item.status}
 					producttotalquantity={item.total_quantity}
 					onChangeQuantity={this.onChangeQuantityPress}
 					onCellPress={this.onCellPress}
 				/>
-			} else if (item.clazz == "menu_banner") {
+			} else if (item.clazz == "menu_banner_kiosk") {
 				return <BannerCell
 					index={index}
 					item={item}
 					navigation={this.props.navigation}
-					bannerImage={item.image}
-					detailImage={item.banner_detail_image}
+					bannerImage={item.menu_image}
+					detailImage={item.menu_banner_kiosk}
 					onPressItem={this.onBannerPressed}
 				/>
 			}

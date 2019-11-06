@@ -55,21 +55,25 @@ export default class ProductCell extends React.Component {
     return (
       <TouchableWithoutFeedback onPress={this.onProductCellPress}>
         <View navigation={this.props.navigation} style={styles.productcell}>
-
-
         
               <Image
                 source={{ uri: this.props.productimage }}
                 style={styles.productimageImage}
               />
-
-
+            
+          
           <View style={styles.productDetail}>
             <Text adjustsFontSizeToFit numberOfLines={3} style={styles.titleText}>{this.props.productname}</Text>
             <Text style={styles.priceText}>
               ${parseFloat(this.props.productprice).toFixed(2)}
             </Text>
         </View>
+        {this.props.productstatus != null && this.props.productstatus.length > 0 ? 
+                  <View style={styles.soldView}>
+                    <Text style={styles.soldtextText}>{this.props.productstatus}</Text>
+                  </View>
+                : null }
+
         </View>
       </TouchableWithoutFeedback>
     );
@@ -111,20 +115,21 @@ backgroundColor:"white",
     marginBottom: 5 * alpha,
   },
   soldView: {
-    backgroundColor: "rgba(0, 0, 0, 0.7)",
     position: "absolute",
-    left: 5,
+    alignSelf: "center",
     width: 74 * alpha,
-    top: 62 * alpha,
+    bottom: 30 * alpha,
     height: 22 * alpha,
     justifyContent: "center",
     alignItems: "center"
   },
   soldtextText: {
-    backgroundColor: "rgba(0, 0, 0, 0.7)",
+    backgroundColor: "rgb(0, 178, 227)",
     color: "white",
+    paddingLeft: 5*alpha,
+    paddingRight: 5*alpha,
     fontFamily: TITLE_FONT,
-    fontSize: 13 * fontAlpha,
+    fontSize: 8 * fontAlpha,
     fontStyle: "normal",
     fontWeight: "normal",
     textAlign: "center"
@@ -135,17 +140,7 @@ backgroundColor:"white",
     fontSize: 10 * fontAlpha,
     textAlign: "center",
     backgroundColor: "rgba(255, 255, 255, 1)"
-  },
-  titleText2: {
-    color: "rgb(54, 54, 54)",
-    fontFamily: TITLE_FONT,
-    fontSize: 8 * fontAlpha,
-    fontStyle: "normal",
-    fontWeight: "normal",
-    textAlign: "left",
-    backgroundColor: "rgba(255, 255, 255, 1)",
-    marginLeft: 1 * alpha
-  },
+  },  
   descriptionText: {
     backgroundColor: "transparent",
     opacity: 0.39,
@@ -168,76 +163,7 @@ backgroundColor:"white",
     textAlign: "center",
     marginTop: 3 * alpha
   },
-  addButton: {
-    backgroundColor: "transparent",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 0,
-    position: "absolute",
-    right: 7 * alpha,
-    width: 20 * alpha,
-    bottom: 1 * alpha,
-    height: 20 * alpha
-  },
-  addButtonText: {
-    color: "black",
-    fontFamily: ".SFNSText",
-    fontSize: 12 * fontAlpha,
-    fontStyle: "normal",
-    fontWeight: "normal",
-    textAlign: "left"
-  },
-  addButtonImage: {
-    resizeMode: "contain"
-  },
-  selectoptionView: {
-    backgroundColor: "transparent",
-    position: "absolute",
-    right: 0 * alpha,
-    width: 61 * alpha,
-    bottom: 0 * alpha,
-    height: 28 * alpha
-  },
-  optionButton: {
-    backgroundColor: "rgb(0, 178, 227)",
-    borderRadius: 10 * alpha,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 0,
-    position: "absolute",
-    right: 6 * alpha,
-    width: 55 * alpha,
-    bottom: 0 * alpha,
-    height: 20 * alpha
-  },
-  optionButtonText: {
-    color: "white",
-    fontFamily: TITLE_FONT,
-    fontSize: 12 * fontAlpha,
-    fontStyle: "normal",
-    fontWeight: "normal",
-    textAlign: "left"
-  },
-  optionButtonImage: {
-    resizeMode: "contain",
-    marginRight: 10 * alpha
-  },
-  badgeView: {
-    backgroundColor: "rgb(0, 178, 227)",
-    borderRadius: 7 * alpha,
-    borderWidth: 1 * alpha,
-    borderColor: "white",
-    borderStyle: "solid",
-    position: "absolute",
-    right: 0 * alpha,
-    width: 14 * alpha,
-    bottom: 13 * alpha,
-    height: 15 * alpha,
-    justifyContent: "center",
-    alignItems: "center"
-  },
+ 
   numberofitemText: {
     color: "rgb(255, 251, 251)",
     fontFamily: NON_TITLE_FONT,
