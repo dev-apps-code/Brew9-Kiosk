@@ -46,21 +46,15 @@ export default class CategoryCell extends React.Component {
             {this.props.selected ? <View style={styles.selectbarView} /> : null}
             <View style={{ flex: 1, padding: 7 * alpha }}>
             {/* <Text style={styles.textWrapper}> */}
-            {categoryImage && (
+            {/* {categoryImage && (
               <Image
                 style={styles.categoryIconImage}
                 source={{ uri: categoryImage }}
               />
-            )}
+            )} */}
             <Text
               style={
-                this.props.selected && categoryImage
-                  ? styles.labelImageText_selected
-                  : !this.props.selected && categoryImage
-                  ? styles.labelImageText
-                  : this.props.selected
-                  ? styles.labelText_selected
-                  : styles.labelText
+                styles.labelText
               }
             >
               {categoryname}
@@ -104,7 +98,7 @@ const styles = StyleSheet.create({
     right:0,
     top:0,
     height:"100%",
-    width:1,
+    width:0,
   },
   selectbarView: {
     backgroundColor: "rgb(0, 178, 227)",
@@ -115,7 +109,7 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     color: "rgb(135, 135, 135)",
     fontFamily: TITLE_FONT,
-    fontSize: 12 * fontAlpha,
+    fontSize: 9 * fontAlpha,
     fontStyle: "normal",
     fontWeight: "normal",
     textAlign: "left",
@@ -128,7 +122,7 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     color: "rgb(54, 54, 54)",
     fontFamily: TITLE_FONT,
-    fontSize: 12 * fontAlpha,
+    fontSize: 10 * fontAlpha,
     fontStyle: "normal",
     fontWeight: "normal",
     textAlign: "left",

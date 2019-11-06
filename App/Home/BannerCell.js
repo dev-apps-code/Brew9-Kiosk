@@ -22,7 +22,7 @@ export default class BannerCell extends React.Component {
 
     onBannerCellPress = () => {
         
-        this.props.onPressItem(this.props.item,this.props.index)
+        // this.props.onPressItem(this.props.item,this.props.index)
     }
 
     render() {
@@ -32,7 +32,7 @@ export default class BannerCell extends React.Component {
                 navigation={this.props.navigation}
                 style={styles.bannercell}>
                 <Image
-                    source={{uri: this.props.bannerImage}}
+                source={require("./../../assets/images/brew-bgd_logo2.jpg")}
                     style={styles.bannerImage}/>
             </View>
         </TouchableWithoutFeedback>
@@ -42,17 +42,14 @@ export default class BannerCell extends React.Component {
 const styles = StyleSheet.create({
     bannercell: {
         backgroundColor: "rgba(255, 255, 255, 1)",
-        width: "100%",
-        height: 150 * alpha,
+        
+        // height: 150 * alpha,
         flex: 1,
     },
     bannerImage: {
-        backgroundColor: "rgba(255, 255, 255, 1)",
-        resizeMode: "cover",
-        height: 150 * alpha,
-        marginLeft: 5 * alpha,
-        marginRight: 5 * alpha,
-        marginTop: 5 * alpha,
+        backgroundColor: "rgb(0, 178, 227)",
+        resizeMode: "contain",
+        height: 120 * alpha,
         marginBottom: 10 * alpha,
         width: 365 * alpha,
     },

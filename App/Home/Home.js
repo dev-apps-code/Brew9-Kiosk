@@ -95,13 +95,13 @@ export default class Home extends React.Component {
 			cart: [],
 			cart_total: 0,
 			cart_total_quantity: 0,
-			product_category:[],
-			products:[],
+
 			loading: true,
 			isRefreshing: false,
 			selected_category: 0,
 			profile: [],
 			menu_banners: [],
+			products:[],
 			product_view_height: 0 * alpha,
 			modalVisible: false,
 			selected_index: null,
@@ -213,31 +213,24 @@ export default class Home extends React.Component {
 	loadStoreProducts() {
 
 		const { dispatch, company_id } = this.props
-		const { menu_banners } =  this.state
+		const { selected_category } =  this.state
 
 		const callback = eventObject => {
 			if (eventObject.success) {
+
+				let data = [...eventObject.result]
+
+				for(var index in data) {
+					data[index].selected = index == selected_category ? true : false				
+				}
+
 				this.setState({
-					data: eventObject.result,
+					data: data,
 					total: eventObject.total,
-					page: this.state.page + 1,
+					products: eventObject.result[0].products,
 				},function () {
-					let data = [...this.state.data]
-					var items = []
-					var index_length = 0
-					for(var index in data) {
-						data[index].selected = index == 0 ? true : false
-						data[index].scroll_index = parseInt(index_length/2)
-						items = items.concat(data[index].products)						
-						index_length = index_length + data[index].products.length
-					}
-					this.setState({
-						// products: this.state.menu_banners.concat(items),
-						products: items,
-						data: data
-					}, function () {
-						
-					})
+					
+
 				}.bind(this))
 			}
 			this.setState({
@@ -261,7 +254,6 @@ export default class Home extends React.Component {
 		this.setState({
 			isRefreshing: true,
 			data: [],
-			products: [],
 		})
 		this.loadShops(true)
 	}
@@ -300,34 +292,16 @@ export default class Home extends React.Component {
 	}
 
 	onSelectCategory = (scroll_index, selected_index) => {
-		// console.log("Scroll Index", scroll_index)
-		this.flatListRef.scrollToIndex({animated: true, index: scroll_index})
-	}
-
-	reachProductIndex = ( viewableItems, changed ) => {
-
-		let viewable = viewableItems.viewableItems
 		let data = [...this.state.data]
 
-		var first_index = parseInt(viewable[0].index/2)
-		var last_index =  Math.floor(viewable[(viewable.length)-1].index/2)
-
-		console.log("first index",first_index)
-		console.log("last index",last_index)
-
 		for (var index in data) {
-			data[index].selected = false
+			data[index].selected = selected_index == index
 		}
-
-		for (var index in data) {
-			if ( data[index].scroll_index >= first_index && data[index].scroll_index <= last_index ) {
-				data[index].selected = true
-				break
-			}
-		}
-		this.setState( { data })
-
+		this.setState( { data, selected_category: selected_index,products: this.state.data[selected_index].products })
+	
 	}
+
+
 	onMorePressed = () => {
 
 		let toggle = this.state.isToggleLocation
@@ -395,7 +369,6 @@ export default class Home extends React.Component {
 			navigation={this.props.navigation}
 			id={item.id}
 			name={item.name}
-			index={index}
 			item={item}
 			quantity={item.quantity}
 			variations={item.selected_variants}
@@ -406,6 +379,7 @@ export default class Home extends React.Component {
 	}
 
 	renderCategorylistFlatListCell = ({ item, index }) => {
+		
 		return <CategoryCell
 			navigation={this.props.navigation}
 			categoryname={item.name}
@@ -669,30 +643,6 @@ export default class Home extends React.Component {
 		})
 	}
 
-	get_product(index) {
-
-		if (index) {
-			let product = this.state.products[index]
-			if (product.quantity == null) product.quantity = 1
-			if (product.calculated_price == null) product.calculated_price = product.price
-			if (product.selected_quantity == null) product.selected_quantity = 1
-			if (product.total_quantity == null) product.total_quantity = 0
-			if (product.variants) {
-				if (product.selected_variants == null) {
-					var selected = []
-					for (var index in product.variants) {
-						var variant = product.variants[index]
-						var value = variant.required ? variant.variant_values[0] : null
-						selected.push(value)
-					}
-					product.selected_variants = selected
-				}
-			}
-			return product
-		}
-		return null
-
-	}
 
 	onVariantPressed = (selected_product, selected_variants, key, selected_value, required) => {
 
@@ -937,11 +887,9 @@ export default class Home extends React.Component {
 
 	render() {
 
-		let selected_product = this.get_product(this.state.selected_index)
-		let {shop,cart,delivery} = this.state
 
-		let show_promo = false
-		
+		let {shop,cart,delivery, data} = this.state
+	
 		return <View style={styles.page1View}>	
 			<StatusBar hidden={true} backgroundColor="blue" barStyle="light-content" />
 				
@@ -960,7 +908,7 @@ export default class Home extends React.Component {
 								keyExtractor={(item, index) => index.toString()}
 								/>
 						</View>
-						<View style={{flexDirection:'row',marginTop:10*alpha}}>
+						<View style={{flexDirection:'row'}}>
 							
 						<View
 							style={styles.categorylistFlatListViewWrapper}>
@@ -985,7 +933,6 @@ export default class Home extends React.Component {
 								style={styles.productlistFlatList}
 								refreshing={this.state.isRefreshing}
 								onRefresh={this.onRefresh.bind(this)}
-								onViewableItemsChanged={this.reachProductIndex}
 								keyExtractor={(item, index) => index.toString()}/>
 							}
 						</View>
@@ -1082,13 +1029,7 @@ export default class Home extends React.Component {
 				{/* {this.renderAlertBar(shop)} */}
 				{this.renderBottomBar(cart,shop)}			
 			</View>
-			<Toast ref="toast"
-				position="center"/>
-				{ selected_product ? <Modal isVisible={this.state.modalVisible} onBackdropPress={() => this.dismissProduct()} hideModalContentWhileAnimating={true}>
-					{this.renderModalContent(selected_product)}
-				</Modal> : null }
-			
-			{this.renderGallery()}
+		
 		</View>
 	}
 
@@ -1412,9 +1353,7 @@ const styles = StyleSheet.create({
 	},
 	productsectionView: {
 		backgroundColor: "rgba(255, 255, 255, 1)",
-		// backgroundColor: "red",
-		// position: "",
-		height: windowHeight - 100*alpha,
+	
 	},
 	categorylistFlatList: {
 		backgroundColor: "transparent",
@@ -1428,16 +1367,21 @@ const styles = StyleSheet.create({
 	categorylistBannerViewWrapper: {
 		width: windowWidth,
 		backgroundColor: "rgba(255, 255, 255, 1)",
-		height: 100*alpha,
-		marginBottom:10*alpha,		
+		height: 120*alpha,
+		// marginBottom:10*alpha,	
+		backgroundColor: "white",	
 	},
 	categorylistFlatListViewWrapper: {
 		width: 70*alpha,
-		// height: windowHeight,
+		borderColor: "gray",
+		borderRightWidth:0.5,
+
+		height: windowHeight - 120*alpha,
 	},
 	productlistFlatList: {
 		backgroundColor: "white",
 		width: "100%",
+		height: windowHeight - 120*alpha,
 	},
 	productlistFlatListViewWrapper: {
 		flex:1,

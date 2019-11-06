@@ -15,7 +15,7 @@ import {
   TouchableOpacity
 } from "react-native";
 import React from "react";
-import { alpha, fontAlpha } from "../Common/size";
+import { alpha, fontAlpha ,windowWidth} from "../Common/size";
 import {TITLE_FONT, NON_TITLE_FONT} from "../Common/common_style";
 
 export default class ProductCell extends React.Component {
@@ -26,7 +26,7 @@ export default class ProductCell extends React.Component {
   componentDidMount() {}
 
   onProductCellPress = () => {
-    this.props.onCellPress(this.props.item, this.props.index);
+   // this.props.onCellPress(this.props.item, this.props.index);
   };
 
   onAddPressed = () => {
@@ -55,102 +55,22 @@ export default class ProductCell extends React.Component {
     return (
       <TouchableWithoutFeedback onPress={this.onProductCellPress}>
         <View navigation={this.props.navigation} style={styles.productcell}>
-          {/* <Image
-            source={require("../../assets/images/background.png")}
-            style={{
-              overflow: "hidden",
-              position: "absolute",
-              left: 0,
-              right: 0,
-              top: 0,
-              width: "100%",
-              height: "100%"
-            }}
-          /> */}
 
-          <View
-            pointerEvents="box-none"
-            style={{
-              width: 74 * alpha,
-              height: 15 * alpha,
-              marginLeft: 3 * alpha,
-              marginTop: 4 * alpha
-            }}
-          >
-            {/* <View
-              pointerEvents="box-none"
-              style={{
-                position: "absolute",
-                left: 0,
-                top: 0 * alpha,
-                bottom: 0 * alpha,
-                justifyContent: "center"
-              }}
-            >
+
+        
               <Image
                 source={{ uri: this.props.productimage }}
                 style={styles.productimageImage}
               />
-            </View> */}
-            {!this.props.productenable && (
-              <View style={styles.soldView}>
-                <Text style={styles.soldtextText}>Sold Out</Text>
-              </View>
-            )}
-          </View>
-
-          {/* <View style={styles.lineText}>
-            <View style={styles.row}>
-              <View style={styles.wrap}>
-                <View style={styles.wrapColumn}>
-                  <Text adjustsFontSizeToFit numberOfLines={3} style={styles.titleText}>{this.props.productname}</Text>
-                </View>
-                <View style={styles.wrapColumn2}>
-                  <Text style={styles.titleText2}>
-                    {this.props.productstatus}
-                  </Text>
-                </View>
-              </View>
-              <View style={styles.wrap2}>
-                <Text style={styles.priceText}>
-                  {parseFloat(this.props.productprice).toFixed(2)}
-                </Text>
-              </View>
-            </View>
-          </View>           */}
 
 
-          <View style={styles.detailsView}>
-            <View 
-              pointerEvents="box-none"
-              style={{
-                position: "absolute",
-                left: 0,
-                top: 0 * alpha,
-                bottom: 0 * alpha,
-                marginTop: 0 * alpha,
-                justifyContent: "center"
-              }}
-            >
-              <Image
-                source={{ uri: this.props.productimage }}
-                style={styles.productimageImage}
-              />
-            {/* <View style={{width:"100%",height:20*alpha,backgroundColor:'red'}}></View> */}
-            </View>
-          </View>
           <View style={styles.productDetail}>
             <Text adjustsFontSizeToFit numberOfLines={3} style={styles.titleText}>{this.props.productname}</Text>
             <Text style={styles.priceText}>
               ${parseFloat(this.props.productprice).toFixed(2)}
             </Text>
-          </View>
-          {/* <View style={styles.titlecenter}>
-            
-          </View> */}
-          
         </View>
-        
+        </View>
       </TouchableWithoutFeedback>
     );
   }
@@ -158,67 +78,37 @@ export default class ProductCell extends React.Component {
 
 const styles = StyleSheet.create({
   productDetail: {
-    width: "70%",
-    marginLeft: 22 * alpha,
-    marginTop: 70 * alpha
+backgroundColor:"white",
   },
   row: {
     flex: 1,
     flexDirection: "row",
     width: "100%",
     marginLeft: 2 * alpha
-  },
-  wrap: {
-    flex: 4,
-    width: "30%",
-    height: 50 * alpha
-    // backgroundColor: "red"
-  },
-  wrap2: {
-    flex: 2,
-    alignItems: "flex-end",
-    justifyContent: "center",
-    // backgroundColor: "green",
-    height: 50 * alpha
-  },
-  wrapColumn: {
-    flex: 1,
-    flexDirection: "column",
-    justifyContent: "flex-end",
-    // backgroundColor: "yellow",
-    height: 100 * alpha
-  },
-  wrapColumn2: {
-    flex: 1,
-    flexDirection: "column",
-    // justifyContent: "center",
-    // backgroundColor: "purple",
-    height: 100 * alpha
-  },
+  }, 
   lineText: {
     backgroundColor: "black",
     width: "70%",
     height: 1 * alpha,
-    marginLeft: 10 * alpha
   },
   productcell: {
     backgroundColor: "rgba(255, 255, 255, 1)",
     // backgroundColor: "yellow",
-    width: "45%",
-    height: 200 * alpha,
+    width: (windowWidth-90)/2 - 20 *alpha,
+    height: 160 * alpha,
     flexDirection: "column",
-    alignItems: "flex-start",
-    marginLeft: 10 * alpha,
-    marginBottom:10 * alpha
+    alignItems: "center",
+    marginLeft:1*alpha,
+    marginTop: 10 * alpha,
+    marginBottom: 5 * alpha
   },
-  productimageImage: {
-    backgroundColor: "rgba(0,0,0,0)",
-    // backgroundColor:"red",
+  productimageImage: {    
     resizeMode: "cover",
-    width: 80 * alpha,
-    height: 110 * alpha,
-    marginLeft: 30 * alpha,
-    marginTop: 70 * alpha
+    backgroundColor: "white",
+    width: 130 * alpha,
+    height: 130 * alpha,
+    marginLeft: 0 * alpha,
+    marginBottom: 5 * alpha,
   },
   soldView: {
     backgroundColor: "rgba(0, 0, 0, 0.7)",
@@ -238,12 +128,6 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     fontWeight: "normal",
     textAlign: "center"
-  },
-  detailsView: {
-    backgroundColor: "rgba(0,0,0,0)",
-    width: "60%",
-    height: 46 * alpha,
-    alignItems: "center"
   },
   titleText: {
     color: "rgb(54, 54, 54)",
@@ -277,7 +161,7 @@ const styles = StyleSheet.create({
   },
   priceText: {
     backgroundColor: "rgba(255, 255, 255, 1)",
-    color: "rgb(54, 54, 54)",
+    color: "rgb(0, 178, 227)",
     fontFamily: TITLE_FONT,
     fontSize: 12 * fontAlpha,
     fontWeight: "bold",
