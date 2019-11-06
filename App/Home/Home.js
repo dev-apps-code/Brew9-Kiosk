@@ -154,7 +154,7 @@ export default class Home extends React.Component {
 		this.loadShops(true)
 		this.interval = setInterval(() => {
 			this.loadShops(true)
-		}, 30000);
+		}, 300000);
 		// this.loadStorePushToken()
 	}
 
