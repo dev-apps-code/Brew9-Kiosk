@@ -1,9 +1,9 @@
 {
-  "expoServerPort": null,
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
-  "devToolsPort": 19002
+  "expoServerPort": 19000,
+  "packagerPort": 19004,
+  "packagerPid": 56463,
+  "expoServerNgrokUrl": "https://wi-86e.tonyvoon.brew9-menu-app.exp.direct",
+  "packagerNgrokUrl": "https://packager.wi-86e.tonyvoon.brew9-menu-app.exp.direct",
+  "ngrokPid": 56480,
+  "devToolsPort": 19006
 }
