@@ -233,10 +233,10 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-brew9-menu/Pods-brew9-menu-resources.sh",
-				"${PODS_ROOT}/Amplitude-iOS/Amplitude/api.amplitude.com.der",
-				"${PODS_ROOT}/Amplitude-iOS/Amplitude/ComodoCaLimitedRsaCertificationAuthority.der",
-				"${PODS_ROOT}/Amplitude-iOS/Amplitude/ComodoRsaCA.der",
-				"${PODS_ROOT}/Amplitude-iOS/Amplitude/ComodoRsaDomainValidationCA.der",
+				"${PODS_ROOT}/Amplitude-iOS/Sources/Amplitude/api.amplitude.com.der",
+				"${PODS_ROOT}/Amplitude-iOS/Sources/Amplitude/ComodoCaLimitedRsaCertificationAuthority.der",
+				"${PODS_ROOT}/Amplitude-iOS/Sources/Amplitude/ComodoRsaCA.der",
+				"${PODS_ROOT}/Amplitude-iOS/Sources/Amplitude/ComodoRsaDomainValidationCA.der",
 				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
