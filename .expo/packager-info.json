@@ -1,10 +1,10 @@
 {
-  "expoServerPort": null,
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "expoServerPort": 19000,
+  "packagerPort": 19004,
+  "packagerPid": 77649,
+  "expoServerNgrokUrl": "https://bt-5ce.tonyvoon.brew9-menu-app.exp.direct",
+  "packagerNgrokUrl": "https://packager.bt-5ce.tonyvoon.brew9-menu-app.exp.direct",
+  "ngrokPid": 77658,
   "devToolsPort": 19002,
   "webpackServerPort": null
 }

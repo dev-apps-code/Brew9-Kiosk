@@ -43,14 +43,14 @@ const styles = StyleSheet.create({
     bannercell: {
         backgroundColor: "red",
         
-         height: 140 * alpha,
+         height: 115 * alpha,
         flex: 1,
         width: windowWidth ,
     },
     bannerImage: {
         backgroundColor: "rgb(0, 178, 227)",
         resizeMode: "center",
-        height: 140 * alpha,
+        height: 115 * alpha,
         width: windowWidth ,
     },
 })
