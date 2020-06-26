@@ -901,13 +901,13 @@ export default class Home extends React.Component {
 						onLayout={(event) => this.measureView(event)}>
 						<View
 							style={styles.categorylistBannerViewWrapper}>
-							<FlatList 
+							<FlatList
 								renderItem={this.renderProductlistFlatListCell}
 								data={this.state.menu_banners}
 								horizontal={true}
 								style={styles.productlistFlatList}
 								keyExtractor={(item, index) => index.toString()}
-								/>
+							/>
 						</View>
 						<View style={{flexDirection:'row'}}>
 							
@@ -1368,9 +1368,9 @@ const styles = StyleSheet.create({
 	categorylistBannerViewWrapper: {
 		width: windowWidth,
 		backgroundColor: "rgba(255, 255, 255, 1)",
-		height: 120*alpha,
+		height: 115*alpha,
 		// marginBottom:10*alpha,	
-		backgroundColor: "white",	
+		backgroundColor: "white",
 	},
 	categorylistFlatListViewWrapper: {
 		width: 70*alpha,
@@ -1382,7 +1382,7 @@ const styles = StyleSheet.create({
 	productlistFlatList: {
 		backgroundColor: "white",
 		width: "100%",
-		height: windowHeight - 120*alpha,
+		height: windowHeight - 110*alpha,
 	},
 	productlistFlatListViewWrapper: {
 		flex:1,
