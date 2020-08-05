@@ -12,18 +12,22 @@ import {
   Image,
   TouchableWithoutFeedback,
   StyleSheet,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
 import React from "react";
 import { alpha, fontAlpha, windowWidth } from "../Common/size";
-import { TITLE_FONT, NON_TITLE_FONT } from "../Common/common_style";
+import {
+  TITLE_FONT,
+  NON_TITLE_FONT,
+  PRIMARY_COLOR,
+} from "../Common/common_style";
 
 export default class ProductCell extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  componentDidMount() { }
+  componentDidMount() {}
 
   onProductCellPress = () => {
     // this.props.onCellPress(this.props.item, this.props.index);
@@ -47,6 +51,66 @@ export default class ProductCell extends React.Component {
     );
   };
 
+  createStatusStyle = () => {
+    
+    return {
+      image: { tintColor: "rgb(0, 178, 227)" },
+      text: { color: "white" },
+    };
+  };
+
+  renderStatusView = () => {
+    let test = {
+      discount_tag_label: "Discount",
+      discount_tag_color: "#ED6E69",
+      discount_tag_text_color: "white",
+    };
+
+    // let test = {
+    //   discount_tag_label: "Discount",
+    //   discount_tag_color: "#F2994A",
+    //   discount_tag_text_color: "white",
+    // };
+
+    let fontColor = test.discount_tag_text_color;
+    let labelColor = test.discount_tag_color;
+    let label = test.discount_tag_label;
+    let labelTextStyle = {
+      fontFamily: NON_TITLE_FONT,
+      fontSize: fontAlpha * 8,
+      backgroundColor: labelColor,
+      color: fontColor,
+      padding: alpha * 2,
+    }
+
+    let triangleStyle = {...styles.triangle,...{borderBottomColor:labelColor}}
+
+    return (
+      <View
+        style={{
+          backgroundColor: "transparent",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Text
+            style={labelTextStyle}
+          >
+            {label}
+          </Text>
+          <View style={triangleStyle} />
+        </View>
+      </View>
+    );
+  };
+
   onSelectOptionPressed = () => {
     this.props.onCellPress(this.props.item, this.props.index);
   };
@@ -55,25 +119,27 @@ export default class ProductCell extends React.Component {
     return (
       <TouchableWithoutFeedback onPress={this.onProductCellPress}>
         <View navigation={this.props.navigation} style={styles.productcell}>
-
           <Image
             source={{ uri: this.props.productimage }}
             style={styles.productimageImage}
           />
 
-
           <View style={styles.productDetail}>
-            <Text adjustsFontSizeToFit numberOfLines={3} style={styles.titleText}>{this.props.productname}</Text>
+            {this.props.productstatus != null &&
+            this.props.productstatus.length > 0
+              ? this.renderStatusView()
+              : null}
+            <Text
+              adjustsFontSizeToFit
+              numberOfLines={3}
+              style={styles.titleText}
+            >
+              {this.props.productname}
+            </Text>
             <Text style={styles.priceText}>
               ${parseFloat(this.props.productprice).toFixed(2)}
             </Text>
           </View>
-          {this.props.productstatus != null && this.props.productstatus.length > 0 ?
-            <View style={styles.soldView}>
-              <Text style={styles.soldtextText}>{this.props.productstatus}</Text>
-            </View>
-            : null}
-
         </View>
       </TouchableWithoutFeedback>
     );
@@ -88,7 +154,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     width: "100%",
-    marginLeft: 2 * alpha
+    marginLeft: 2 * alpha,
   },
   lineText: {
     backgroundColor: "black",
@@ -99,12 +165,13 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255, 255, 255, 1)",
     // backgroundColor: "yellow",
     width: (windowWidth - 90) / 2 - 20 * alpha,
-    height: 175 * alpha,
+    height: 200 * alpha,
     flexDirection: "column",
+    justifyContent: "flex-end",
     alignItems: "center",
     marginLeft: 1 * alpha,
     marginTop: 10 * alpha,
-    marginBottom: 5 * alpha
+    marginBottom: 5 * alpha,
   },
   productimageImage: {
     resizeMode: "cover",
@@ -121,7 +188,7 @@ const styles = StyleSheet.create({
     bottom: 35 * alpha,
     height: 22 * alpha,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   soldtextText: {
     backgroundColor: "rgb(0, 178, 227)",
@@ -132,14 +199,14 @@ const styles = StyleSheet.create({
     fontSize: 8 * fontAlpha,
     fontStyle: "normal",
     fontWeight: "normal",
-    textAlign: "center"
+    textAlign: "center",
   },
   titleText: {
     color: "rgb(54, 54, 54)",
     fontFamily: TITLE_FONT,
     fontSize: 10 * fontAlpha,
     textAlign: "center",
-    backgroundColor: "rgba(255, 255, 255, 1)"
+    backgroundColor: "rgba(255, 255, 255, 1)",
   },
   descriptionText: {
     backgroundColor: "transparent",
@@ -152,7 +219,7 @@ const styles = StyleSheet.create({
     textAlign: "left",
     width: 180 * alpha,
     marginLeft: 1 * alpha,
-    marginTop: 5 * alpha
+    marginTop: 5 * alpha,
   },
   priceText: {
     backgroundColor: "rgba(255, 255, 255, 1)",
@@ -161,7 +228,7 @@ const styles = StyleSheet.create({
     fontSize: 12 * fontAlpha,
     fontWeight: "bold",
     textAlign: "center",
-    marginTop: 3 * alpha
+    marginTop: 3 * alpha,
   },
 
   numberofitemText: {
@@ -171,6 +238,24 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     fontWeight: "bold",
     textAlign: "center",
-    backgroundColor: "transparent"
-  }
+    backgroundColor: "transparent",
+  },
+
+  triangle: {
+    position: "absolute",
+    right: alpha * -8.5,
+    width: 0,
+    height: 0,
+    backgroundColor: "transparent",
+    borderStyle: "solid",
+    borderLeftWidth: alpha * 7,
+    borderRightWidth: alpha * 7,
+    borderBottomWidth: alpha * 3,
+    borderLeftColor: "transparent",
+    borderRightColor: "transparent",
+    // borderBottomColor: "skyblue",
+    transform: [{ rotate: "90deg" }],
+  },
+
+  labelText: {},
 });
