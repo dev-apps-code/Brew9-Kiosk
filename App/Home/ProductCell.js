@@ -51,14 +51,6 @@ export default class ProductCell extends React.Component {
     );
   };
 
-  createStatusStyle = () => {
-    
-    return {
-      image: { tintColor: "rgb(0, 178, 227)" },
-      text: { color: "white" },
-    };
-  };
-
   renderStatusView = () => {
     let test = {
       discount_tag_label: "Discount",
@@ -77,13 +69,16 @@ export default class ProductCell extends React.Component {
     let label = test.discount_tag_label;
     let labelTextStyle = {
       fontFamily: NON_TITLE_FONT,
-      fontSize: fontAlpha * 8,
+      fontSize: fontAlpha * 7,
       backgroundColor: labelColor,
       color: fontColor,
       padding: alpha * 2,
-    }
+    };
 
-    let triangleStyle = {...styles.triangle,...{borderBottomColor:labelColor}}
+    let triangleStyle = {
+      ...styles.triangle,
+      ...{ borderBottomColor: labelColor },
+    };
 
     return (
       <View
@@ -100,13 +95,23 @@ export default class ProductCell extends React.Component {
             alignItems: "center",
           }}
         >
-          <Text
-            style={labelTextStyle}
-          >
-            {label}
-          </Text>
+          <Text style={labelTextStyle}>{label}</Text>
           <View style={triangleStyle} />
         </View>
+      </View>
+    );
+  };
+
+  renderPrices = () => {
+    return (
+      <View style={styles.pricesView}>
+        <Text style={styles.priceText}>
+          ${parseFloat(this.props.productprice).toFixed(2)}
+        </Text>
+        <Image source={require("./../../assets/images/apps.png")} style={styles.brew9Icon}/>
+        <Text style={styles.discountPriceText}>
+          ${parseFloat(this.props.productprice).toFixed(2)}
+        </Text>
       </View>
     );
   };
@@ -136,9 +141,7 @@ export default class ProductCell extends React.Component {
             >
               {this.props.productname}
             </Text>
-            <Text style={styles.priceText}>
-              ${parseFloat(this.props.productprice).toFixed(2)}
-            </Text>
+            {this.renderPrices()}
           </View>
         </View>
       </TouchableWithoutFeedback>
@@ -204,9 +207,11 @@ const styles = StyleSheet.create({
   titleText: {
     color: "rgb(54, 54, 54)",
     fontFamily: TITLE_FONT,
-    fontSize: 10 * fontAlpha,
+    fontSize: 9 * fontAlpha,
     textAlign: "center",
     backgroundColor: "rgba(255, 255, 255, 1)",
+    marginBottom: alpha * 2,
+    marginTop: alpha * 2,
   },
   descriptionText: {
     backgroundColor: "transparent",
@@ -223,12 +228,18 @@ const styles = StyleSheet.create({
   },
   priceText: {
     backgroundColor: "rgba(255, 255, 255, 1)",
+    color: "#363636",
+    fontFamily: TITLE_FONT,
+    fontSize: 12 * fontAlpha,
+    fontWeight: "bold",
+    marginRight: 10 * alpha
+  },
+  discountPriceText: {
+    backgroundColor: "rgba(255, 255, 255, 1)",
     color: "rgb(0, 178, 227)",
     fontFamily: TITLE_FONT,
     fontSize: 12 * fontAlpha,
     fontWeight: "bold",
-    textAlign: "center",
-    marginTop: 3 * alpha,
   },
 
   numberofitemText: {
@@ -257,5 +268,14 @@ const styles = StyleSheet.create({
     transform: [{ rotate: "90deg" }],
   },
 
-  labelText: {},
+  brew9Icon: {
+    marginTop: alpha * 3,
+    marginRight: alpha * 1
+  },
+
+  pricesView: {
+    // alignItems:'flex-end',
+    justifyContent:'center',
+    flexDirection:'row'
+  }
 });
