@@ -72,7 +72,8 @@ export default class ProductCell extends React.Component {
       fontSize: fontAlpha * 7,
       backgroundColor: labelColor,
       color: fontColor,
-      padding: alpha * 2,
+      paddingVertical: alpha * 2,
+      paddingHorizontal: alpha * 4
     };
 
     let triangleStyle = {
@@ -210,7 +211,7 @@ const styles = StyleSheet.create({
     fontSize: 9 * fontAlpha,
     textAlign: "center",
     backgroundColor: "rgba(255, 255, 255, 1)",
-    marginBottom: alpha * 2,
+    marginBottom: alpha * 3,
     marginTop: alpha * 2,
   },
   descriptionText: {

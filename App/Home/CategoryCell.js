@@ -30,6 +30,15 @@ export default class CategoryCell extends React.Component {
 
   render() {
     const { categoryImage, categoryname, label } = this.props;
+    let iconStyle =
+      categoryname === "Signature Coffee"
+        ? {
+            resizeMode: "contain",
+            backgroundColor: "transparent",
+            width: 12 * alpha,
+            height: 12 * alpha,
+          }
+        : styles.categoryIconImage;
     return (
       <TouchableWithoutFeedback onPress={this.onCategoryCellPress}>
         <View
@@ -54,7 +63,7 @@ export default class CategoryCell extends React.Component {
             >
               {categoryImage && (
                 <Image
-                  style={styles.categoryIconImage}
+                  style={iconStyle}
                   source={{ uri: categoryImage }}
                 />
               )}
@@ -88,20 +97,20 @@ export default class CategoryCell extends React.Component {
 
 const styles = StyleSheet.create({
   promoBox: {
-    backgroundColor: "#595959",
+    backgroundColor: "#FDE9F1",
     borderTopLeftRadius: 2 * alpha,
     borderBottomLeftRadius: 2 * alpha,
-    alignItems:'center',
-    justifyContent:'center',
+    alignItems: "center",
+    justifyContent: "center",
     height: 12 * alpha,
-    paddingVertical: 1* alpha,
-    paddingHorizontal: 3* alpha,
+    paddingVertical: 1 * alpha,
+    paddingHorizontal: 3 * alpha,
 
     minWidth: 0,
     maxWidth: 60 * alpha,
   },
   promoBoxText: {
-    color: "#F2F2F2",
+    color: "#F05071",
     fontFamily: TITLE_FONT,
     fontSize: 6 * fontAlpha,
     fontStyle: "normal",
@@ -189,7 +198,7 @@ const styles = StyleSheet.create({
   categoryIconImage: {
     resizeMode: "contain",
     backgroundColor: "transparent",
-    width: 18 * alpha,
-    height: 18 * alpha,
+    width: 16 * alpha,
+    height: 16 * alpha,
   },
 });
