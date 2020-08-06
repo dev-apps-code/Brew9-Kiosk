@@ -12,13 +12,17 @@ export class WebserviceHelper {
 }
 
 export function getBasicAuthentication(authToken) {
-  return `Basic ${authToken}`
+  // return `Basic ${'authToken'}`
+  return `Basic $2a$11$3oL8f.pbLWC.MOPIC7`
 }
 
 export function getMethod(authtoken,object) {
   const urlString = `${KSERVERURL}/${object.getUrlString()}?${object.getFormData()}`
+  console.log("[GET]")
+  console.log(urlString)
   // console.log(urlString)
-  // console.log(authtoken)
+  console.log()
+  console.log(getBasicAuthentication(authtoken))
   return fetch(urlString, {
     method: 'GET',
     headers: {

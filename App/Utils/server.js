@@ -1,5 +1,5 @@
-export const KSERVERURL = "http://139.162.16.119:3050/api";
-export const KURL_INFO = "http://139.162.16.119:3050/info";
+export const KSERVERURL = "https://dev7.brew9.co/api";
+export const KURL_INFO = "https://dev7.brew9.co/info";
 //export const KSERVERURL ='http://localhost:3000/api'
 //export const KURL_INFO ='http://localhost:3000/info'
 // export const KSERVERURL ='https://3358a428.ngrok.io/api'
@@ -13,7 +13,7 @@ export const KURL_CREDIT = "http://www.innogix.com/co3/credit_policy.html";
 export const KURL_TERMS_CO3_GO =
   "http://www.innogix.com/co3/co3_go_agreement.html";
 
-export const KCURRENT_API_VERSION_HEADER = "application/dc.v12";
+export const KCURRENT_API_VERSION_HEADER = "application/dc.v7";
 
 export const KTIMEOUT = 3 * 1000;
 
