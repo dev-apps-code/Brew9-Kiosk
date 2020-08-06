@@ -73,7 +73,7 @@ export default class ProductCell extends React.Component {
       backgroundColor: labelColor,
       color: fontColor,
       paddingVertical: alpha * 2,
-      paddingHorizontal: alpha * 4
+      paddingHorizontal: alpha * 4,
     };
 
     let triangleStyle = {
@@ -104,15 +104,23 @@ export default class ProductCell extends React.Component {
   };
 
   renderPrices = () => {
+    let { productDiscountedPrice, productprice } = this.props;
     return (
       <View style={styles.pricesView}>
         <Text style={styles.priceText}>
-          ${parseFloat(this.props.productprice).toFixed(2)}
+          ${parseFloat(productprice).toFixed(2)}
         </Text>
-        <Image source={require("./../../assets/images/apps.png")} style={styles.brew9Icon}/>
-        <Text style={styles.discountPriceText}>
-          ${parseFloat(this.props.productprice).toFixed(2)}
-        </Text>
+        {productDiscountedPrice ? (
+          <View style={{ flexDirection: "row" }}>
+            <Image
+              source={require("./../../assets/images/apps.png")}
+              style={styles.brew9Icon}
+            />
+            <Text style={styles.discountPriceText}>
+              ${parseFloat(productDiscountedPrice).toFixed(2)}
+            </Text>
+          </View>
+        ) : null}
       </View>
     );
   };
@@ -233,7 +241,6 @@ const styles = StyleSheet.create({
     fontFamily: TITLE_FONT,
     fontSize: 12 * fontAlpha,
     fontWeight: "bold",
-    marginRight: 10 * alpha
   },
   discountPriceText: {
     backgroundColor: "rgba(255, 255, 255, 1)",
@@ -241,6 +248,8 @@ const styles = StyleSheet.create({
     fontFamily: TITLE_FONT,
     fontSize: 12 * fontAlpha,
     fontWeight: "bold",
+    marginLeft: 10 * alpha,
+
   },
 
   numberofitemText: {
@@ -271,12 +280,12 @@ const styles = StyleSheet.create({
 
   brew9Icon: {
     marginTop: alpha * 3,
-    marginRight: alpha * 1
+    marginRight: alpha * 1,
   },
 
   pricesView: {
     // alignItems:'flex-end',
-    justifyContent:'center',
-    flexDirection:'row'
-  }
+    justifyContent: "center",
+    flexDirection: "row",
+  },
 });
