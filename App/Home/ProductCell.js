@@ -52,33 +52,23 @@ export default class ProductCell extends React.Component {
   };
 
   renderStatusView = () => {
-    let test = {
-      discount_tag_label: "Discount",
-      discount_tag_color: "#ED6E69",
-      discount_tag_text_color: "white",
-    };
+    let {productDiscountTagLabel, productDiscountTagColor, productDiscountTagTextColor} = this.props
+    if(productDiscountTagLabel === '') {
+      return null
+    }
 
-    // let test = {
-    //   discount_tag_label: "Discount",
-    //   discount_tag_color: "#F2994A",
-    //   discount_tag_text_color: "white",
-    // };
-
-    let fontColor = test.discount_tag_text_color;
-    let labelColor = test.discount_tag_color;
-    let label = test.discount_tag_label;
     let labelTextStyle = {
       fontFamily: NON_TITLE_FONT,
       fontSize: fontAlpha * 7,
-      backgroundColor: labelColor,
-      color: fontColor,
+      backgroundColor: productDiscountTagColor,
+      color: productDiscountTagTextColor,
       paddingVertical: alpha * 2,
       paddingHorizontal: alpha * 4,
     };
 
     let triangleStyle = {
       ...styles.triangle,
-      ...{ borderBottomColor: labelColor },
+      ...{ borderBottomColor: productDiscountTagColor },
     };
 
     return (
@@ -96,7 +86,7 @@ export default class ProductCell extends React.Component {
             alignItems: "center",
           }}
         >
-          <Text style={labelTextStyle}>{label}</Text>
+          <Text style={labelTextStyle}>{productDiscountTagLabel}</Text>
           <View style={triangleStyle} />
         </View>
       </View>

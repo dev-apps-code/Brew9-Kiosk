@@ -408,8 +408,6 @@ export default class Home extends React.Component {
   renderProductlistFlatListCell = ({ item, index }) => {
     if (item) {
       if (item.clazz == "product") {
-        console.log('\n\n==========')
-        console.log(index)
         return (
           <ProductCell
             navigation={this.props.navigation}
@@ -426,6 +424,9 @@ export default class Home extends React.Component {
             productenable={item.enabled}
             productstatus={item.status}
             productDiscountedPrice={item.discounted_price}
+            productDiscountTagLabel={item.discount_tag_label}
+            productDiscountTagColor={item.discount_tag_color}
+            productDiscountTagTextColor={item.discount_tag_text_color}
             producttotalquantity={item.total_quantity}
             onChangeQuantity={this.onChangeQuantityPress}
             onCellPress={this.onCellPress}
