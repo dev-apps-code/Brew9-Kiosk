@@ -48,6 +48,7 @@ import { TITLE_FONT, NON_TITLE_FONT } from "../Common/common_style";
   company_id: members.company_id,
   location: members.location,
   selectedShop: shops.selectedShop,
+  
 }))
 export default class Home extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -187,16 +188,12 @@ export default class Home extends React.Component {
   }
 
   loadShops(loadProducts) {
-    const { dispatch, company_id, location } = this.props;
-
-    this.setState({ loading: true });
-    const callback = (eventObject) => {
-      this.setState({ loading: false });
-      if (eventObject.success) {
+    const { selectedShop } = this.props;
+  
         this.setState(
           {
-            shop: eventObject.result,
-            menu_banners: eventObject.result.menu_banners,
+            shop:selectedShop,
+            menu_banners: selectedShop.menu_banners,
           },
           function () {
             if (loadProducts) {
@@ -204,24 +201,10 @@ export default class Home extends React.Component {
             }
           }
         );
-      }
-    };
-
-    var latitude = location != null ? location.coords.latitude : null;
-    var longitude = location != null ? location.coords.longitude : null;
-
-    const obj = new NearestShopRequestObject(latitude, longitude);
-    obj.setUrlId(company_id);
-    dispatch(
-      createAction("shops/loadShops")({
-        object: obj,
-        callback,
-      })
-    );
   }
 
   loadStoreProducts() {
-    const { dispatch, company_id } = this.props;
+    const { dispatch, company_id, selectedShop : { id }, selectedShop} = this.props;
     const { selected_category } = this.state;
 
     const callback = (eventObject) => {
@@ -248,7 +231,7 @@ export default class Home extends React.Component {
     };
 
     const obj = new ProductRequestObject();
-    obj.setUrlId(company_id);
+    obj.setUrlId(id);
     dispatch(
       createAction("products/loadStoreProducts")({
         object: obj,
@@ -433,6 +416,7 @@ export default class Home extends React.Component {
           />
         );
       } else if (item.clazz == "menu_banner_kiosk") {
+        alert("YAY")
         return (
           <BannerCell
             index={index}
