@@ -391,11 +391,6 @@ export default class Home extends React.Component {
   };
 
   renderCategorylistFlatListCell = ({ item, index }) => {
-    if (index === 0) {
-      console.log(">>>>>\n\n");
-      console.log(item);
-      console.log("========\n\n");
-    }
     return (
       <CategoryCell
         navigation={this.props.navigation}
@@ -405,6 +400,7 @@ export default class Home extends React.Component {
         scrollIndex={item.scroll_index}
         onSelectCategory={this.onSelectCategory}
         selected={item.selected}
+        label={item.label}
       />
     );
   };
@@ -412,6 +408,8 @@ export default class Home extends React.Component {
   renderProductlistFlatListCell = ({ item, index }) => {
     if (item) {
       if (item.clazz == "product") {
+        // console.log('\n\n==========')
+        // console.log(item)
         return (
           <ProductCell
             navigation={this.props.navigation}
@@ -1490,7 +1488,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   categorylistFlatListViewWrapper: {
-    width: 70 * alpha,
+    width: 80 * alpha,
     borderColor: "gray",
     borderRightWidth: 0.5,
 
