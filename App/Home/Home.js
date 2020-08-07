@@ -42,6 +42,7 @@ import AutoHeightImage from "react-native-auto-height-image";
 import * as Location from "expo-location";
 import * as Permissions from "expo-permissions";
 import { TITLE_FONT, NON_TITLE_FONT } from "../Common/common_style";
+import AnimationLoading from '../Components/AnimationLoading';
 
 @connect(({ members, shops }) => ({
   currentMember: members.profile,
@@ -189,7 +190,8 @@ export default class Home extends React.Component {
 
   loadShops(loadProducts) {
     const { selectedShop } = this.props;
-  
+        console.log("\n\nBanners:")
+        console.log(selectedShop.menu_banners)
         this.setState(
           {
             shop:selectedShop,
@@ -416,7 +418,6 @@ export default class Home extends React.Component {
           />
         );
       } else if (item.clazz == "menu_banner_kiosk") {
-        alert("YAY")
         return (
           <BannerCell
             index={index}
@@ -986,9 +987,10 @@ export default class Home extends React.Component {
         />
 
         {this.state.loading ? (
-          <View style={[styles.loadingIndicator]}>
-            <ActivityIndicator animating={false} size="large" />
-          </View>
+          // <View style={{backgroundColor:'red', height:'100%', width:'100%'}}>
+            
+          // </View>
+          <AnimationLoading />
         ) : (
           <View
             style={styles.productsectionView}
