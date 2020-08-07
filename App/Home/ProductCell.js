@@ -52,9 +52,13 @@ export default class ProductCell extends React.Component {
   };
 
   renderStatusView = () => {
-    let {productDiscountTagLabel, productDiscountTagColor, productDiscountTagTextColor} = this.props
-    if(productDiscountTagLabel === '') {
-      return null
+    let {
+      productDiscountTagLabel,
+      productDiscountTagColor,
+      productDiscountTagTextColor,
+    } = this.props;
+    if (productDiscountTagLabel === "") {
+      return null;
     }
 
     let labelTextStyle = {
@@ -95,7 +99,7 @@ export default class ProductCell extends React.Component {
 
   renderPrices = () => {
     let { productDiscountedPrice, productprice } = this.props;
-    return (
+    return productprice ? (
       <View style={styles.pricesView}>
         <Text style={styles.priceText}>
           ${parseFloat(productprice).toFixed(2)}
@@ -112,7 +116,7 @@ export default class ProductCell extends React.Component {
           </View>
         ) : null}
       </View>
-    );
+    ) : null;
   };
 
   onSelectOptionPressed = () => {
@@ -239,7 +243,6 @@ const styles = StyleSheet.create({
     fontSize: 12 * fontAlpha,
     fontWeight: "bold",
     marginLeft: 10 * alpha,
-
   },
 
   numberofitemText: {
