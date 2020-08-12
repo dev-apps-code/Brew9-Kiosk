@@ -55,6 +55,7 @@ import VerifyUser from "./App/VerifyUser/VerifyUser";
 import Register from "./App/Register/Register";
 import DirectionMap from "./App/DirectionMap/DirectionMap";
 import FeaturedPromotionDetail from "./App/Home/FeaturedPromotionDetail";
+import Outlet from "./App/SelectShop/Outlet"
 
 import { create } from "dva-core";
 import { Provider, connect } from "react-redux";
@@ -65,6 +66,9 @@ const PushOrder = createStackNavigator(
     Home: {
       screen: Home
     },
+    // SelectShop: {
+    //   screen: Outlet
+    // },
     Checkout: {
       screen: Checkout,
       navigationOptions: {
@@ -342,6 +346,9 @@ const RootNavigator = createStackNavigator(
     FirstScreen: {
       screen: FirstScreen
     },
+    SelectShop: {
+      screen: Outlet
+    },
     Home: {
       screen: Home
     },
@@ -350,7 +357,8 @@ const RootNavigator = createStackNavigator(
     }
   },
   {
-    initialRouteName: "Home",
+    initialRouteName: "SelectShop",
+    // initialRouteName: "Home",
     mode: "modal",
     headerMode: "none"
   }
