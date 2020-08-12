@@ -105,7 +105,7 @@ export default class ProductCell extends React.Component {
           ${parseFloat(productprice).toFixed(2)}
         </Text>
         {productDiscountedPrice ? (
-          <View style={{ flexDirection: "row" }}>
+          <View style={{ flexDirection: "row"}}>
             <Image
               source={require("./../../assets/images/apps.png")}
               style={styles.brew9Icon}
@@ -242,7 +242,6 @@ const styles = StyleSheet.create({
     fontFamily: TITLE_FONT,
     fontSize: 12 * fontAlpha,
     fontWeight: "bold",
-    marginLeft: 10 * alpha,
   },
 
   numberofitemText: {
@@ -273,7 +272,8 @@ const styles = StyleSheet.create({
 
   brew9Icon: {
     marginTop: alpha * 3,
-    marginRight: alpha * 1,
+    marginLeft: 10 * alpha,
+    marginRight: 1 * alpha
   },
 
   pricesView: {
