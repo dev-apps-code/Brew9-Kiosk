@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingRight: 10,
     height: alpha * 30,
-    alignItems: 'center',
+    // alignItems: 'center',
     justifyContent: 'flex-start'
   },
   orderButton: {
@@ -222,13 +222,15 @@ const styles = StyleSheet.create({
     tintColor: LIGHT_GREY,
     width: 8 * alpha,
     height: 11 * alpha,
-    marginRight: alpha * 7
+    marginRight: alpha * 7,
+    marginTop: alpha * 2
   },
   clockImage: {
     tintColor: LIGHT_GREY,
     width: 10 * alpha,
     height: 10 * alpha,
-    marginRight: alpha * 8
+    marginRight: alpha * 8,
+    marginTop: alpha * 2
   },
   favoriteImage: {
     width: 13 * alpha,
