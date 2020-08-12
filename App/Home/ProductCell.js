@@ -271,9 +271,10 @@ const styles = StyleSheet.create({
   },
 
   brew9Icon: {
-    marginTop: alpha * 3,
     marginLeft: 10 * alpha,
-    marginRight: 1 * alpha
+    marginRight: 1 * alpha,
+    height: alpha * 13,
+    width: alpha * 13
   },
 
   pricesView: {
