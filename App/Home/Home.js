@@ -161,7 +161,7 @@ export default class Home extends React.Component {
     this.interval = setInterval(() => {
       this.loadShops(true);
     }, 9000000);
-    // this.loadStorePushToken()
+    this.loadStorePushToken()
   }
 
   loadStorePushToken() {
@@ -190,8 +190,8 @@ export default class Home extends React.Component {
 
   loadShops(loadProducts) {
     const { selectedShop } = this.props;
-        console.log("\n\nBanners:")
-        console.log(selectedShop.menu_banners)
+        console.log("\n\n========:")
+        console.log(selectedShop.name)
         this.setState(
           {
             shop:selectedShop,
@@ -987,10 +987,9 @@ export default class Home extends React.Component {
         />
 
         {this.state.loading ? (
-          // <View style={{backgroundColor:'red', height:'100%', width:'100%'}}>
-            
-          // </View>
-          <AnimationLoading />
+          <View style={{backgroundColor:'white', height:'100%', width:'100%', alignItems:'center', justifyContent:'center'}}>
+             <ActivityIndicator size="small" color="#0000ff" />
+          </View>
         ) : (
           <View
             style={styles.productsectionView}
