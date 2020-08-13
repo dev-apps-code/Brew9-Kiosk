@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   promoBoxText: {
     color: "#F05071",
     fontFamily: TITLE_FONT,
-    fontSize: 6 * fontAlpha,
+    fontSize: 7 * fontAlpha,
     fontStyle: "normal",
     fontWeight: "normal",
     textAlign: "right",
