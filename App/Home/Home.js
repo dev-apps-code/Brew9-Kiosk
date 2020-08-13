@@ -121,6 +121,8 @@ export default class Home extends React.Component {
       selected_promotion: "",
       isPromoToggle: false,
       isToggleLocation: false,
+      exempted: ["Reusable Bag", "Be Inspired", "Go Green"]
+
     };
     this.moveAnimation = new Animated.ValueXY({ x: 0, y: windowHeight });
   }
@@ -376,7 +378,9 @@ export default class Home extends React.Component {
   };
 
   renderCategorylistFlatListCell = ({ item, index }) => {
-    return (
+    let {exempted} = this.state
+    
+    return exempted.includes(item.name) ? null : (
       <CategoryCell
         navigation={this.props.navigation}
         categoryname={item.name}
