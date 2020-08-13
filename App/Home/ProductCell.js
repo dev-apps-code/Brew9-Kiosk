@@ -56,23 +56,41 @@ export default class ProductCell extends React.Component {
       productDiscountTagLabel,
       productDiscountTagColor,
       productDiscountTagTextColor,
+      productDiscountedPrice,
+      productstatus,
     } = this.props;
-    if (productDiscountTagLabel === "") {
-      return null;
+
+    let labelColor = productDiscountTagColor;
+    let labelText = productDiscountTagLabel;
+    let labelTagTextColor = productDiscountTagTextColor;
+    if (productDiscountedPrice === "" || productDiscountedPrice === 0) {
+      if (productstatus !== "") {
+        labelColor = "rgb(0, 178, 227)";
+        labelText = productstatus;
+        labelTagTextColor = "#FFFFFF";
+      } else {
+        return (
+          <View
+            style={{
+              height: alpha * 13,
+              width: alpha * 30,
+            }}/>
+        );
+      }
     }
 
     let labelTextStyle = {
       fontFamily: NON_TITLE_FONT,
       fontSize: fontAlpha * 7,
-      backgroundColor: productDiscountTagColor,
-      color: productDiscountTagTextColor,
+      backgroundColor: labelColor,
+      color: labelTagTextColor,
       paddingVertical: alpha * 2,
       paddingHorizontal: alpha * 4,
     };
 
     let triangleStyle = {
       ...styles.triangle,
-      ...{ borderBottomColor: productDiscountTagColor },
+      ...{ borderBottomColor: labelColor },
     };
 
     return (
@@ -90,7 +108,7 @@ export default class ProductCell extends React.Component {
             alignItems: "center",
           }}
         >
-          <Text style={labelTextStyle}>{productDiscountTagLabel}</Text>
+          <Text style={labelTextStyle}>{labelText}</Text>
           <View style={triangleStyle} />
         </View>
       </View>
@@ -99,7 +117,8 @@ export default class ProductCell extends React.Component {
 
   renderPrices = () => {
     let { productDiscountedPrice, productprice } = this.props;
-    return productprice ? (
+    console.log(productprice)
+    return productprice > 0 ? (
       <View style={styles.pricesView}>
         <Text style={styles.priceText}>
           ${parseFloat(productprice).toFixed(2)}
@@ -116,7 +135,7 @@ export default class ProductCell extends React.Component {
           </View>
         ) : null}
       </View>
-    ) : null;
+    ) : <View style={{height: alpha * 15}}/>
   };
 
   onSelectOptionPressed = () => {
@@ -124,8 +143,6 @@ export default class ProductCell extends React.Component {
   };
 
   render() {
-    let { productstatus, productDiscountedPrice } = this.props;
-    console.log(productDiscountedPrice);
     return (
       <TouchableWithoutFeedback onPress={this.onProductCellPress}>
         <View navigation={this.props.navigation} style={styles.productcell}>
@@ -135,11 +152,7 @@ export default class ProductCell extends React.Component {
           />
 
           <View style={styles.productDetail}>
-            {productstatus != null &&
-            productstatus.length > 0 &&
-            productDiscountedPrice != 0
-              ? this.renderStatusView()
-              : null}
+            {this.renderStatusView()}
             <Text
               adjustsFontSizeToFit
               numberOfLines={3}
