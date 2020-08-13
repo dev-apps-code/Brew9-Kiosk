@@ -105,7 +105,7 @@ export default class ProductCell extends React.Component {
           ${parseFloat(productprice).toFixed(2)}
         </Text>
         {productDiscountedPrice ? (
-          <View style={{ flexDirection: "row"}}>
+          <View style={{ flexDirection: "row" }}>
             <Image
               source={require("./../../assets/images/apps.png")}
               style={styles.brew9Icon}
@@ -124,6 +124,8 @@ export default class ProductCell extends React.Component {
   };
 
   render() {
+    let { productstatus, productDiscountedPrice } = this.props;
+    console.log(productDiscountedPrice);
     return (
       <TouchableWithoutFeedback onPress={this.onProductCellPress}>
         <View navigation={this.props.navigation} style={styles.productcell}>
@@ -133,8 +135,9 @@ export default class ProductCell extends React.Component {
           />
 
           <View style={styles.productDetail}>
-            {this.props.productstatus != null &&
-            this.props.productstatus.length > 0
+            {productstatus != null &&
+            productstatus.length > 0 &&
+            productDiscountedPrice != 0
               ? this.renderStatusView()
               : null}
             <Text
@@ -274,7 +277,7 @@ const styles = StyleSheet.create({
     marginLeft: 10 * alpha,
     marginRight: 1 * alpha,
     height: alpha * 13,
-    width: alpha * 13
+    width: alpha * 13,
   },
 
   pricesView: {
