@@ -74,7 +74,8 @@ export default class ProductCell extends React.Component {
             style={{
               height: alpha * 13,
               width: alpha * 30,
-            }}/>
+            }}
+          />
         );
       }
     }
@@ -117,7 +118,6 @@ export default class ProductCell extends React.Component {
 
   renderPrices = () => {
     let { productDiscountedPrice, productprice } = this.props;
-    console.log(productprice)
     return productprice > 0 ? (
       <View style={styles.pricesView}>
         <Text style={styles.priceText}>
@@ -135,11 +135,26 @@ export default class ProductCell extends React.Component {
           </View>
         ) : null}
       </View>
-    ) : <View style={{height: alpha * 15}}/>
+    ) : (
+      <View style={{ height: alpha * 15 }} />
+    );
   };
 
   onSelectOptionPressed = () => {
     this.props.onCellPress(this.props.item, this.props.index);
+  };
+
+  renderName = () => {
+    let { index } = this.props;
+    let style =
+      index % 2 == 0
+        ? styles.titleText
+        : [styles.titleText, { width: alpha * 120 }];
+    return (
+      <Text adjustsFontSizeToFit numberOfLines={3} style={style}>
+        {this.props.productname}
+      </Text>
+    );
   };
 
   render() {
@@ -153,13 +168,7 @@ export default class ProductCell extends React.Component {
 
           <View style={styles.productDetail}>
             {this.renderStatusView()}
-            <Text
-              adjustsFontSizeToFit
-              numberOfLines={3}
-              style={styles.titleText}
-            >
-              {this.props.productname}
-            </Text>
+            {this.renderName()}
             {this.renderPrices()}
           </View>
         </View>
