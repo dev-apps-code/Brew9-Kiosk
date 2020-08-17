@@ -85,7 +85,6 @@ export default class ProductCell extends React.Component {
       fontFamily: NON_TITLE_FONT,
       fontSize: fontAlpha * 7,
       color: labelTagTextColor,
-      marginHorizontal: alpha * 4,
     };
 
     let labelViewStyle = {
@@ -93,17 +92,12 @@ export default class ProductCell extends React.Component {
       backgroundColor: labelColor,
       justifyContent: "center",
       alignItems: "center",
+      paddingRight: alpha * 4,
+      paddingLeft: alpha * 3
     };
 
     let triangleStyle = [styles.tri, { tintColor: labelColor }];
     return (
-      <View
-        style={{
-          backgroundColor: "transparent",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
         <View
           style={{
             flexDirection: "row",
@@ -120,7 +114,6 @@ export default class ProductCell extends React.Component {
             style={triangleStyle}
           />
         </View>
-      </View>
     );
   };
 
@@ -187,7 +180,9 @@ export default class ProductCell extends React.Component {
 
 const styles = StyleSheet.create({
   productDetail: {
-    backgroundColor: "white",
+    justifyContent:"center",
+    alignItems:'center'
+    // width: alpha * 100
   },
   row: {
     flex: 1,
