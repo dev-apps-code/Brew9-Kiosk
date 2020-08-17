@@ -21,6 +21,7 @@ import {
   NON_TITLE_FONT,
   PRIMARY_COLOR,
 } from "../Common/common_style";
+import { trimStart } from "lodash";
 
 export default class ProductCell extends React.Component {
   constructor(props) {
@@ -83,17 +84,18 @@ export default class ProductCell extends React.Component {
     let labelTextStyle = {
       fontFamily: NON_TITLE_FONT,
       fontSize: fontAlpha * 7,
-      backgroundColor: labelColor,
       color: labelTagTextColor,
-      paddingVertical: alpha * 2,
-      paddingHorizontal: alpha * 4,
+      marginHorizontal: alpha * 4,
     };
 
-    let triangleStyle = {
-      ...styles.triangle,
-      ...{ borderBottomColor: labelColor },
+    let labelViewStyle = {
+      height: "100%",
+      backgroundColor: labelColor,
+      justifyContent: "center",
+      alignItems: "center",
     };
 
+    let triangleStyle = [styles.tri, { tintColor: labelColor }];
     return (
       <View
         style={{
@@ -107,10 +109,16 @@ export default class ProductCell extends React.Component {
             flexDirection: "row",
             justifyContent: "center",
             alignItems: "center",
+            height: alpha * 11,
           }}
         >
-          <Text style={labelTextStyle}>{labelText}</Text>
-          <View style={triangleStyle} />
+          <View style={labelViewStyle}>
+            <Text style={labelTextStyle}>{labelText}</Text>
+          </View>
+          <Image
+            source={require("./../../assets/images/tri.png")}
+            style={triangleStyle}
+          />
         </View>
       </View>
     );
@@ -300,6 +308,9 @@ const styles = StyleSheet.create({
     marginRight: 1 * alpha,
     height: alpha * 13,
     width: alpha * 13,
+  },
+  tri: {
+    height: "100%",
   },
 
   pricesView: {
