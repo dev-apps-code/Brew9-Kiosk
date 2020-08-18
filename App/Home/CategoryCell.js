@@ -61,11 +61,10 @@ export default class CategoryCell extends React.Component {
             <View
               style={{ flexDirection: "row", justifyContent: "space-between" }}
             >
-              {categoryImage && (
-                <Image
-                  style={iconStyle}
-                  source={{ uri: categoryImage }}
-                />
+              {categoryImage ? (
+                <Image style={iconStyle} source={{ uri: categoryImage }} />
+              ) : (
+                <View />
               )}
               {label != null && label != "" && (
                 <View style={styles.promoBox}>
