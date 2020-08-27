@@ -121,7 +121,7 @@ export default class Home extends React.Component {
       selected_promotion: "",
       isPromoToggle: false,
       isToggleLocation: false,
-      exempted: ["Reusable Bag", "Be Inspired", "Go Green"]
+      exempted: ["Reusable Bag", "Be Inspired", "Go Green", "Stay Together"]
 
     };
     this.moveAnimation = new Animated.ValueXY({ x: 0, y: windowHeight });
@@ -981,7 +981,7 @@ export default class Home extends React.Component {
 
   render() {
     let { shop, cart, delivery, data } = this.state;
-
+    console.log(this.state.products)
     return (
       <View style={styles.page1View}>
         <StatusBar
