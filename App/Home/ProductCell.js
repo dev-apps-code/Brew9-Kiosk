@@ -69,10 +69,6 @@ export default class ProductCell extends React.Component {
       productstatus,
     } = this.props;
 
-    console.log("\n\nset--");
-    console.log(productstatus);
-    console.log(productDiscountTagLabel);
-
     let labelColor = productDiscountTagColor;
     let labelText = productDiscountTagLabel;
     let labelTagTextColor = productDiscountTagTextColor;
