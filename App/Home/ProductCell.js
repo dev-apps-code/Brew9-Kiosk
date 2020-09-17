@@ -53,33 +53,29 @@ export default class ProductCell extends React.Component {
   };
 
   renderStatusView = () => {
-    let {
+    return (
+      <View style={styles.statusView}>
+        {this.renderProductStatus()}
+        {this.renderDiscountLabel()}
+      </View>
+    );
+  };
+
+  renderDiscountLabel = () => {
+    const {
       productDiscountTagLabel,
       productDiscountTagColor,
       productDiscountTagTextColor,
-      productDiscountedPrice,
       productstatus,
     } = this.props;
+
+    console.log("\n\nset--");
+    console.log(productstatus);
+    console.log(productDiscountTagLabel);
 
     let labelColor = productDiscountTagColor;
     let labelText = productDiscountTagLabel;
     let labelTagTextColor = productDiscountTagTextColor;
-    if (productDiscountedPrice === "" || productDiscountedPrice === 0) {
-      if (productstatus !== "") {
-        labelColor = "rgb(0, 178, 227)";
-        labelText = productstatus;
-        labelTagTextColor = "#FFFFFF";
-      } else {
-        return (
-          <View
-            style={{
-              height: alpha * 13,
-              width: alpha * 30,
-            }}
-          />
-        );
-      }
-    }
 
     let labelTextStyle = {
       fontFamily: NON_TITLE_FONT,
@@ -93,27 +89,79 @@ export default class ProductCell extends React.Component {
       justifyContent: "center",
       alignItems: "center",
       paddingRight: alpha * 4,
-      paddingLeft: alpha * 3
+      paddingLeft: alpha * 3,
     };
 
     let triangleStyle = [styles.tri, { tintColor: labelColor }];
     return (
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            height: alpha * 11,
-          }}
-        >
-          <View style={labelViewStyle}>
-            <Text style={labelTextStyle}>{labelText}</Text>
-          </View>
-          <Image
-            source={require("./../../assets/images/tri.png")}
-            style={triangleStyle}
-          />
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          height: alpha * 11,
+        }}
+      >
+        <View style={labelViewStyle}>
+          <Text style={labelTextStyle}>{labelText}</Text>
         </View>
+        <Image
+          source={require("./../../assets/images/tri.png")}
+          style={triangleStyle}
+        />
+      </View>
+    );
+  };
+
+  renderProductStatus = () => {
+    const { productstatus } = this.props;
+
+    if (productstatus !== "") {
+      labelColor = "rgb(0, 178, 227)";
+      labelText = productstatus;
+      labelTagTextColor = "#FFFFFF";
+    } else {
+      return null;
+    }
+
+    let labelColor = "rgb(0, 178, 227)";
+    let labelText = productstatus;
+    let labelTagTextColor = "#FFFFFF";
+
+    let labelTextStyle = {
+      fontFamily: NON_TITLE_FONT,
+      fontSize: fontAlpha * 7,
+      color: labelTagTextColor,
+    };
+
+    let labelViewStyle = {
+      height: "100%",
+      backgroundColor: labelColor,
+      justifyContent: "center",
+      alignItems: "center",
+      paddingRight: alpha * 4,
+      paddingLeft: alpha * 3,
+    };
+
+    let triangleStyle = [styles.tri, { tintColor: labelColor }];
+    return (
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          height: alpha * 11,
+          marginRight: alpha * 5,
+        }}
+      >
+        <View style={labelViewStyle}>
+          <Text style={labelTextStyle}>{labelText}</Text>
+        </View>
+        <Image
+          source={require("./../../assets/images/tri.png")}
+          style={triangleStyle}
+        />
+      </View>
     );
   };
 
@@ -180,8 +228,8 @@ export default class ProductCell extends React.Component {
 
 const styles = StyleSheet.create({
   productDetail: {
-    justifyContent:"center",
-    alignItems:'center'
+    justifyContent: "center",
+    alignItems: "center",
     // width: alpha * 100
   },
   row: {
@@ -280,6 +328,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     backgroundColor: "transparent",
+  },
+
+  statusView: {
+    flexDirection: "row",
   },
 
   triangle: {
