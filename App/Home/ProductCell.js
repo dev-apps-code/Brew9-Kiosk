@@ -67,7 +67,17 @@ export default class ProductCell extends React.Component {
       productDiscountTagColor,
       productDiscountTagTextColor,
       productstatus,
+      productDiscountedPrice,
+      productname,
     } = this.props;
+
+    console.log("---");
+    console.log(productname);
+    console.log(productDiscountedPrice);
+    console.log(typeof productDiscountedPrice);
+    if (productDiscountedPrice <= 0) {
+      return null;
+    }
 
     let labelColor = productDiscountTagColor;
     let labelText = productDiscountTagLabel;
@@ -169,7 +179,7 @@ export default class ProductCell extends React.Component {
           ${parseFloat(productprice).toFixed(2)}
         </Text>
         {productDiscountedPrice ? (
-          <View style={{ flexDirection: "row" }}>
+          <View style={styles.priceRowContainer}>
             <Image
               source={require("./../../assets/images/apps.png")}
               style={styles.brew9Icon}
@@ -250,6 +260,10 @@ const styles = StyleSheet.create({
     marginLeft: 1 * alpha,
     marginTop: 10 * alpha,
     marginBottom: 5 * alpha,
+  },
+  priceRowContainer: {
+    flexDirection: "row",
+    alignItems: "center",
   },
   productimageImage: {
     resizeMode: "cover",
@@ -349,8 +363,8 @@ const styles = StyleSheet.create({
   brew9Icon: {
     marginLeft: 10 * alpha,
     marginRight: 1 * alpha,
-    height: alpha * 13,
-    width: alpha * 13,
+    height: alpha * 12,
+    width: alpha * 12,
   },
   tri: {
     height: "100%",
