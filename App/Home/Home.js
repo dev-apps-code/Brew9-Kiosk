@@ -42,14 +42,13 @@ import AutoHeightImage from "react-native-auto-height-image";
 import * as Location from "expo-location";
 import * as Permissions from "expo-permissions";
 import { TITLE_FONT, NON_TITLE_FONT } from "../Common/common_style";
-import AnimationLoading from '../Components/AnimationLoading';
+import AnimationLoading from "../Components/AnimationLoading";
 
 @connect(({ members, shops }) => ({
   currentMember: members.profile,
   company_id: members.company_id,
   location: members.location,
   selectedShop: shops.selectedShop,
-  
 }))
 export default class Home extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -121,8 +120,7 @@ export default class Home extends React.Component {
       selected_promotion: "",
       isPromoToggle: false,
       isToggleLocation: false,
-      exempted: ["Reusable Bag", "Be Inspired", "Go Green", "Stay Together"]
-
+      exempted: ["Reusable Bag", "Be Inspired", "Go Green", "Stay Together"],
     };
     this.moveAnimation = new Animated.ValueXY({ x: 0, y: windowHeight });
   }
@@ -192,23 +190,26 @@ export default class Home extends React.Component {
 
   loadShops(loadProducts) {
     const { selectedShop } = this.props;
-        console.log("\n\n========:")
-        console.log(selectedShop.name)
-        this.setState(
-          {
-            shop:selectedShop,
-            menu_banners: selectedShop.menu_banners,
-          },
-          function () {
-            if (loadProducts) {
-              this.loadStoreProducts();
-            }
-          }
-        );
+    this.setState(
+      {
+        shop: selectedShop,
+        menu_banners: selectedShop.menu_banners,
+      },
+      function () {
+        if (loadProducts) {
+          this.loadStoreProducts();
+        }
+      }
+    );
   }
 
   loadStoreProducts() {
-    const { dispatch, company_id, selectedShop : { id }, selectedShop} = this.props;
+    const {
+      dispatch,
+      company_id,
+      selectedShop: { id },
+      selectedShop,
+    } = this.props;
     const { selected_category } = this.state;
 
     const callback = (eventObject) => {
@@ -378,8 +379,8 @@ export default class Home extends React.Component {
   };
 
   renderCategorylistFlatListCell = ({ item, index }) => {
-    let {exempted} = this.state
-    
+    let { exempted } = this.state;
+
     return exempted.includes(item.name) ? null : (
       <CategoryCell
         navigation={this.props.navigation}
@@ -397,6 +398,8 @@ export default class Home extends React.Component {
   renderProductlistFlatListCell = ({ item, index }) => {
     if (item) {
       if (item.clazz == "product") {
+        // console.log("\n\n");
+        // console.log(Object.keys(item));
         return (
           <ProductCell
             navigation={this.props.navigation}
@@ -981,7 +984,6 @@ export default class Home extends React.Component {
 
   render() {
     let { shop, cart, delivery, data } = this.state;
-    console.log(this.state.products)
     return (
       <View style={styles.page1View}>
         <StatusBar
@@ -991,8 +993,16 @@ export default class Home extends React.Component {
         />
 
         {this.state.loading ? (
-          <View style={{backgroundColor:'white', height:'100%', width:'100%', alignItems:'center', justifyContent:'center'}}>
-             <ActivityIndicator size="small" color="#0000ff" />
+          <View
+            style={{
+              backgroundColor: "white",
+              height: "100%",
+              width: "100%",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <ActivityIndicator size="small" color="#0000ff" />
           </View>
         ) : (
           <View

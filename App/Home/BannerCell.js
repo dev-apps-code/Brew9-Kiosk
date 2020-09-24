@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     },
     bannerImage: {
         backgroundColor: "rgb(0, 178, 227)",
-        resizeMode: "center",
+        resizeMode: "cover",
         height: 115 * alpha,
         width: windowWidth ,
     },
