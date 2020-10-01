@@ -22,6 +22,7 @@ import {
   PRIMARY_COLOR,
 } from "../Common/common_style";
 import { trimStart } from "lodash";
+import { Image as ExpoImage } from "react-native-expo-image-cache";
 
 export default class ProductCell extends React.Component {
   constructor(props) {
@@ -71,10 +72,6 @@ export default class ProductCell extends React.Component {
       productname,
     } = this.props;
 
-    console.log("---");
-    console.log(productname);
-    console.log(productDiscountedPrice);
-    console.log(typeof productDiscountedPrice);
     if (productDiscountedPrice <= 0) {
       return null;
     }
@@ -213,13 +210,16 @@ export default class ProductCell extends React.Component {
   };
 
   render() {
+    const uri = this.props.productimage;
+
     return (
       <TouchableWithoutFeedback onPress={this.onProductCellPress}>
         <View navigation={this.props.navigation} style={styles.productcell}>
-          <Image
+          {/* <Image
             source={{ uri: this.props.productimage }}
             style={styles.productimageImage}
-          />
+          /> */}
+          <ExpoImage {...{ uri }} style={styles.productimageImage} />
 
           <View style={styles.productDetail}>
             {this.renderStatusView()}
