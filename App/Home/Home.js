@@ -216,15 +216,25 @@ export default class Home extends React.Component {
       if (eventObject.success) {
         let data = [...eventObject.result];
 
-        for (var index in data) {
-          data[index].selected = index == selected_category ? true : false;
+        let filteredData = [];
+
+        data.forEach((category, index) => {
+          let { show_menu_kiosk, name } = category;
+          if (show_menu_kiosk === true) {
+            filteredData.push(category);
+          }
+        });
+
+        for (var index in filteredData) {
+          filteredData[index].selected =
+            index == selected_category ? true : false;
         }
 
         this.setState(
           {
-            data: data,
+            data: filteredData,
             total: eventObject.total,
-            products: eventObject.result[0].products,
+            products: filteredData[0].products,
           },
           function () {}.bind(this)
         );
@@ -379,9 +389,7 @@ export default class Home extends React.Component {
   };
 
   renderCategorylistFlatListCell = ({ item, index }) => {
-    let { exempted } = this.state;
-
-    return exempted.includes(item.name) ? null : (
+    return (
       <CategoryCell
         navigation={this.props.navigation}
         categoryname={item.name}
@@ -398,8 +406,6 @@ export default class Home extends React.Component {
   renderProductlistFlatListCell = ({ item, index }) => {
     if (item) {
       if (item.clazz == "product") {
-        // console.log("\n\n");
-        // console.log(Object.keys(item));
         return (
           <ProductCell
             navigation={this.props.navigation}
