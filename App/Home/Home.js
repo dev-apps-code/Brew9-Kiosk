@@ -195,7 +195,7 @@ class Home extends React.Component {
         const {result} = eventObject;
         const filteredData = [];
 
-        result.forEach((products, index) => {
+        result.forEach((products) => {
           const {show_menu_kiosk} = products;
 
           if (
