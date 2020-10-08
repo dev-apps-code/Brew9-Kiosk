@@ -1,11 +1,3 @@
-//
-//  Home
-//  Brew9
-//
-//  Created by [Author].
-//  Copyright © 2018 brew9. All rights reserved.
-//
-
 import {
   Text,
   StyleSheet,
@@ -15,28 +7,21 @@ import {
   View,
   Animated,
   TouchableHighlight,
-  TextInput,
   ScrollView,
   StatusBar,
-  TouchableWithoutFeedback,
-  ActivityIndicator,
   Platform,
 } from "react-native";
 import React from "react";
 import Modal from "react-native-modal";
 import PushRequestObject from "../Requests/push_request_object";
 import { connect } from "react-redux";
-import { createAction, dispatch } from "../Utils/index";
+import { createAction } from "../Utils/index";
 import ProductCell from "./ProductCell";
 import CategoryCell from "./CategoryCell";
 import BannerCell from "./BannerCell";
 import CartCell from "./CartCell";
 import { alpha, fontAlpha, windowHeight, windowWidth } from "../Common/size";
 import ProductRequestObject from "../Requests/product_request_object";
-import NearestShopRequestObject from "../Requests/nearest_shop_request_object";
-import SwitchSelector from "react-native-switch-selector";
-import Toast, { DURATION } from "react-native-easy-toast";
-import ImageViewer from "react-native-image-zoom-viewer";
 import _ from "lodash";
 import AutoHeightImage from "react-native-auto-height-image";
 import * as Location from "expo-location";
@@ -50,7 +35,7 @@ import AnimationLoading from "../Components/AnimationLoading";
   location: members.location,
   selectedShop: shops.selectedShop,
 }))
-export default class Home extends React.Component {
+class Home extends React.Component {
   static navigationOptions = ({ navigation }) => {
     const { params = {} } = navigation.state;
     return {
@@ -189,13 +174,12 @@ export default class Home extends React.Component {
   }
 
   loadShops(loadProducts) {
-    const { selectedShop } = this.props;
     this.setState(
       {
-        shop: selectedShop,
-        menu_banners: selectedShop.menu_banners,
+        shop: this.props.selectedShop,
+        menu_banners: this.props.selectedShop.menu_banners,
       },
-      function () {
+      () => {
         if (loadProducts) {
           this.loadStoreProducts();
         }
@@ -204,49 +188,44 @@ export default class Home extends React.Component {
   }
 
   loadStoreProducts() {
-    const {
-      dispatch,
-      company_id,
-      selectedShop: { id },
-      selectedShop,
-    } = this.props;
+    const { dispatch, selectedShop } = this.props;
     const { selected_category } = this.state;
 
     const callback = (eventObject) => {
       if (eventObject.success) {
-        let data = [...eventObject.result];
+        const { result } = eventObject;
+        const filteredData = [];
 
-        let filteredData = [];
+        result.forEach((products, index) => {
+          const { show_menu_kiosk } = products;
 
-        data.forEach((category, index) => {
-          let { show_menu_kiosk, name } = category;
-          if (show_menu_kiosk === true) {
-            filteredData.push(category);
+          if (
+            typeof show_menu_kiosk === "undefined" ||
+            show_menu_kiosk == true
+          ) {
+            filteredData.push(products);
           }
         });
 
         for (var index in filteredData) {
-          filteredData[index].selected =
-            index == selected_category ? true : false;
+          filteredData[index].selected = index === selected_category;
         }
 
-        this.setState(
-          {
-            data: filteredData,
-            total: eventObject.total,
-            products: filteredData[0].products,
-          },
-          function () {}.bind(this)
-        );
+        this.setState((prevState) => ({
+          ...prevState,
+          data: filteredData,
+          total: eventObject.total,
+          products: filteredData[0].products,
+          isRefreshing: false,
+          loading: false,
+        }));
+      } else {
+        // Failed to fetch products
       }
-      this.setState({
-        isRefreshing: false,
-        loading: false,
-      });
     };
 
     const obj = new ProductRequestObject();
-    obj.setUrlId(id);
+    obj.setUrlId(selectedShop.id);
     dispatch(
       createAction("products/loadStoreProducts")({
         object: obj,
@@ -999,17 +978,7 @@ export default class Home extends React.Component {
         />
 
         {this.state.loading ? (
-          <View
-            style={{
-              backgroundColor: "white",
-              height: "100%",
-              width: "100%",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <ActivityIndicator size="small" color="#0000ff" />
-          </View>
+          <AnimationLoading />
         ) : (
           <View
             style={styles.productsectionView}
@@ -1055,44 +1024,6 @@ export default class Home extends React.Component {
         )}
         {this.state.isToggleLocation && (
           <View style={styles.showLocationView}>
-            {/* <View
-						style={styles.deliveryView}>
-						<View
-							pointerEvents="box-none"
-							style={{
-								position: "absolute",
-								left: 0,
-								right: 0,
-								top: 0,
-								bottom: 0,
-								alignItems: "flex-start",
-							}}>
-							<Text
-								style={styles.deliveryTwoText}>Delivery</Text>
-							<Text
-								style={styles.freeWithRm40SpendText}>Free with RM40 spend</Text>
-							<Text
-								style={styles.deliveredByBrew9Text}>Delivered by Brew9, deliver within 3000m from branch</Text>
-							<View
-								style={{
-									flex: 1,
-								}}/>
-							<Text
-								style={styles.deliverAreaAffectText}>(Deliver area affected by location, weather and other factors,{"\n"}based on the actual distance)</Text>
-						</View>
-						<View
-							pointerEvents="box-none"
-							style={{
-								position: "absolute",
-								left: 0,
-								top: 0,
-								bottom: 0,
-								justifyContent: "center",
-							}}>
-							<Text
-								style={styles.deliveryRm5ExtraText}>Delivery RM5 (Extra charge delivery after 21:14)</Text>
-						</View>
-					</View> */}
             <View style={styles.branchInfoView}>
               <Text style={styles.branchInfoText}>Branch Info</Text>
               <Text style={styles.branchAddress}>
@@ -1113,31 +1044,6 @@ export default class Home extends React.Component {
             </View>
           </View>
         )}
-
-        {/* <Animated.View
-					style={[styles.cartsummaryviewView,this.moveAnimation.getLayout()]} >
-					<View
-						style={styles.clearAllView}>
-						<TouchableOpacity
-							onPress={this.onClearPress}
-							style={styles.clearButton}>
-							<Image
-								source={require("./../../assets/images/group-14-13.png")}
-								style={styles.clearButtonImage}/>
-							<Text
-								style={styles.clearButtonText}>Clear</Text>
-						</TouchableOpacity>
-					</View>
-					<View
-						style={styles.popOutCartFlatListViewWrapper}>
-						<FlatList
-							renderItem={this.renderPopOutCartFlatListCell}
-							data={this.state.cart}
-							style={styles.popOutCartFlatList}
-							keyExtractor={(item, index) => index.toString()}/>
-					</View>
-				</Animated.View>
-				 */}
 
         <View style={styles.bottomAlertView}>
           {/* remove alert bar at the bottom side */}
@@ -2398,3 +2304,5 @@ const styles = StyleSheet.create({
     height: "100%",
   },
 });
+
+export default Home;
