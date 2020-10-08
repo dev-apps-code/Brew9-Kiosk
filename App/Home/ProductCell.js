@@ -12,18 +12,24 @@ import {
   Image,
   TouchableWithoutFeedback,
   StyleSheet,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
 import React from "react";
 import { alpha, fontAlpha, windowWidth } from "../Common/size";
-import { TITLE_FONT, NON_TITLE_FONT } from "../Common/common_style";
+import {
+  TITLE_FONT,
+  NON_TITLE_FONT,
+  PRIMARY_COLOR,
+} from "../Common/common_style";
+import { trimStart } from "lodash";
+import { Image as ExpoImage } from "react-native-expo-image-cache";
 
 export default class ProductCell extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  componentDidMount() { }
+  componentDidMount() {}
 
   onProductCellPress = () => {
     // this.props.onCellPress(this.props.item, this.props.index);
@@ -47,33 +53,179 @@ export default class ProductCell extends React.Component {
     );
   };
 
+  renderStatusView = () => {
+    return (
+      <View style={styles.statusView}>
+        {this.renderProductStatus()}
+        {this.renderDiscountLabel()}
+      </View>
+    );
+  };
+
+  renderDiscountLabel = () => {
+    const {
+      productDiscountTagLabel,
+      productDiscountTagColor,
+      productDiscountTagTextColor,
+      productstatus,
+      productDiscountedPrice,
+      productname,
+    } = this.props;
+
+    if (productDiscountedPrice <= 0) {
+      return null;
+    }
+
+    let labelColor = productDiscountTagColor;
+    let labelText = productDiscountTagLabel;
+    let labelTagTextColor = productDiscountTagTextColor;
+
+    let labelTextStyle = {
+      fontFamily: NON_TITLE_FONT,
+      fontSize: fontAlpha * 7,
+      color: labelTagTextColor,
+    };
+
+    let labelViewStyle = {
+      height: "100%",
+      backgroundColor: labelColor,
+      justifyContent: "center",
+      alignItems: "center",
+      paddingRight: alpha * 4,
+      paddingLeft: alpha * 3,
+    };
+
+    let triangleStyle = [styles.tri, { tintColor: labelColor }];
+    return (
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          height: alpha * 11,
+        }}
+      >
+        <View style={labelViewStyle}>
+          <Text style={labelTextStyle}>{labelText}</Text>
+        </View>
+        <Image
+          source={require("./../../assets/images/tri.png")}
+          style={triangleStyle}
+        />
+      </View>
+    );
+  };
+
+  renderProductStatus = () => {
+    const { productstatus } = this.props;
+
+    if (productstatus !== "") {
+      labelColor = "rgb(0, 178, 227)";
+      labelText = productstatus;
+      labelTagTextColor = "#FFFFFF";
+    } else {
+      return null;
+    }
+
+    let labelColor = "rgb(0, 178, 227)";
+    let labelText = productstatus;
+    let labelTagTextColor = "#FFFFFF";
+
+    let labelTextStyle = {
+      fontFamily: NON_TITLE_FONT,
+      fontSize: fontAlpha * 7,
+      color: labelTagTextColor,
+    };
+
+    let labelViewStyle = {
+      height: "100%",
+      backgroundColor: labelColor,
+      justifyContent: "center",
+      alignItems: "center",
+      paddingRight: alpha * 4,
+      paddingLeft: alpha * 3,
+    };
+
+    let triangleStyle = [styles.tri, { tintColor: labelColor }];
+    return (
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          height: alpha * 11,
+          marginRight: alpha * 5,
+        }}
+      >
+        <View style={labelViewStyle}>
+          <Text style={labelTextStyle}>{labelText}</Text>
+        </View>
+        <Image
+          source={require("./../../assets/images/tri.png")}
+          style={triangleStyle}
+        />
+      </View>
+    );
+  };
+
+  renderPrices = () => {
+    let { productDiscountedPrice, productprice } = this.props;
+    return productprice > 0 ? (
+      <View style={styles.pricesView}>
+        <Text style={styles.priceText}>
+          ${parseFloat(productprice).toFixed(2)}
+        </Text>
+        {productDiscountedPrice ? (
+          <View style={styles.priceRowContainer}>
+            <Image
+              source={require("./../../assets/images/apps.png")}
+              style={styles.brew9Icon}
+            />
+            <Text style={styles.discountPriceText}>
+              ${parseFloat(productDiscountedPrice).toFixed(2)}
+            </Text>
+          </View>
+        ) : null}
+      </View>
+    ) : (
+      <View style={{ height: alpha * 15 }} />
+    );
+  };
+
   onSelectOptionPressed = () => {
     this.props.onCellPress(this.props.item, this.props.index);
   };
 
+  renderName = () => {
+    let { index } = this.props;
+    let style =
+      index % 2 == 0
+        ? styles.titleText
+        : [styles.titleText, { width: alpha * 120 }];
+    return (
+      <Text adjustsFontSizeToFit numberOfLines={3} style={style}>
+        {this.props.productname}
+      </Text>
+    );
+  };
+
   render() {
+    const uri = this.props.productimage;
+
     return (
       <TouchableWithoutFeedback onPress={this.onProductCellPress}>
         <View navigation={this.props.navigation} style={styles.productcell}>
-
-          <Image
+          {/* <Image
             source={{ uri: this.props.productimage }}
             style={styles.productimageImage}
-          />
-
+          /> */}
+          <ExpoImage {...{ uri }} style={styles.productimageImage} />
 
           <View style={styles.productDetail}>
-            <Text adjustsFontSizeToFit numberOfLines={3} style={styles.titleText}>{this.props.productname}</Text>
-            <Text style={styles.priceText}>
-              ${parseFloat(this.props.productprice).toFixed(2)}
-            </Text>
+            {this.renderStatusView()}
+            {this.renderName()}
+            {this.renderPrices()}
           </View>
-          {this.props.productstatus != null && this.props.productstatus.length > 0 ?
-            <View style={styles.soldView}>
-              <Text style={styles.soldtextText}>{this.props.productstatus}</Text>
-            </View>
-            : null}
-
         </View>
       </TouchableWithoutFeedback>
     );
@@ -82,13 +234,15 @@ export default class ProductCell extends React.Component {
 
 const styles = StyleSheet.create({
   productDetail: {
-    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "center",
+    // width: alpha * 100
   },
   row: {
     flex: 1,
     flexDirection: "row",
     width: "100%",
-    marginLeft: 2 * alpha
+    marginLeft: 2 * alpha,
   },
   lineText: {
     backgroundColor: "black",
@@ -99,12 +253,17 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255, 255, 255, 1)",
     // backgroundColor: "yellow",
     width: (windowWidth - 90) / 2 - 20 * alpha,
-    height: 175 * alpha,
+    height: 200 * alpha,
     flexDirection: "column",
+    justifyContent: "flex-end",
     alignItems: "center",
     marginLeft: 1 * alpha,
     marginTop: 10 * alpha,
-    marginBottom: 5 * alpha
+    marginBottom: 5 * alpha,
+  },
+  priceRowContainer: {
+    flexDirection: "row",
+    alignItems: "center",
   },
   productimageImage: {
     resizeMode: "cover",
@@ -121,7 +280,7 @@ const styles = StyleSheet.create({
     bottom: 35 * alpha,
     height: 22 * alpha,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   soldtextText: {
     backgroundColor: "rgb(0, 178, 227)",
@@ -132,14 +291,16 @@ const styles = StyleSheet.create({
     fontSize: 8 * fontAlpha,
     fontStyle: "normal",
     fontWeight: "normal",
-    textAlign: "center"
+    textAlign: "center",
   },
   titleText: {
     color: "rgb(54, 54, 54)",
     fontFamily: TITLE_FONT,
-    fontSize: 10 * fontAlpha,
+    fontSize: 9 * fontAlpha,
     textAlign: "center",
-    backgroundColor: "rgba(255, 255, 255, 1)"
+    backgroundColor: "rgba(255, 255, 255, 1)",
+    marginBottom: alpha * 3,
+    marginTop: alpha * 2,
   },
   descriptionText: {
     backgroundColor: "transparent",
@@ -152,16 +313,21 @@ const styles = StyleSheet.create({
     textAlign: "left",
     width: 180 * alpha,
     marginLeft: 1 * alpha,
-    marginTop: 5 * alpha
+    marginTop: 5 * alpha,
   },
   priceText: {
+    backgroundColor: "rgba(255, 255, 255, 1)",
+    color: "#363636",
+    fontFamily: TITLE_FONT,
+    fontSize: 12 * fontAlpha,
+    fontWeight: "bold",
+  },
+  discountPriceText: {
     backgroundColor: "rgba(255, 255, 255, 1)",
     color: "rgb(0, 178, 227)",
     fontFamily: TITLE_FONT,
     fontSize: 12 * fontAlpha,
     fontWeight: "bold",
-    textAlign: "center",
-    marginTop: 3 * alpha
   },
 
   numberofitemText: {
@@ -171,6 +337,42 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     fontWeight: "bold",
     textAlign: "center",
-    backgroundColor: "transparent"
-  }
+    backgroundColor: "transparent",
+  },
+
+  statusView: {
+    flexDirection: "row",
+  },
+
+  triangle: {
+    position: "absolute",
+    right: alpha * -8.5,
+    width: 0,
+    height: 0,
+    backgroundColor: "transparent",
+    borderStyle: "solid",
+    borderLeftWidth: alpha * 7,
+    borderRightWidth: alpha * 7,
+    borderBottomWidth: alpha * 3,
+    borderLeftColor: "transparent",
+    borderRightColor: "transparent",
+    // borderBottomColor: "skyblue",
+    transform: [{ rotate: "90deg" }],
+  },
+
+  brew9Icon: {
+    marginLeft: 10 * alpha,
+    marginRight: 1 * alpha,
+    height: alpha * 12,
+    width: alpha * 12,
+  },
+  tri: {
+    height: "100%",
+  },
+
+  pricesView: {
+    // alignItems:'flex-end',
+    justifyContent: "center",
+    flexDirection: "row",
+  },
 });

@@ -4,7 +4,7 @@ platform :ios, '10.0'
 target 'brew9-menu' do
   pod 'ExpoKit',
     :git => "http://github.com/expo/expo.git",
-    :tag => "ios/2.12.5",
+    :tag => "ios/2.13.0",
     :subspecs => [
       "Core"
     ],

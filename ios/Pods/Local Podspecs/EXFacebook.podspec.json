@@ -1,10 +1,12 @@
 {
   "name": "EXFacebook",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "summary": "Expo universal module for Facebook SDK",
   "description": "Expo universal module for Facebook SDK",
   "license": "MIT",
-  "authors": "650 Industries, Inc.",
+  "authors": {
+    "name": "650 Industries, Inc."
+  },
   "homepage": "https://docs.expo.io/versions/latest/sdk/facebook/",
   "platforms": {
     "ios": "10.0"
@@ -23,10 +25,10 @@
 
     ],
     "FBSDKCoreKit": [
-      "~> 4.0"
+      "~> 5.5"
     ],
     "FBSDKLoginKit": [
-      "~> 4.0"
+      "~> 5.5"
     ]
   }
 }

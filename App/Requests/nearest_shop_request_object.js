@@ -9,7 +9,9 @@ class NearestShopRequestObject extends BaseRequestObject{
     }
 
    getUrlString() {
-       return `companies/${this.url_id}/shops_kiosks`
+    //    return `companies/${this.url_id}/shops_kiosks`
+    // /api/companies/1/shop_kiosk/4 HTTP/1.1
+    return `companies/1/shop_kiosk/${this.url_id}`
    }
 }
 export default NearestShopRequestObject

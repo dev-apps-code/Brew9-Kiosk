@@ -1,10 +1,12 @@
 {
   "name": "EXAppLoaderProvider",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "summary": "Provides application loaders",
   "description": "Provides application loaders",
   "license": "MIT",
-  "authors": "650 Industries, Inc.",
+  "authors": {
+    "name": "650 Industries, Inc."
+  },
   "homepage": "https://github.com/expo/expo/tree/master/packages/expo-app-loader-provider",
   "platforms": {
     "ios": "10.0"
