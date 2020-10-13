@@ -7,6 +7,7 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
+  AsyncStorage,
   View,
 } from 'react-native';
 import React from 'react';
@@ -79,9 +80,11 @@ export default class Outlet extends React.Component {
     const connectionState = await NetInfo.fetch();
     const {isConnected} = connectionState;
     if (isConnected) {
-      this.loadAllShops();
+      // this.loadAllShops();
+      this.loadCache();
     } else {
-      alert('not connected');
+      alert('not connected, attempting to load cache data');
+      this.loadCache();
     }
   };
 
@@ -169,6 +172,28 @@ export default class Outlet extends React.Component {
     }
   };
 
+  async saveCache(data) {
+    const cacheShop = JSON.stringify(data);
+    await AsyncStorage.setItem('@cacheShop', cacheShop);
+  }
+
+  async loadCache() {
+    try {
+      const cacheShop = await AsyncStorage.getItem('@cacheShop');
+      if (cacheShop !== null) {
+        const object = JSON.parse(cacheShop);
+        const callback = this.cacheCallBack;
+        const params = {object, callback};
+        const action = createAction('shops/cacheSelectShop')(params);
+        this.props.dispatch(action);
+      } else {
+        alert('No cache data found');
+      }
+    } catch (error) {
+      alert('No cache data found');
+    }
+  }
+
   onPressShop = (data) => {
     this.setState({
       selectedShop: data,
@@ -176,14 +201,25 @@ export default class Outlet extends React.Component {
   };
 
   onPressOrderNowCallback = (eventObject) => {
+    const {result, success} = eventObject;
+    this.saveCache(result);
     const {
       dispatch,
       navigation: {navigate},
     } = this.props;
 
-    if (eventObject.success) {
+    if (success) {
       navigate('Home');
     }
+  };
+
+  cacheCallBack = (eventObject) => {
+    const {
+      dispatch,
+      navigation: {navigate},
+    } = this.props;
+
+    navigate('Home');
   };
 
   getShopsList = () => {
