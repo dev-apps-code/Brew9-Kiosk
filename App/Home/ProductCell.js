@@ -23,6 +23,7 @@ import {
 } from "../Common/common_style";
 import { trimStart } from "lodash";
 import { Image as ExpoImage } from "react-native-expo-image-cache";
+import FastImage from 'react-native-fast-image'
 
 export default class ProductCell extends React.Component {
   constructor(props) {
@@ -219,8 +220,12 @@ export default class ProductCell extends React.Component {
             source={{ uri: this.props.productimage }}
             style={styles.productimageImage}
           /> */}
-          <ExpoImage {...{ uri }} style={styles.productimageImage} />
-
+          {/* <ExpoImage {...{ uri }} style={styles.productimageImage} /> */}
+          <FastImage
+              style={styles.productimageImage}
+              source={{ uri: this.props.productimage }}
+              resizeMode={FastImage.resizeMode.contain}
+          /> 
           <View style={styles.productDetail}>
             {this.renderStatusView()}
             {this.renderName()}
