@@ -8,13 +8,12 @@ import {
   TextInput,
   TouchableOpacity,
   View,
-} from "react-native";
-import React from "react";
-import * as Permissions from "expo-permissions";
-import * as Location from "expo-location";
-import { connect } from "react-redux";
-import { alpha, fontAlpha, windowWidth } from "../Common/size";
-import ShopList from "../Components/ShopList";
+} from 'react-native';
+import React from 'react';
+import {connect} from 'react-redux';
+import {alpha, fontAlpha, windowWidth} from '../Common/size';
+import ShopList from '../Components/ShopList';
+import NetInfo from '@react-native-community/netinfo';
 import {
   TINT_COLOR,
   TABBAR_INACTIVE_TINT,
@@ -25,13 +24,13 @@ import {
   TEXT_COLOR,
   DISABLED_COLOR,
   DEFAULT_BORDER_RADIUS,
-} from "../Common/common_style";
-import { createAction } from "../Utils";
-import AllShopsRequestObject from "../Requests/all_shops_request_object";
-  import SelectShopRequestObject from '../Requests/select_shop_request_object';
-import NearestShopRequestObject from "../Requests/nearest_shop_request_object";
+} from '../Common/common_style';
+import {createAction} from '../Utils';
+import AllShopsRequestObject from '../Requests/all_shops_request_object';
+import SelectShopRequestObject from '../Requests/select_shop_request_object';
+import NearestShopRequestObject from '../Requests/nearest_shop_request_object';
 
-@connect(({ members, shops, orders }) => ({
+@connect(({members, shops, orders}) => ({
   allShops: shops.allShops,
   companyId: members.company_id,
   nearbyShops: shops.nearbyShops,
@@ -50,23 +49,23 @@ export default class Outlet extends React.Component {
     isSearching: false,
     searchResults: [],
     selectedArea: null,
-    selectedAreaText: "All",
+    selectedAreaText: 'All',
     selectedDistrict: null,
     showAreaView: false,
     showMap: true,
     selectedShop: null,
   });
 
-  componentDidMount() {
-    const { navigation } = this.props;
-    this.focusListener = navigation.addListener("didFocus", this._didFocus);
+  async componentDidMount() {
+    const {navigation} = this.props;
+    this.focusListener = navigation.addListener('didFocus', this._didFocus);
     this.keyboardWillShowListener = Keyboard.addListener(
-      "keyboardWillShow",
-      this.keyboardWillShow
+      'keyboardWillShow',
+      this.keyboardWillShow,
     );
     this.keyboardWillHideListener = Keyboard.addListener(
-      "keyboardWillHide",
-      this.keyboardWillHide
+      'keyboardWillHide',
+      this.keyboardWillHide,
     );
   }
 
@@ -77,7 +76,21 @@ export default class Outlet extends React.Component {
   }
 
   _didFocus = async () => {
-    this.loadAllShops();
+    const connectionState = await NetInfo.fetch();
+    const {isConnected} = connectionState;
+    if (isConnected) {
+      this.loadAllShops();
+    } else {
+      alert('not connected');
+    }
+  };
+
+  isConnected = () => {
+    NetInfo.fetch().then((state) => {
+      console.log('Connection type', state.type);
+      console.log('Is connected?', state.isConnected);
+      return 'test';
+    });
   };
 
   keyboardWillHide = () => {
@@ -85,12 +98,12 @@ export default class Outlet extends React.Component {
   };
 
   keyboardWillShow = () => {
-    this.setState({ showMap: false });
+    this.setState({showMap: false});
   };
 
   async loadAllShops() {
-    this.setState({ isLoading: true });
-    const { companyId, dispatch, location } = this.props;
+    this.setState({isLoading: true});
+    const {companyId, dispatch, location} = this.props;
 
     const latitude = location != null ? location.coords.latitude : null;
     const longitude = location != null ? location.coords.longitude : null;
@@ -103,10 +116,10 @@ export default class Outlet extends React.Component {
 
     // load all shops always
     dispatch(
-      createAction("shops/loadAllShops")({
+      createAction('shops/loadAllShops')({
         object: allShopsObject,
         callback: this.updateShopsList,
-      })
+      }),
     );
 
     //   const { status } = await Permissions.getAsync(Permissions.LOCATION);
@@ -126,11 +139,11 @@ export default class Outlet extends React.Component {
   }
 
   updateShopsList = (eventObject) => {
-    this.setState({ isLoading: false });
+    this.setState({isLoading: false});
   };
 
   onPressOrderNow = async (id) => {
-    const { location } = this.props;
+    const {location} = this.props;
     const latitude = location != null ? location.coords.latitude : null;
     const longitude = location != null ? location.coords.longitude : null;
 
@@ -141,8 +154,8 @@ export default class Outlet extends React.Component {
       object.setShopId(id);
 
       const callback = this.onPressOrderNowCallback;
-      const params = { object, callback };
-      const action = createAction("shops/selectShop")(params);
+      const params = {object, callback};
+      const action = createAction('shops/selectShop')(params);
       this.props.dispatch(action);
     } else {
       const object = new SelectShopRequestObject();
@@ -150,8 +163,8 @@ export default class Outlet extends React.Component {
       object.setShopId(id);
 
       const callback = this.onPressOrderNowCallback;
-      const params = { object, callback };
-      const action = createAction("shops/selectShop")(params);
+      const params = {object, callback};
+      const action = createAction('shops/selectShop')(params);
       this.props.dispatch(action);
     }
   };
@@ -165,17 +178,17 @@ export default class Outlet extends React.Component {
   onPressOrderNowCallback = (eventObject) => {
     const {
       dispatch,
-      navigation: { navigate },
+      navigation: {navigate},
     } = this.props;
 
     if (eventObject.success) {
-      navigate("Home");
+      navigate('Home');
     }
   };
 
   getShopsList = () => {
-    const { allShops, nearbyShops } = this.props;
-    const { displayShopList, isSearching, searchResults } = this.state;
+    const {allShops, nearbyShops} = this.props;
+    const {displayShopList, isSearching, searchResults} = this.state;
 
     if (isSearching) return searchResults;
     if (displayShopList.length > 0) return displayShopList;
@@ -206,20 +219,19 @@ export default class Outlet extends React.Component {
 const styles = StyleSheet.create({
   //view
   mainView: {
-    height: "100%",
-    width: "100%",
+    height: '100%',
+    width: '100%',
     backgroundColor: LIGHT_GREY_BACKGROUND,
   },
   header: {
-      height: alpha * 50,
-      width: '100%',
-      justifyContent:'center',
-      alignItems:'center',
-      backgroundColor: 'white',
-
+    height: alpha * 50,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'white',
   },
   headerText: {
-      fontFamily: TITLE_FONT,
-      fontSize: fontAlpha * 12
-  }
+    fontFamily: TITLE_FONT,
+    fontSize: fontAlpha * 12,
+  },
 });
