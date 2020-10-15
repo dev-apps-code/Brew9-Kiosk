@@ -80,10 +80,10 @@ export default class Outlet extends React.Component {
     const connectionState = await NetInfo.fetch();
     const {isConnected} = connectionState;
     if (isConnected) {
-      // this.loadAllShops();
-      this.loadCache();
+      this.loadAllShops();
+      // this.loadCache();
     } else {
-      alert('not connected, attempting to load cache data');
+      alert('no network connection, attempting to load cache data');
       this.loadCache();
     }
   };
