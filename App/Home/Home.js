@@ -10,6 +10,7 @@ import {
   ScrollView,
   StatusBar,
   Platform,
+  AsyncStorage,
 } from 'react-native';
 import React from 'react';
 import Modal from 'react-native-modal';
@@ -28,6 +29,7 @@ import * as Location from 'expo-location';
 import * as Permissions from 'expo-permissions';
 import {TITLE_FONT} from '../Common/common_style';
 import AnimationLoading from '../Components/AnimationLoading';
+import NetInfo from '@react-native-community/netinfo';
 
 @connect(({members, shops}) => ({
   currentMember: members.profile,
@@ -148,6 +150,15 @@ class Home extends React.Component {
     // this.loadStorePushToken()
   }
 
+  // async saveCache() {
+  //   try {
+  //     const cacheData = await AsyncStorage.getItem('@cacheData');
+  //     console.log(cacheData)
+  //   } catch (error) {
+  //     alert("No cache data found")
+  //   }
+  // }
+
   loadStorePushToken() {
     const {dispatch, currentMember} = this.props;
     const callback = (eventObject) => {
@@ -172,15 +183,24 @@ class Home extends React.Component {
     }
   }
 
-  loadShops(loadProducts) {
+  async loadShops(loadProducts) {
     this.setState(
       {
         shop: this.props.selectedShop,
         menu_banners: this.props.selectedShop.menu_banners,
       },
-      () => {
+      async () => {
         if (loadProducts) {
-          this.loadStoreProducts();
+          // this.loadStoreProducts();
+          const connectionState = await NetInfo.fetch();
+          const {isConnected} = connectionState;
+          if (isConnected) {
+            this.loadStoreProducts();
+            // this.loadCache();
+          } else {
+            alert('not connected, attempting to load cache data');
+            this.loadCache();
+          }
         }
       },
     );
@@ -191,7 +211,60 @@ class Home extends React.Component {
     const {selected_category} = this.state;
 
     const callback = (eventObject) => {
+      // console.log(eventObject);
       if (eventObject.success) {
+        const {result} = eventObject;
+        this.saveCache(eventObject);
+        const filteredData = [];
+
+        result.forEach((products) => {
+          const {show_menu_kiosk} = products;
+
+          if (
+            typeof show_menu_kiosk === 'undefined' ||
+            show_menu_kiosk == true
+          ) {
+            filteredData.push(products);
+          }
+        });
+
+        for (var index in filteredData) {
+          filteredData[index].selected = index === selected_category;
+        }
+
+        this.setState((prevState) => ({
+          ...prevState,
+          data: filteredData,
+          total: eventObject.total,
+          products: filteredData[0].products,
+          isRefreshing: false,
+          loading: false,
+        }));
+      } else {
+        alert('Failed to fetch products');
+        // Failed to fetch products
+      }
+    };
+
+    const obj = new ProductRequestObject();
+    obj.setUrlId(selectedShop.id);
+    dispatch(
+      createAction('products/loadStoreProducts')({
+        object: obj,
+        callback,
+      }),
+    );
+  }
+
+  async loadCache() {
+    try {
+      const cacheStoreProducts = await AsyncStorage.getItem(
+        '@cacheStoreProducts',
+      );
+      // console.log(cacheStoreProducts);
+      if (cacheStoreProducts !== null) {
+        const {selected_category} = this.state;
+        const eventObject = JSON.parse(cacheStoreProducts);
         const {result} = eventObject;
         const filteredData = [];
 
@@ -219,18 +292,16 @@ class Home extends React.Component {
           loading: false,
         }));
       } else {
-        // Failed to fetch products
+        alert('No cache data found');
       }
-    };
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
-    const obj = new ProductRequestObject();
-    obj.setUrlId(selectedShop.id);
-    dispatch(
-      createAction('products/loadStoreProducts')({
-        object: obj,
-        callback,
-      }),
-    );
+  async saveCache(data) {
+    const cacheStoreProducts = JSON.stringify(data);
+    await AsyncStorage.setItem('@cacheStoreProducts', cacheStoreProducts);
   }
 
   onRefresh() {
