@@ -5,7 +5,7 @@ buildscript {
   }
 
   dependencies {
-    classpath 'io.fabric.tools:gradle:1.26.1'
+    classpath 'io.fabric.tools:gradle:1.28.0'
   }
 }
 apply plugin: 'com.android.application'
@@ -21,7 +21,7 @@ def safeExtGet(prop, fallback) {
 }
 
 android {
-  compileSdkVersion safeExtGet("compileSdkVersion", 28)
+  compileSdkVersion safeExtGet("compileSdkVersion", 29)
 
   compileOptions {
     sourceCompatibility JavaVersion.VERSION_1_8
@@ -31,7 +31,7 @@ android {
   defaultConfig {
     applicationId 'com.brew9.menu'
     minSdkVersion safeExtGet("minSdkVersion", 21)
-    targetSdkVersion safeExtGet("targetSdkVersion", 28)
+    targetSdkVersion safeExtGet("targetSdkVersion", 29)
     versionCode 1
     versionName '1.0.0'
     ndk {
@@ -39,15 +39,15 @@ android {
       // to be able to bundle old, incompatible SDKs.
 
 
-      
+
       abiFilters 'armeabi-v7a', 'x86', 'arm64-v8a', 'x86_64'
-      
+
     }
     multiDexEnabled true
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     // Deprecated. Used by net.openid:appauth
     manifestPlaceholders = [
-        'appAuthRedirectScheme': 'host.exp.exponent'
+            'appAuthRedirectScheme': 'host.exp.exponent'
     ]
   }
   dexOptions {
@@ -82,6 +82,7 @@ android {
   }
   packagingOptions {
     pickFirst "**"
+    pickFirst '**/META-INFMANIFEST.MF'
   }
 }
 
@@ -121,7 +122,7 @@ dependencies {
   // Our dependencies from ExpoView
   // DON'T ADD ANYTHING HERE THAT ISN'T IN EXPOVIEW. ONLY COPY THINGS FROM EXPOVIEW TO HERE.
   implementation "com.android.support:appcompat-v7:$supportLibVersion"
-  implementation 'com.facebook.android:facebook-android-sdk:5.0.1'
+  implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
   implementation('com.facebook.android:audience-network-sdk:5.1.1') {
     exclude module: 'play-services-ads'
   }
@@ -136,9 +137,14 @@ dependencies {
   implementation 'com.google.android.gms:play-services-auth:15.0.1'
   implementation 'com.google.android.gms:play-services-location:15.0.1'
   implementation 'com.google.android.gms:play-services-ads:15.0.1'
+  implementation project(':react-native-fast-image')
+  /*
+  deprecicated as of sdk34
+
   annotationProcessor 'com.raizlabs.android:DBFlow-Compiler:2.2.1'
   implementation "com.raizlabs.android:DBFlow-Core:2.2.1"
   implementation "com.raizlabs.android:DBFlow:2.2.1"
+  */
   implementation "com.madgag.spongycastle:core:1.53.0.0"
   implementation "com.madgag.spongycastle:prov:1.53.0.0"
   debugImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta1'
@@ -179,38 +185,38 @@ dependencies {
   testImplementation 'com.android.support.test:runner:1.0.2-alpha1'
   testImplementation 'com.android.support.test:rules:1.0.2-alpha1'
 
-  
-  implementation('host.exp.exponent:expoview:34.0.0@aar') {
+
+  implementation('host.exp.exponent:expoview:38.0.0@aar') {
     transitive = true
     exclude group: 'com.squareup.okhttp3', module: 'okhttp'
     exclude group: 'com.squareup.okhttp3', module: 'okhttp-urlconnection'
   }
-  
 
 
-  
+
+
   api 'org.webkit:android-jsc:r245459' // needs to be before react-native
-  api 'com.facebook.react:react-native:33.0.0'
-  
+  api 'com.facebook.react:react-native:38.0.0'
 
 
-  
+
+
   addUnimodulesDependencies([
-      modulesPaths : [
-        '../../node_modules'
-      ],
-      configuration: 'api',
-      target       : 'react-native',
-      exclude      : [
-        // You can exclude unneeded modules here, eg.
-        // 'unimodules-face-detector-interface',
-        // 'expo-face-detector'
+          modulesPaths : [
+                  '../../node_modules'
+          ],
+          configuration: 'api',
+          target       : 'react-native',
+          exclude      : [
+                  // You can exclude unneeded modules here, eg.
+                  // 'unimodules-face-detector-interface',
+                  // 'expo-face-detector'
 
-        // Adding a name here will also remove the package
-        // from auto-generated BasePackageList.java
-      ]
+                  // Adding a name here will also remove the package
+                  // from auto-generated BasePackageList.java
+          ]
   ])
-  
+
 }
 
 // This has to be down here for some reason
