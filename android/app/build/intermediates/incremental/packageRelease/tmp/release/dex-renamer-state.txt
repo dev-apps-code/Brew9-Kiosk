@@ -1,4 +1,4 @@
-#Wed Oct 21 07:55:44 MYT 2020
+#Wed Oct 21 08:45:15 MYT 2020
 base.0=/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 path.1=classes2.dex
 renamed.1=classes2.dex

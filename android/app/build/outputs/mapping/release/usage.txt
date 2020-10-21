@@ -4437,16 +4437,6 @@ org.spongycastle.jcajce.provider.keystore.pkcs12.PKCS12KeyStoreSpi:
     static final int KEY_SECRET
 com.google.common.hash.Hashing$Crc32cHolder
 com.bumptech.glide.Glide:
-    public static java.io.File getPhotoCacheDir(android.content.Context)
-    public static java.io.File getPhotoCacheDir(android.content.Context,java.lang.String)
-    public static synchronized void init(com.bumptech.glide.Glide)
-    public static void init(android.content.Context,com.bumptech.glide.GlideBuilder)
-    public static synchronized void tearDown()
-    public static com.bumptech.glide.RequestManager with(android.app.Activity)
-    public static com.bumptech.glide.RequestManager with(androidx.fragment.app.FragmentActivity)
-    public static com.bumptech.glide.RequestManager with(androidx.fragment.app.Fragment)
-    public static com.bumptech.glide.RequestManager with(android.app.Fragment)
-    public static com.bumptech.glide.RequestManager with(android.view.View)
     public synchronized varargs void preFillBitmapPool(com.bumptech.glide.load.engine.prefill.PreFillType$Builder[])
     public void clearDiskCache()
     public com.bumptech.glide.MemoryCategory setMemoryCategory(com.bumptech.glide.MemoryCategory)
@@ -4536,7 +4526,6 @@ com.google.android.gms.internal.ads.zzaba
 org.spongycastle.crypto.tls.TlsDSASigner:
     public org.spongycastle.crypto.Signer createSigner(org.spongycastle.crypto.tls.SignatureAndHashAlgorithm,org.spongycastle.crypto.params.AsymmetricKeyParameter)
 com.google.common.collect.ByFunctionOrdering
-com.dylanvann.fastimage.R$styleable
 org.spongycastle.asn1.cms.GenericHybridParameters:
     private void <init>(org.spongycastle.asn1.ASN1Sequence)
     public static org.spongycastle.asn1.cms.GenericHybridParameters getInstance(java.lang.Object)
@@ -4545,7 +4534,6 @@ org.spongycastle.asn1.cms.GenericHybridParameters:
     public org.spongycastle.asn1.x509.AlgorithmIdentifier getKem()
 com.cronutils.descriptor.TimeDescriptionStrategy$TimeFields
 org.apache.commons.lang3.builder.ToStringStyle$JsonToStringStyle
-com.dylanvann.fastimage.R$bool
 com.google.common.base.Ascii
 kotlin.reflect.jvm.internal.KClassifierImpl
 com.google.android.gms.common.internal.GmsClientSupervisor:
@@ -5859,7 +5847,6 @@ com.bumptech.glide.MemoryCategory:
 com.google.common.util.concurrent.AbstractService$10
 androidx.lifecycle.ComputableLiveData
 com.google.android.gms.internal.gtm.zzqw
-com.dylanvann.fastimage.BuildConfig
 com.google.android.exoplayer2.extractor.mp4.FragmentedMp4Extractor$Flags
 com.google.common.io.GwtWorkarounds$2
 com.google.android.gms.internal.auth.zzab
@@ -7050,7 +7037,6 @@ com.cronutils.model.field.definition.FieldDefinitionBuilder:
 androidx.core.R
 com.google.android.gms.ads.zzc
 com.google.android.gms.internal.ads.zzzl
-com.dylanvann.fastimage.R$id
 com.google.common.util.concurrent.Service$State
 org.spongycastle.asn1.esf.CrlListID:
     public static org.spongycastle.asn1.esf.CrlListID getInstance(java.lang.Object)
@@ -7744,91 +7730,6 @@ com.google.android.gms.internal.fitness.zzbb
 com.raizlabs.android.dbflow.converter.DateConverter:
     public java.util.Date getModelValue(java.lang.Long)
     public synthetic bridge java.lang.Object getModelValue(java.lang.Object)
-com.dylanvann.fastimage.GlideOptions:
-    public static com.dylanvann.fastimage.GlideOptions sizeMultiplierOf(float)
-    public static com.dylanvann.fastimage.GlideOptions diskCacheStrategyOf(com.bumptech.glide.load.engine.DiskCacheStrategy)
-    public static com.dylanvann.fastimage.GlideOptions priorityOf(com.bumptech.glide.Priority)
-    public static com.dylanvann.fastimage.GlideOptions placeholderOf(android.graphics.drawable.Drawable)
-    public static com.dylanvann.fastimage.GlideOptions placeholderOf(int)
-    public static com.dylanvann.fastimage.GlideOptions errorOf(android.graphics.drawable.Drawable)
-    public static com.dylanvann.fastimage.GlideOptions errorOf(int)
-    public static com.dylanvann.fastimage.GlideOptions skipMemoryCacheOf(boolean)
-    public static com.dylanvann.fastimage.GlideOptions overrideOf(int,int)
-    public static com.dylanvann.fastimage.GlideOptions overrideOf(int)
-    public static com.dylanvann.fastimage.GlideOptions signatureOf(com.bumptech.glide.load.Key)
-    public static com.dylanvann.fastimage.GlideOptions fitCenterTransform()
-    public static com.dylanvann.fastimage.GlideOptions centerInsideTransform()
-    public static com.dylanvann.fastimage.GlideOptions centerCropTransform()
-    public static com.dylanvann.fastimage.GlideOptions circleCropTransform()
-    public static com.dylanvann.fastimage.GlideOptions bitmapTransform(com.bumptech.glide.load.Transformation)
-    public static com.dylanvann.fastimage.GlideOptions noTransformation()
-    public static com.dylanvann.fastimage.GlideOptions option(com.bumptech.glide.load.Option,java.lang.Object)
-    public static com.dylanvann.fastimage.GlideOptions decodeTypeOf(java.lang.Class)
-    public static com.dylanvann.fastimage.GlideOptions formatOf(com.bumptech.glide.load.DecodeFormat)
-    public static com.dylanvann.fastimage.GlideOptions frameOf(long)
-    public static com.dylanvann.fastimage.GlideOptions downsampleOf(com.bumptech.glide.load.resource.bitmap.DownsampleStrategy)
-    public static com.dylanvann.fastimage.GlideOptions timeoutOf(int)
-    public static com.dylanvann.fastimage.GlideOptions encodeQualityOf(int)
-    public static com.dylanvann.fastimage.GlideOptions encodeFormatOf(android.graphics.Bitmap$CompressFormat)
-    public static com.dylanvann.fastimage.GlideOptions noAnimation()
-    public com.dylanvann.fastimage.GlideOptions useUnlimitedSourceGeneratorsPool(boolean)
-    public com.dylanvann.fastimage.GlideOptions placeholder(int)
-    public com.dylanvann.fastimage.GlideOptions fallback(android.graphics.drawable.Drawable)
-    public com.dylanvann.fastimage.GlideOptions fallback(int)
-    public com.dylanvann.fastimage.GlideOptions error(android.graphics.drawable.Drawable)
-    public com.dylanvann.fastimage.GlideOptions error(int)
-    public com.dylanvann.fastimage.GlideOptions theme(android.content.res.Resources$Theme)
-    public com.dylanvann.fastimage.GlideOptions override(int)
-    public com.dylanvann.fastimage.GlideOptions encodeFormat(android.graphics.Bitmap$CompressFormat)
-    public com.dylanvann.fastimage.GlideOptions encodeQuality(int)
-    public com.dylanvann.fastimage.GlideOptions frame(long)
-    public com.dylanvann.fastimage.GlideOptions format(com.bumptech.glide.load.DecodeFormat)
-    public com.dylanvann.fastimage.GlideOptions disallowHardwareConfig()
-    public com.dylanvann.fastimage.GlideOptions timeout(int)
-    public com.dylanvann.fastimage.GlideOptions centerCrop()
-    public com.dylanvann.fastimage.GlideOptions fitCenter()
-    public com.dylanvann.fastimage.GlideOptions centerInside()
-    public com.dylanvann.fastimage.GlideOptions optionalCircleCrop()
-    public com.dylanvann.fastimage.GlideOptions circleCrop()
-    public final varargs com.dylanvann.fastimage.GlideOptions transform(com.bumptech.glide.load.Transformation[])
-    public final varargs com.dylanvann.fastimage.GlideOptions transforms(com.bumptech.glide.load.Transformation[])
-    public com.dylanvann.fastimage.GlideOptions optionalTransform(com.bumptech.glide.load.Transformation)
-    public com.dylanvann.fastimage.GlideOptions optionalTransform(java.lang.Class,com.bumptech.glide.load.Transformation)
-    public com.dylanvann.fastimage.GlideOptions transform(java.lang.Class,com.bumptech.glide.load.Transformation)
-    public com.dylanvann.fastimage.GlideOptions dontTransform()
-    public com.dylanvann.fastimage.GlideOptions dontAnimate()
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions dontAnimate()
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions dontTransform()
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions transform(java.lang.Class,com.bumptech.glide.load.Transformation)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions optionalTransform(java.lang.Class,com.bumptech.glide.load.Transformation)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions optionalTransform(com.bumptech.glide.load.Transformation)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions transforms(com.bumptech.glide.load.Transformation[])
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions transform(com.bumptech.glide.load.Transformation[])
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions circleCrop()
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions optionalCircleCrop()
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions centerInside()
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions fitCenter()
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions centerCrop()
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions timeout(int)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions disallowHardwareConfig()
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions format(com.bumptech.glide.load.DecodeFormat)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions frame(long)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions encodeQuality(int)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions encodeFormat(android.graphics.Bitmap$CompressFormat)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions override(int)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions theme(android.content.res.Resources$Theme)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions error(int)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions error(android.graphics.drawable.Drawable)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions fallback(int)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions fallback(android.graphics.drawable.Drawable)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions placeholder(int)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions useUnlimitedSourceGeneratorsPool(boolean)
-    private static com.dylanvann.fastimage.GlideOptions fitCenterTransform0
-    private static com.dylanvann.fastimage.GlideOptions centerInsideTransform1
-    private static com.dylanvann.fastimage.GlideOptions centerCropTransform2
-    private static com.dylanvann.fastimage.GlideOptions circleCropTransform3
-    private static com.dylanvann.fastimage.GlideOptions noTransformation4
-    private static com.dylanvann.fastimage.GlideOptions noAnimation5
 com.google.firebase.messaging.FirebaseMessagingRegistrar$zza:
     public final com.google.android.datatransport.Transport getTransport(java.lang.String,java.lang.Class,com.google.android.datatransport.Transformer)
 org.spongycastle.pqc.jcajce.provider.mceliece.McEliecePKCSCipherSpi:
@@ -8989,9 +8890,7 @@ kotlin.collections.AbstractMutableList:
     public abstract void add(int,java.lang.Object)
 com.bumptech.glide.load.engine.cache.DiskLruCacheWrapper:
     public static synchronized com.bumptech.glide.load.engine.cache.DiskCache get(java.io.File,long)
-    private synchronized void resetDiskCache()
     public void delete(com.bumptech.glide.load.Key)
-    public synchronized void clear()
     private static final java.lang.String TAG
     private static final int APP_VERSION
     private static final int VALUE_COUNT
@@ -9104,7 +9003,6 @@ org.spongycastle.pqc.jcajce.provider.mceliece.BCMcElieceCCA2PrivateKey:
     public int getT()
     protected org.spongycastle.asn1.ASN1Primitive getAlgParams()
 org.joda.time.convert.ReadablePeriodConverter
-com.bumptech.glide.request.RequestFutureTarget
 com.google.android.gms.internal.base.zae
 org.spongycastle.crypto.tls.TlsHandshakeHash:
     public abstract void init(org.spongycastle.crypto.tls.TlsContext)
@@ -9131,7 +9029,6 @@ androidx.media.MediaBrowserServiceCompat$ServiceBinderImpl$8
 androidx.vectordrawable.R$color
 org.intellij.lang.annotations.JdkConstants$PatternFlags
 kotlin.sequences.SequencesKt___SequencesKt$minus$4$iterator$1
-com.dylanvann.fastimage.R$attr
 org.spongycastle.crypto.tls.SSL3Mac:
     public org.spongycastle.crypto.Digest getUnderlyingDigest()
     private static final byte IPAD_BYTE
@@ -9470,7 +9367,6 @@ org.spongycastle.jce.provider.RFC3280CertPathUtilities:
     protected static final int CRL_SIGN
 com.bumptech.glide.load.engine.bitmap_recycle.PrettyPrintTreeMap
 com.google.android.gms.common.server.converter.StringToIntConverter
-com.dylanvann.fastimage.R$interpolator
 org.spongycastle.crypto.signers.ISOTrailers:
     public static boolean noTrailerAvailable(org.spongycastle.crypto.Digest)
     public static final int TRAILER_IMPLICIT
@@ -11031,7 +10927,6 @@ org.apache.commons.lang3.time.DateUtils
 com.google.android.exoplayer2.upstream.TeeDataSource
 androidx.media.VolumeProviderCompatApi21$1
 com.google.common.collect.TreeRangeMap$SubRangeMap$SubRangeMapAsMap
-com.dylanvann.fastimage.R$string
 com.raizlabs.android.dbflow.sql.language.SQLOperator:
     public abstract java.lang.String operation()
 org.apache.commons.codec.digest.UnixCrypt
@@ -12295,7 +12190,6 @@ org.spongycastle.asn1.cms.CMSAlgorithmProtection:
     public org.spongycastle.asn1.x509.AlgorithmIdentifier getSignatureAlgorithm()
     public static final int SIGNATURE
     public static final int MAC
-com.bumptech.glide.request.RequestFutureTarget$Waiter
 com.raizlabs.android.dbflow.annotation.ConflictAction
 com.google.common.io.BaseEncoding$SeparatedBaseEncoding
 org.spongycastle.i18n.MessageBundle:
@@ -12306,36 +12200,6 @@ org.spongycastle.i18n.MessageBundle:
     public java.lang.String getTitle(java.util.Locale,java.util.TimeZone)
     public java.lang.String getTitle(java.util.Locale)
     public static final java.lang.String TITLE_ENTRY
-com.bumptech.glide.RequestBuilder:
-    protected void <init>(java.lang.Class,com.bumptech.glide.RequestBuilder)
-    public com.bumptech.glide.RequestBuilder transition(com.bumptech.glide.TransitionOptions)
-    public com.bumptech.glide.RequestBuilder error(com.bumptech.glide.RequestBuilder)
-    public com.bumptech.glide.RequestBuilder thumbnail(com.bumptech.glide.RequestBuilder)
-    public varargs com.bumptech.glide.RequestBuilder thumbnail(com.bumptech.glide.RequestBuilder[])
-    public com.bumptech.glide.RequestBuilder thumbnail(float)
-    public com.bumptech.glide.RequestBuilder load(android.graphics.Bitmap)
-    public com.bumptech.glide.RequestBuilder load(android.graphics.drawable.Drawable)
-    public com.bumptech.glide.RequestBuilder load(java.lang.String)
-    public com.bumptech.glide.RequestBuilder load(android.net.Uri)
-    public com.bumptech.glide.RequestBuilder load(java.io.File)
-    public com.bumptech.glide.RequestBuilder load(java.lang.Integer)
-    public com.bumptech.glide.RequestBuilder load(java.net.URL)
-    public com.bumptech.glide.RequestBuilder load(byte[])
-    public com.bumptech.glide.request.FutureTarget into(int,int)
-    public com.bumptech.glide.request.FutureTarget submit()
-    public com.bumptech.glide.request.FutureTarget submit(int,int)
-    public com.bumptech.glide.request.target.Target downloadOnly(com.bumptech.glide.request.target.Target)
-    public com.bumptech.glide.request.FutureTarget downloadOnly(int,int)
-    protected com.bumptech.glide.RequestBuilder getDownloadOnlyRequest()
-    public synthetic bridge java.lang.Object load(java.lang.Object)
-    public synthetic bridge java.lang.Object load(byte[])
-    public synthetic bridge java.lang.Object load(java.net.URL)
-    public synthetic bridge java.lang.Object load(java.lang.Integer)
-    public synthetic bridge java.lang.Object load(java.io.File)
-    public synthetic bridge java.lang.Object load(android.net.Uri)
-    public synthetic bridge java.lang.Object load(java.lang.String)
-    public synthetic bridge java.lang.Object load(android.graphics.drawable.Drawable)
-    public synthetic bridge java.lang.Object load(android.graphics.Bitmap)
 com.google.android.gms.internal.gtm.zzb
 androidx.recyclerview.widget.ThreadUtil$MainThreadCallback
 com.bumptech.glide.request.transition.BitmapContainerTransitionFactory
@@ -13180,7 +13044,6 @@ android.support.v4.media.session.MediaControllerCompat$MediaControllerImplBase
 com.google.android.gms.internal.fitness.zzdq
 com.bumptech.glide.load.engine.ActiveResources:
     void setDequeuedResourceCallback(com.bumptech.glide.load.engine.ActiveResources$DequeuedResourceCallback)
-    void shutdown()
 com.google.firebase.installations.R$string
 org.spongycastle.pqc.crypto.mceliece.Conversions:
     public static byte[] signConversion(int,int,byte[])
@@ -13622,14 +13485,6 @@ org.spongycastle.asn1.pkcs.SafeBag:
 kotlin.annotation.Retention
 com.google.zxing.client.result.ISBNParsedResult
 com.bumptech.glide.manager.RequestManagerRetriever:
-    private static void findAllSupportFragmentsWithViews(java.util.Collection,java.util.Map)
-    private androidx.fragment.app.Fragment findSupportFragment(android.view.View,androidx.fragment.app.FragmentActivity)
-    private android.app.Fragment findFragment(android.view.View,android.app.Activity)
-    private void findAllFragmentsWithViews(android.app.FragmentManager,androidx.collection.ArrayMap)
-    private void findAllFragmentsWithViewsPreO(android.app.FragmentManager,androidx.collection.ArrayMap)
-    public com.bumptech.glide.RequestManager get(androidx.fragment.app.Fragment)
-    public com.bumptech.glide.RequestManager get(android.view.View)
-    public com.bumptech.glide.RequestManager get(android.app.Fragment)
     static final java.lang.String FRAGMENT_TAG
     private static final java.lang.String TAG
     private static final int ID_REMOVE_FRAGMENT_MANAGER
@@ -16612,7 +16467,6 @@ com.google.common.collect.Synchronized$SynchronizedAsMapValues$1
 com.cronutils.model.time.generator.FieldValueGeneratorFactory:
     public static com.cronutils.model.time.generator.FieldValueGeneratorFactory instance()
 org.apache.commons.io.LineIterator
-com.dylanvann.fastimage.R
 org.apache.commons.io.input.ClosedInputStream
 com.google.common.collect.AbstractSetMultimap
 com.google.android.exoplayer2.scheduler.RequirementsWatcher$Listener
@@ -17507,8 +17361,6 @@ org.apache.commons.lang3.builder.DiffBuilder$2
 com.google.common.collect.ForwardingObject
 com.google.common.cache.LocalCache$AbstractReferenceEntry
 com.google.android.gms.fitness.zzd
-com.bumptech.glide.load.engine.Engine$EngineJobFactory:
-    void shutdown()
 com.google.common.collect.TreeRangeSet
 org.unimodules.core.interfaces.services.UIManager$ViewHolder:
     public abstract android.view.View get(java.lang.Object)
@@ -17799,9 +17651,6 @@ com.google.ads.mediation.customevent.CustomEventBannerListener:
 com.bumptech.glide.load.resource.bitmap.TransformationUtils:
     private void <init>()
     public static android.graphics.Bitmap rotateImage(android.graphics.Bitmap,int)
-    public static android.graphics.Bitmap circleCrop(com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,android.graphics.Bitmap,int,int)
-    private static android.graphics.Bitmap getAlphaSafeBitmap(com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,android.graphics.Bitmap)
-    private static android.graphics.Bitmap$Config getAlphaSafeConfig(android.graphics.Bitmap)
     public static android.graphics.Bitmap roundedCorners(com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,android.graphics.Bitmap,int,int,int)
     public static android.graphics.Bitmap roundedCorners(com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,android.graphics.Bitmap,int)
     public static android.graphics.Bitmap roundedCorners(com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,android.graphics.Bitmap,float,float,float,float)
@@ -19871,7 +19720,6 @@ com.google.common.cache.LocalCache$EntrySet
 android.support.v4.media.session.PlaybackStateCompatApi22:
     public static java.lang.Object newInstance(int,long,long,float,long,java.lang.CharSequence,long,java.util.List,long,android.os.Bundle)
     private void <init>()
-com.dylanvann.fastimage.R$drawable
 androidx.recyclerview.R$color
 androidx.fragment.R$id:
     private void <init>()
@@ -19942,7 +19790,6 @@ androidx.fragment.R$id:
     public static final int text2
     public static final int time
     public static final int title
-com.dylanvann.fastimage.GlideApp
 com.google.common.collect.EmptyImmutableSet
 com.google.common.util.concurrent.ServiceManager$ServiceManagerState$1
 com.google.android.material.tabs.TabLayout$1
@@ -21111,7 +20958,6 @@ androidx.recyclerview.widget.ItemTouchUIUtil
 androidx.core.internal.package-info
 com.bumptech.glide.load.engine.Engine:
     public void clearDiskCache()
-    public void shutdown()
     private static final java.lang.String TAG
     private static final int JOB_POOL_SIZE
 com.google.android.gms.maps.internal.zzae
@@ -21641,59 +21487,6 @@ de.greenrobot.event.util.ErrorDialogManager:
     public static final java.lang.String KEY_FINISH_AFTER_DIALOG
     public static final java.lang.String KEY_ICON_ID
     public static final java.lang.String KEY_EVENT_TYPE_ON_CLOSE
-com.bumptech.glide.request.BaseRequestOptions:
-    private com.bumptech.glide.request.BaseRequestOptions scaleOnlyTransform(com.bumptech.glide.load.resource.bitmap.DownsampleStrategy,com.bumptech.glide.load.Transformation)
-    public com.bumptech.glide.request.BaseRequestOptions useUnlimitedSourceGeneratorsPool(boolean)
-    public com.bumptech.glide.request.BaseRequestOptions placeholder(int)
-    public com.bumptech.glide.request.BaseRequestOptions fallback(android.graphics.drawable.Drawable)
-    public com.bumptech.glide.request.BaseRequestOptions fallback(int)
-    public com.bumptech.glide.request.BaseRequestOptions error(android.graphics.drawable.Drawable)
-    public com.bumptech.glide.request.BaseRequestOptions error(int)
-    public com.bumptech.glide.request.BaseRequestOptions theme(android.content.res.Resources$Theme)
-    public com.bumptech.glide.request.BaseRequestOptions override(int)
-    public final boolean isLocked()
-    public com.bumptech.glide.request.BaseRequestOptions encodeFormat(android.graphics.Bitmap$CompressFormat)
-    public com.bumptech.glide.request.BaseRequestOptions encodeQuality(int)
-    public com.bumptech.glide.request.BaseRequestOptions frame(long)
-    public com.bumptech.glide.request.BaseRequestOptions format(com.bumptech.glide.load.DecodeFormat)
-    public com.bumptech.glide.request.BaseRequestOptions disallowHardwareConfig()
-    public com.bumptech.glide.request.BaseRequestOptions timeout(int)
-    public com.bumptech.glide.request.BaseRequestOptions centerCrop()
-    public com.bumptech.glide.request.BaseRequestOptions fitCenter()
-    public com.bumptech.glide.request.BaseRequestOptions centerInside()
-    public com.bumptech.glide.request.BaseRequestOptions optionalCircleCrop()
-    public com.bumptech.glide.request.BaseRequestOptions circleCrop()
-    public varargs com.bumptech.glide.request.BaseRequestOptions transform(com.bumptech.glide.load.Transformation[])
-    public varargs com.bumptech.glide.request.BaseRequestOptions transforms(com.bumptech.glide.load.Transformation[])
-    public com.bumptech.glide.request.BaseRequestOptions optionalTransform(com.bumptech.glide.load.Transformation)
-    public com.bumptech.glide.request.BaseRequestOptions optionalTransform(java.lang.Class,com.bumptech.glide.load.Transformation)
-    public com.bumptech.glide.request.BaseRequestOptions transform(java.lang.Class,com.bumptech.glide.load.Transformation)
-    public com.bumptech.glide.request.BaseRequestOptions dontTransform()
-    public com.bumptech.glide.request.BaseRequestOptions dontAnimate()
-    protected boolean isAutoCloneEnabled()
-    public final boolean isDiskCacheStrategySet()
-    public final boolean isSkipMemoryCacheSet()
-    private static final int UNSET
-    private static final int SIZE_MULTIPLIER
-    private static final int DISK_CACHE_STRATEGY
-    private static final int PRIORITY
-    private static final int ERROR_PLACEHOLDER
-    private static final int ERROR_ID
-    private static final int PLACEHOLDER
-    private static final int PLACEHOLDER_ID
-    private static final int IS_CACHEABLE
-    private static final int OVERRIDE
-    private static final int SIGNATURE
-    private static final int TRANSFORMATION
-    private static final int RESOURCE_CLASS
-    private static final int FALLBACK
-    private static final int FALLBACK_ID
-    private static final int THEME
-    private static final int TRANSFORMATION_ALLOWED
-    private static final int TRANSFORMATION_REQUIRED
-    private static final int USE_UNLIMITED_SOURCE_GENERATORS_POOL
-    private static final int ONLY_RETRIEVE_FROM_CACHE
-    private static final int USE_ANIMATION_POOL
 com.google.android.gms.security.ProviderInstaller$ProviderInstallListener
 com.google.android.material.snackbar.BaseTransientBottomBar$Behavior:
     private void setBaseTransientBottomBar(com.google.android.material.snackbar.BaseTransientBottomBar)
@@ -22724,8 +22517,6 @@ androidx.appcompat.R$attr:
     public static final int windowMinWidthMinor
     public static final int windowNoTitle
 org.intellij.lang.annotations.JdkConstants$FontStyle
-com.bumptech.glide.load.engine.Engine$LazyDiskCacheProvider:
-    synchronized void clearDiskCacheIfCreated()
 com.google.android.gms.tagmanager.zzep
 com.google.android.gms.common.SignInButton$ButtonSize
 androidx.loader.R
@@ -24437,7 +24228,6 @@ org.joda.time.DateTime:
 com.google.maps.android.PolyUtil
 com.bumptech.glide.util.Executors:
     private void <init>()
-    public static void shutdownAndAwaitTermination(java.util.concurrent.ExecutorService)
 com.google.android.datatransport.runtime.ExecutionModule:
     void <init>()
 com.google.android.gms.gcm.zzj
@@ -25423,97 +25213,6 @@ org.spongycastle.crypto.Xof:
     public abstract int doFinal(byte[],int,int)
 com.google.android.gms.common.internal.FallbackServiceBroker
 com.google.android.gms.internal.identity.zzg
-com.dylanvann.fastimage.GlideRequest:
-    void <init>(java.lang.Class,com.bumptech.glide.RequestBuilder)
-    protected com.dylanvann.fastimage.GlideRequest getDownloadOnlyRequest()
-    public com.dylanvann.fastimage.GlideRequest useUnlimitedSourceGeneratorsPool(boolean)
-    public com.dylanvann.fastimage.GlideRequest placeholder(int)
-    public com.dylanvann.fastimage.GlideRequest fallback(android.graphics.drawable.Drawable)
-    public com.dylanvann.fastimage.GlideRequest fallback(int)
-    public com.dylanvann.fastimage.GlideRequest error(android.graphics.drawable.Drawable)
-    public com.dylanvann.fastimage.GlideRequest error(int)
-    public com.dylanvann.fastimage.GlideRequest theme(android.content.res.Resources$Theme)
-    public com.dylanvann.fastimage.GlideRequest override(int)
-    public com.dylanvann.fastimage.GlideRequest encodeFormat(android.graphics.Bitmap$CompressFormat)
-    public com.dylanvann.fastimage.GlideRequest encodeQuality(int)
-    public com.dylanvann.fastimage.GlideRequest frame(long)
-    public com.dylanvann.fastimage.GlideRequest format(com.bumptech.glide.load.DecodeFormat)
-    public com.dylanvann.fastimage.GlideRequest disallowHardwareConfig()
-    public com.dylanvann.fastimage.GlideRequest timeout(int)
-    public com.dylanvann.fastimage.GlideRequest centerCrop()
-    public com.dylanvann.fastimage.GlideRequest fitCenter()
-    public com.dylanvann.fastimage.GlideRequest centerInside()
-    public com.dylanvann.fastimage.GlideRequest optionalCircleCrop()
-    public com.dylanvann.fastimage.GlideRequest circleCrop()
-    public varargs com.dylanvann.fastimage.GlideRequest transform(com.bumptech.glide.load.Transformation[])
-    public varargs com.dylanvann.fastimage.GlideRequest transforms(com.bumptech.glide.load.Transformation[])
-    public com.dylanvann.fastimage.GlideRequest optionalTransform(com.bumptech.glide.load.Transformation)
-    public com.dylanvann.fastimage.GlideRequest optionalTransform(java.lang.Class,com.bumptech.glide.load.Transformation)
-    public com.dylanvann.fastimage.GlideRequest transform(java.lang.Class,com.bumptech.glide.load.Transformation)
-    public com.dylanvann.fastimage.GlideRequest dontTransform()
-    public com.dylanvann.fastimage.GlideRequest dontAnimate()
-    public com.dylanvann.fastimage.GlideRequest transition(com.bumptech.glide.TransitionOptions)
-    public com.dylanvann.fastimage.GlideRequest error(com.bumptech.glide.RequestBuilder)
-    public com.dylanvann.fastimage.GlideRequest thumbnail(com.bumptech.glide.RequestBuilder)
-    public final varargs com.dylanvann.fastimage.GlideRequest thumbnail(com.bumptech.glide.RequestBuilder[])
-    public com.dylanvann.fastimage.GlideRequest thumbnail(float)
-    public com.dylanvann.fastimage.GlideRequest load(android.graphics.Bitmap)
-    public com.dylanvann.fastimage.GlideRequest load(android.graphics.drawable.Drawable)
-    public com.dylanvann.fastimage.GlideRequest load(java.lang.String)
-    public com.dylanvann.fastimage.GlideRequest load(android.net.Uri)
-    public com.dylanvann.fastimage.GlideRequest load(java.io.File)
-    public com.dylanvann.fastimage.GlideRequest load(java.lang.Integer)
-    public com.dylanvann.fastimage.GlideRequest load(java.net.URL)
-    public com.dylanvann.fastimage.GlideRequest load(byte[])
-    protected synthetic bridge com.bumptech.glide.RequestBuilder getDownloadOnlyRequest()
-    public synthetic bridge com.bumptech.glide.RequestBuilder load(byte[])
-    public synthetic bridge com.bumptech.glide.RequestBuilder load(java.net.URL)
-    public synthetic bridge com.bumptech.glide.RequestBuilder load(java.lang.Integer)
-    public synthetic bridge com.bumptech.glide.RequestBuilder load(java.io.File)
-    public synthetic bridge com.bumptech.glide.RequestBuilder load(android.net.Uri)
-    public synthetic bridge com.bumptech.glide.RequestBuilder load(java.lang.String)
-    public synthetic bridge com.bumptech.glide.RequestBuilder load(android.graphics.drawable.Drawable)
-    public synthetic bridge com.bumptech.glide.RequestBuilder load(android.graphics.Bitmap)
-    public synthetic bridge com.bumptech.glide.RequestBuilder thumbnail(float)
-    public synthetic bridge com.bumptech.glide.RequestBuilder thumbnail(com.bumptech.glide.RequestBuilder[])
-    public synthetic bridge com.bumptech.glide.RequestBuilder thumbnail(com.bumptech.glide.RequestBuilder)
-    public synthetic bridge com.bumptech.glide.RequestBuilder error(com.bumptech.glide.RequestBuilder)
-    public synthetic bridge com.bumptech.glide.RequestBuilder transition(com.bumptech.glide.TransitionOptions)
-    public synthetic bridge java.lang.Object load(java.lang.Object)
-    public synthetic bridge java.lang.Object load(byte[])
-    public synthetic bridge java.lang.Object load(java.net.URL)
-    public synthetic bridge java.lang.Object load(java.lang.Integer)
-    public synthetic bridge java.lang.Object load(java.io.File)
-    public synthetic bridge java.lang.Object load(android.net.Uri)
-    public synthetic bridge java.lang.Object load(java.lang.String)
-    public synthetic bridge java.lang.Object load(android.graphics.drawable.Drawable)
-    public synthetic bridge java.lang.Object load(android.graphics.Bitmap)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions dontAnimate()
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions dontTransform()
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions transform(java.lang.Class,com.bumptech.glide.load.Transformation)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions optionalTransform(java.lang.Class,com.bumptech.glide.load.Transformation)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions optionalTransform(com.bumptech.glide.load.Transformation)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions transforms(com.bumptech.glide.load.Transformation[])
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions transform(com.bumptech.glide.load.Transformation[])
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions circleCrop()
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions optionalCircleCrop()
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions centerInside()
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions fitCenter()
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions centerCrop()
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions timeout(int)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions disallowHardwareConfig()
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions format(com.bumptech.glide.load.DecodeFormat)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions frame(long)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions encodeQuality(int)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions encodeFormat(android.graphics.Bitmap$CompressFormat)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions override(int)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions theme(android.content.res.Resources$Theme)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions error(int)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions error(android.graphics.drawable.Drawable)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions fallback(int)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions fallback(android.graphics.drawable.Drawable)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions placeholder(int)
-    public synthetic bridge com.bumptech.glide.request.BaseRequestOptions useUnlimitedSourceGeneratorsPool(boolean)
 org.spongycastle.crypto.tls.DTLSReassembler:
     void <init>(short,int)
     short getMsgType()
@@ -25760,7 +25459,6 @@ androidx.core.text.TextUtilsCompat:
     private static final java.lang.String HEBR_SCRIPT_SUBTAG
 com.google.android.gms.internal.ads.zzaks:
     public boolean zza(android.app.DownloadManager$Request)
-com.dylanvann.fastimage.R$anim
 com.google.common.collect.ImmutableEnumMap$2$1
 com.google.android.exoplayer2.text.Cue$LineType
 kotlin.reflect.jvm.internal.KMutableProperty1Impl$Setter:
@@ -26745,46 +26443,6 @@ org.spongycastle.asn1.x509.ObjectDigestInfo:
     public static final int publicKeyCert
     public static final int otherObjectDigest
 com.google.common.math.DoubleMath$1
-com.dylanvann.fastimage.GlideRequests:
-    public synchronized com.dylanvann.fastimage.GlideRequests applyDefaultRequestOptions(com.bumptech.glide.request.RequestOptions)
-    public synchronized com.dylanvann.fastimage.GlideRequests setDefaultRequestOptions(com.bumptech.glide.request.RequestOptions)
-    public com.dylanvann.fastimage.GlideRequests addDefaultRequestListener(com.bumptech.glide.request.RequestListener)
-    public com.dylanvann.fastimage.GlideRequest asGif()
-    public com.dylanvann.fastimage.GlideRequest load(android.graphics.Bitmap)
-    public com.dylanvann.fastimage.GlideRequest load(android.graphics.drawable.Drawable)
-    public com.dylanvann.fastimage.GlideRequest load(java.lang.String)
-    public com.dylanvann.fastimage.GlideRequest load(android.net.Uri)
-    public com.dylanvann.fastimage.GlideRequest load(java.io.File)
-    public com.dylanvann.fastimage.GlideRequest load(java.lang.Integer)
-    public com.dylanvann.fastimage.GlideRequest load(java.net.URL)
-    public com.dylanvann.fastimage.GlideRequest load(byte[])
-    public com.dylanvann.fastimage.GlideRequest downloadOnly()
-    public com.dylanvann.fastimage.GlideRequest download(java.lang.Object)
-    public com.dylanvann.fastimage.GlideRequest asFile()
-    public synthetic bridge com.bumptech.glide.RequestBuilder asFile()
-    public synthetic bridge com.bumptech.glide.RequestBuilder download(java.lang.Object)
-    public synthetic bridge com.bumptech.glide.RequestBuilder downloadOnly()
-    public synthetic bridge com.bumptech.glide.RequestBuilder load(byte[])
-    public synthetic bridge com.bumptech.glide.RequestBuilder load(java.net.URL)
-    public synthetic bridge com.bumptech.glide.RequestBuilder load(java.lang.Integer)
-    public synthetic bridge com.bumptech.glide.RequestBuilder load(java.io.File)
-    public synthetic bridge com.bumptech.glide.RequestBuilder load(android.net.Uri)
-    public synthetic bridge com.bumptech.glide.RequestBuilder load(java.lang.String)
-    public synthetic bridge com.bumptech.glide.RequestBuilder load(android.graphics.drawable.Drawable)
-    public synthetic bridge com.bumptech.glide.RequestBuilder load(android.graphics.Bitmap)
-    public synthetic bridge com.bumptech.glide.RequestBuilder asGif()
-    public synthetic bridge com.bumptech.glide.RequestManager addDefaultRequestListener(com.bumptech.glide.request.RequestListener)
-    public synthetic bridge com.bumptech.glide.RequestManager setDefaultRequestOptions(com.bumptech.glide.request.RequestOptions)
-    public synthetic bridge com.bumptech.glide.RequestManager applyDefaultRequestOptions(com.bumptech.glide.request.RequestOptions)
-    public synthetic bridge java.lang.Object load(java.lang.Object)
-    public synthetic bridge java.lang.Object load(byte[])
-    public synthetic bridge java.lang.Object load(java.net.URL)
-    public synthetic bridge java.lang.Object load(java.lang.Integer)
-    public synthetic bridge java.lang.Object load(java.io.File)
-    public synthetic bridge java.lang.Object load(android.net.Uri)
-    public synthetic bridge java.lang.Object load(java.lang.String)
-    public synthetic bridge java.lang.Object load(android.graphics.drawable.Drawable)
-    public synthetic bridge java.lang.Object load(android.graphics.Bitmap)
 com.airbnb.lottie.parser.JsonUtils:
     private void <init>()
 androidx.media.R$dimen
@@ -27240,7 +26898,6 @@ org.spongycastle.math.ec.custom.sec.SecT193R2Curve:
     private static final int SecT193R2_DEFAULT_COORDS
 com.bumptech.glide.manager.RequestTracker:
     void addRequest(com.bumptech.glide.request.Request)
-    public boolean isPaused()
     private static final java.lang.String TAG
 host.exp.expoview.R2$string
 com.google.android.gms.internal.gtm.zzqj$zze
@@ -27359,7 +27016,6 @@ org.spongycastle.asn1.dvcs.PathProcInput:
     public boolean isInhibitPolicyMapping()
     public boolean isExplicitPolicyReqd()
     public boolean isInhibitAnyPolicy()
-com.bumptech.glide.request.FutureTarget
 kotlin.jvm.internal.LocalVariableReferencesKt
 kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf$StringTableTypes$Record$Builder:
     public kotlin.reflect.jvm.internal.impl.metadata.jvm.JvmProtoBuf$StringTableTypes$Record getDefaultInstanceForType()
@@ -30021,13 +29677,6 @@ org.spongycastle.asn1.eac.CertificateHolderReference:
     private static final java.lang.String ReferenceEncoding
 androidx.media.app.NotificationCompat$MediaStyle
 org.apache.commons.lang3.builder.DiffBuilder$18
-com.dylanvann.fastimage.FastImageSource:
-    public void <init>(android.content.Context,java.lang.String)
-    private static final java.lang.String DATA_SCHEME
-    private static final java.lang.String LOCAL_RESOURCE_SCHEME
-    private static final java.lang.String ANDROID_RESOURCE_SCHEME
-    private static final java.lang.String ANDROID_CONTENT_SCHEME
-    private static final java.lang.String LOCAL_FILE_SCHEME
 com.google.android.gms.auth.account.zza
 com.google.common.collect.MapMakerInternalMap$EntryFactory$7
 com.google.android.gms.ads.doubleclick.PublisherAdView:
@@ -30180,10 +29829,6 @@ com.segment.analytics.ConnectionFactory
 com.bumptech.glide.annotation.Excludes
 kotlin.collections.unsigned.UArraysKt___UArraysJvmKt$asList$2
 com.google.common.io.GwtWorkarounds
-com.dylanvann.fastimage.FastImageRequestListener:
-    static final java.lang.String REACT_ON_ERROR_EVENT
-    static final java.lang.String REACT_ON_LOAD_EVENT
-    static final java.lang.String REACT_ON_LOAD_END_EVENT
 com.google.android.material.bottomsheet.BottomSheetDialog:
     public void <init>(android.content.Context)
     protected void <init>(android.content.Context,boolean,android.content.DialogInterface$OnCancelListener)
@@ -31835,7 +31480,6 @@ org.spongycastle.math.ec.custom.sec.SecT163R1Curve:
     private static final int SecT163R1_DEFAULT_COORDS
 com.bumptech.glide.load.engine.cache.DiskCacheAdapter:
     public void delete(com.bumptech.glide.load.Key)
-    public void clear()
 org.spongycastle.crypto.engines.CramerShoupCoreEngine:
     private java.math.BigInteger generateRandomElement(java.math.BigInteger,java.security.SecureRandom)
     private boolean isValidMessage(java.math.BigInteger,java.math.BigInteger)
@@ -32168,7 +31812,8 @@ com.bumptech.glide.load.engine.cache.ExternalPreferredCacheDiskCacheFactory
 com.bumptech.glide.signature.MediaStoreSignature
 com.google.android.gms.wallet.Payments
 com.google.common.collect.ImmutableMapValues$SerializedForm
-com.bumptech.glide.load.MultiTransformation
+com.bumptech.glide.load.MultiTransformation:
+    public void <init>(java.util.Collection)
 bolts.WebViewAppLinkResolver$2
 androidx.core.view.animation.PathInterpolatorCompat:
     private void <init>()
@@ -32260,7 +31905,6 @@ org.spongycastle.pqc.math.ntru.polynomial.SparseTernaryPolynomial:
     private static final int BITS_PER_INDEX
 androidx.media.MediaBrowserServiceCompatApi21$ServiceCompatProxy
 com.raizlabs.android.dbflow.annotation.PrimaryKey
-com.bumptech.glide.signature.AndroidResourceSignature
 com.google.android.material.bottomappbar.BottomAppBar:
     public void <init>(android.content.Context)
     public void <init>(android.content.Context,android.util.AttributeSet)
@@ -32683,7 +32327,9 @@ com.google.android.exoplayer2.drm.DefaultDrmSessionManager:
     private static final java.lang.String TAG
 com.google.common.annotations.GwtIncompatible
 com.google.android.gms.internal.fitness.zzep
-com.bumptech.glide.load.resource.bitmap.CircleCrop
+com.bumptech.glide.load.resource.bitmap.CircleCrop:
+    private static final int VERSION
+    private static final java.lang.String ID
 org.spongycastle.pqc.jcajce.provider.mceliece.McElieceKobaraImaiCipherSpi:
     public java.lang.String getName()
     public byte[] messageEncrypt()
@@ -35411,7 +35057,6 @@ com.google.android.gms.common.internal.SignInButtonConfig
 com.bumptech.glide.util.Util:
     private void <init>()
     public static int getSize(android.graphics.Bitmap)
-    public static void assertBackgroundThread()
     public static int hashCode(int)
     public static int hashCode(boolean)
     private static final int HASH_MULTIPLIER
@@ -37529,7 +37174,6 @@ org.spongycastle.crypto.util.DerUtil:
     static org.spongycastle.asn1.ASN1OctetString getOctetString(byte[])
     static byte[] toByteArray(org.spongycastle.asn1.ASN1Primitive)
 com.google.android.gms.tagmanager.zzec
-com.dylanvann.fastimage.R$integer
 org.spongycastle.crypto.params.KDFDoublePipelineIterationParameters:
     private void <init>(byte[],byte[],int,boolean)
     public static org.spongycastle.crypto.params.KDFDoublePipelineIterationParameters createWithCounter(byte[],byte[],int)
@@ -38078,7 +37722,6 @@ org.spongycastle.asn1.cryptopro.ECGOST3410ParamSetParameters:
     public java.math.BigInteger getP()
     public java.math.BigInteger getQ()
     public java.math.BigInteger getA()
-com.dylanvann.fastimage.R$color
 androidx.legacy.coreutils.R$dimen
 kotlin.time.DurationUnitKt$WhenMappings
 androidx.print.PrintHelper$OnPrintFinishCallback
@@ -38244,38 +37887,6 @@ com.google.android.gms.common.api.internal.BaseImplementation
 kotlin.jvm.internal.Ref$ByteRef
 androidx.vectordrawable.R$attr
 com.google.android.exoplayer2.source.dash.manifest.RangedUri
-com.bumptech.glide.request.RequestOptions:
-    public static com.bumptech.glide.request.RequestOptions sizeMultiplierOf(float)
-    public static com.bumptech.glide.request.RequestOptions priorityOf(com.bumptech.glide.Priority)
-    public static com.bumptech.glide.request.RequestOptions placeholderOf(android.graphics.drawable.Drawable)
-    public static com.bumptech.glide.request.RequestOptions placeholderOf(int)
-    public static com.bumptech.glide.request.RequestOptions errorOf(android.graphics.drawable.Drawable)
-    public static com.bumptech.glide.request.RequestOptions errorOf(int)
-    public static com.bumptech.glide.request.RequestOptions skipMemoryCacheOf(boolean)
-    public static com.bumptech.glide.request.RequestOptions overrideOf(int,int)
-    public static com.bumptech.glide.request.RequestOptions overrideOf(int)
-    public static com.bumptech.glide.request.RequestOptions fitCenterTransform()
-    public static com.bumptech.glide.request.RequestOptions centerInsideTransform()
-    public static com.bumptech.glide.request.RequestOptions centerCropTransform()
-    public static com.bumptech.glide.request.RequestOptions circleCropTransform()
-    public static com.bumptech.glide.request.RequestOptions bitmapTransform(com.bumptech.glide.load.Transformation)
-    public static com.bumptech.glide.request.RequestOptions noTransformation()
-    public static com.bumptech.glide.request.RequestOptions option(com.bumptech.glide.load.Option,java.lang.Object)
-    public static com.bumptech.glide.request.RequestOptions formatOf(com.bumptech.glide.load.DecodeFormat)
-    public static com.bumptech.glide.request.RequestOptions frameOf(long)
-    public static com.bumptech.glide.request.RequestOptions downsampleOf(com.bumptech.glide.load.resource.bitmap.DownsampleStrategy)
-    public static com.bumptech.glide.request.RequestOptions timeoutOf(int)
-    public static com.bumptech.glide.request.RequestOptions encodeQualityOf(int)
-    public static com.bumptech.glide.request.RequestOptions encodeFormatOf(android.graphics.Bitmap$CompressFormat)
-    public static com.bumptech.glide.request.RequestOptions noAnimation()
-    private static com.bumptech.glide.request.RequestOptions skipMemoryCacheTrueOptions
-    private static com.bumptech.glide.request.RequestOptions skipMemoryCacheFalseOptions
-    private static com.bumptech.glide.request.RequestOptions fitCenterOptions
-    private static com.bumptech.glide.request.RequestOptions centerInsideOptions
-    private static com.bumptech.glide.request.RequestOptions centerCropOptions
-    private static com.bumptech.glide.request.RequestOptions circleCropOptions
-    private static com.bumptech.glide.request.RequestOptions noTransformOptions
-    private static com.bumptech.glide.request.RequestOptions noAnimationOptions
 com.raizlabs.android.dbflow.structure.database.transaction.FastStoreModelTransaction$Builder
 com.google.zxing.datamatrix.detector.Detector$ResultPointsAndTransitionsComparator
 androidx.core.graphics.ColorUtils:
@@ -39443,7 +39054,6 @@ org.unimodules.core.interfaces.RuntimeEnvironmentInterface:
     public abstract org.unimodules.core.interfaces.RuntimeEnvironmentInterface$PlatformVersion platformVersion()
 com.google.android.material.floatingactionbutton.BorderDrawable$BorderState
 com.google.android.gms.common.api.internal.zaby
-com.dylanvann.fastimage.R$style
 com.google.zxing.qrcode.detector.FinderPatternInfo
 com.google.zxing.client.result.VINResultParser
 com.google.common.cache.Weigher
@@ -39665,7 +39275,6 @@ com.google.android.material.bottomnavigation.BottomNavigationView$2
 kotlin.collections.AbstractCollection:
     public abstract java.util.Iterator iterator()
 androidx.viewpager.R
-com.dylanvann.fastimage.R$xml
 org.spongycastle.asn1.cms.KEKRecipientInfo:
     public void <init>(org.spongycastle.asn1.cms.KEKIdentifier,org.spongycastle.asn1.x509.AlgorithmIdentifier,org.spongycastle.asn1.ASN1OctetString)
     public void <init>(org.spongycastle.asn1.ASN1Sequence)
@@ -41376,7 +40985,6 @@ com.google.zxing.multi.GenericMultipleBarcodeReader
 com.google.common.collect.ImmutableMultimap$EntryCollection
 com.google.android.gms.internal.auth-api.zzo
 androidx.core.app.FrameMetricsAggregator
-com.dylanvann.fastimage.R$dimen
 org.spongycastle.crypto.params.CramerShoupParameters:
     public void <init>(java.math.BigInteger,java.math.BigInteger,java.math.BigInteger,org.spongycastle.crypto.Digest)
     public org.spongycastle.crypto.Digest getH()
@@ -42264,7 +41872,6 @@ com.squareup.picasso.ContactsPhotoRequestHandler:
 com.google.zxing.ChecksumException
 androidx.core.text.TextDirectionHeuristicsCompat$TextDirectionHeuristicImpl:
     public boolean isRtl(char[],int,int)
-com.dylanvann.fastimage.FastImageViewPackage
 com.google.android.gms.auth.api.signin.internal.zzi
 com.airbnb.lottie.R
 com.google.android.gms.internal.ads.zzqi:
@@ -42465,7 +42072,6 @@ com.google.common.cache.LocalCache$AccessQueue$1
 com.raizlabs.android.dbflow.sql.language.Operator$1
 com.google.android.gms.fitness.request.GoalsReadRequest$Builder
 androidx.lifecycle.GenericLifecycleObserver
-com.dylanvann.fastimage.R$layout
 kotlin.text.MatchGroup:
     public static synthetic kotlin.text.MatchGroup copy$default(kotlin.text.MatchGroup,java.lang.String,kotlin.ranges.IntRange,int,java.lang.Object)
     public final java.lang.String getValue()
@@ -42915,36 +42521,6 @@ com.google.android.material.floatingactionbutton.FloatingActionButtonImpl:
     private static final float SHOW_OPACITY
     private static final float SHOW_SCALE
     private static final float SHOW_ICON_SCALE
-com.bumptech.glide.RequestManager:
-    private synchronized void updateRequestOptions(com.bumptech.glide.request.RequestOptions)
-    public synchronized com.bumptech.glide.RequestManager applyDefaultRequestOptions(com.bumptech.glide.request.RequestOptions)
-    public synchronized com.bumptech.glide.RequestManager setDefaultRequestOptions(com.bumptech.glide.request.RequestOptions)
-    public com.bumptech.glide.RequestManager addDefaultRequestListener(com.bumptech.glide.request.RequestListener)
-    public void setPauseAllRequestsOnTrimMemoryModerate(boolean)
-    public synchronized boolean isPaused()
-    public synchronized void pauseRequestsRecursive()
-    public synchronized void resumeRequestsRecursive()
-    public com.bumptech.glide.RequestBuilder asGif()
-    public com.bumptech.glide.RequestBuilder load(android.graphics.Bitmap)
-    public com.bumptech.glide.RequestBuilder load(android.graphics.drawable.Drawable)
-    public com.bumptech.glide.RequestBuilder load(java.lang.String)
-    public com.bumptech.glide.RequestBuilder load(android.net.Uri)
-    public com.bumptech.glide.RequestBuilder load(java.io.File)
-    public com.bumptech.glide.RequestBuilder load(java.lang.Integer)
-    public com.bumptech.glide.RequestBuilder load(java.net.URL)
-    public com.bumptech.glide.RequestBuilder load(byte[])
-    public com.bumptech.glide.RequestBuilder downloadOnly()
-    public com.bumptech.glide.RequestBuilder download(java.lang.Object)
-    public com.bumptech.glide.RequestBuilder asFile()
-    public synthetic bridge java.lang.Object load(java.lang.Object)
-    public synthetic bridge java.lang.Object load(byte[])
-    public synthetic bridge java.lang.Object load(java.net.URL)
-    public synthetic bridge java.lang.Object load(java.lang.Integer)
-    public synthetic bridge java.lang.Object load(java.io.File)
-    public synthetic bridge java.lang.Object load(android.net.Uri)
-    public synthetic bridge java.lang.Object load(java.lang.String)
-    public synthetic bridge java.lang.Object load(android.graphics.drawable.Drawable)
-    public synthetic bridge java.lang.Object load(android.graphics.Bitmap)
 com.google.common.collect.StandardRowSortedTable
 host.exp.expoview.R$xml
 org.spongycastle.jcajce.spec.GOST28147ParameterSpec:
@@ -45046,7 +44622,6 @@ com.google.android.exoplayer2.text.cea.Cea708InitializationData:
 org.apache.commons.io.output.CountingOutputStream
 com.bumptech.glide.load.engine.cache.DiskCache:
     public abstract void delete(com.bumptech.glide.load.Key)
-    public abstract void clear()
 com.google.android.material.badge.BadgeUtils
 kotlin.properties.ReadOnlyProperty
 com.google.android.gms.internal.ads.zzber:
@@ -45959,7 +45534,6 @@ kotlin.SafePublicationLazyImpl:
     private final java.lang.Object final
     public static final kotlin.SafePublicationLazyImpl$Companion Companion
 com.bumptech.glide.Glide:
-    private final com.bumptech.glide.load.engine.Engine engine
     private final com.bumptech.glide.Glide$RequestOptionsFactory defaultRequestOptionsFactory
     private com.bumptech.glide.MemoryCategory memoryCategory
 org.unimodules.adapters.react.services.UIManagerModuleWrapper$4:
@@ -46640,9 +46214,6 @@ org.spongycastle.pqc.math.linearalgebra.GF2nElement:
     public abstract java.lang.Object clone()
 kotlin.reflect.jvm.internal.impl.descriptors.impl.PropertySetterDescriptorImpl:
     static final synthetic boolean $assertionsDisabled
-com.bumptech.glide.RequestBuilder:
-    private final com.bumptech.glide.Glide glide
-    protected static final com.bumptech.glide.request.RequestOptions DOWNLOAD_ONLY_OPTIONS
 com.google.android.exoplayer2.extractor.ogg.VorbisUtil$VorbisIdHeader:
     public final long version
     public final int bitrateMax
@@ -46744,10 +46315,6 @@ androidx.appcompat.view.menu.ActionMenuItem:
     private android.view.MenuItem$OnMenuItemClickListener mClickListener
 kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf$Type$Argument$Projection:
     private static kotlin.reflect.jvm.internal.impl.protobuf.Internal$EnumLiteMap internalValueMap
-com.bumptech.glide.manager.RequestManagerRetriever:
-    private final androidx.collection.ArrayMap tempViewToSupportFragment
-    private final androidx.collection.ArrayMap tempViewToFragment
-    private final android.os.Bundle tempBundle
 com.google.android.gms.common.logging.Logger:
     private final com.google.android.gms.common.internal.GmsLogger zzew
 org.spongycastle.crypto.params.GOST3410Parameters:
@@ -47110,8 +46677,6 @@ com.google.android.gms.internal.gcm.zzj:
     private static volatile com.google.android.gms.internal.gcm.zzk zzdj
 androidx.appcompat.widget.ActionBarContextView$1:
     final synthetic androidx.appcompat.widget.ActionBarContextView this$0
-com.bumptech.glide.load.resource.bitmap.TransformationUtils:
-    private static final android.graphics.Paint CIRCLE_CROP_SHAPE_PAINT
 kotlin.reflect.jvm.internal.impl.descriptors.impl.AbstractClassDescriptor:
     static final synthetic boolean $assertionsDisabled
 bolts.Task$12:
@@ -49191,9 +48756,6 @@ org.spongycastle.asn1.eac.EACObjectIdentifiers:
     public static final org.spongycastle.asn1.ASN1ObjectIdentifier id_TA_RSA_v1_5_SHA_512
     public static final org.spongycastle.asn1.ASN1ObjectIdentifier id_TA_RSA_PSS_SHA_512
     public static final org.spongycastle.asn1.ASN1ObjectIdentifier id_EAC_ePassport
-com.bumptech.glide.RequestManager:
-    private static final com.bumptech.glide.request.RequestOptions DECODE_TYPE_GIF
-    private static final com.bumptech.glide.request.RequestOptions DOWNLOAD_ONLY_OPTIONS
 kotlin.reflect.jvm.internal.impl.utils.Jsr305State$Companion
 androidx.exifinterface.media.ExifInterface:
     private boolean mHasThumbnail
@@ -49331,19 +48893,19 @@ com.google.android.gms.internal.ads.zzjr:
     private final com.google.android.gms.internal.ads.zzrw zzarp
 com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$4:
     final synthetic com.google.android.material.floatingactionbutton.FloatingActionButtonImpl this$0
-com.google.android.exoplayer2.drm.DefaultDrmSessionEventListener$-CC
+com.google.android.exoplayer2.extractor.BinarySearchSeeker$TimestampSeeker$-CC
 com.google.android.exoplayer2.video.VideoListener$-CC:
     public static void $default$onVideoSizeChanged(com.google.android.exoplayer2.video.VideoListener,int,int,int,float)
     public static void $default$onRenderedFirstFrame(com.google.android.exoplayer2.video.VideoListener)
 com.google.android.exoplayer2.analytics.AnalyticsListener$-CC
-com.google.android.exoplayer2.extractor.BinarySearchSeeker$TimestampSeeker$-CC
-com.google.android.exoplayer2.audio.AudioListener$-CC
 com.google.android.exoplayer2.Player$EventListener$-CC:
     public static void $default$onTracksChanged(com.google.android.exoplayer2.Player$EventListener,com.google.android.exoplayer2.source.TrackGroupArray,com.google.android.exoplayer2.trackselection.TrackSelectionArray)
     public static void $default$onLoadingChanged(com.google.android.exoplayer2.Player$EventListener,boolean)
     public static void $default$onPlayerStateChanged(com.google.android.exoplayer2.Player$EventListener,boolean,int)
     public static void $default$onPlayerError(com.google.android.exoplayer2.Player$EventListener,com.google.android.exoplayer2.ExoPlaybackException)
     public static void $default$onPlaybackParametersChanged(com.google.android.exoplayer2.Player$EventListener,com.google.android.exoplayer2.PlaybackParameters)
+com.google.android.exoplayer2.audio.AudioListener$-CC
+com.google.android.exoplayer2.drm.DefaultDrmSessionEventListener$-CC
 org.unimodules.core.interfaces.Package$-CC:
     public static java.util.List $default$createInternalModules(org.unimodules.core.interfaces.Package,android.content.Context)
     public static java.util.List $default$createExportedModules(org.unimodules.core.interfaces.Package,android.content.Context)

@@ -1,3 +1,8 @@
+# Basic Idea of debugging
+1. learn how to find error message
+2. fix all warning
+3. fix all error
+
 # How to upgrade for android compability
 1. Upgrade to expo 28 sdk 
 2. migrate to androidX
@@ -8,6 +13,7 @@ and there is no error
 
 5. Update app.json iosexpoviewurl and androidexpoviewurl
 6. Use yarn instead of npm
+
 
 # How to solve android apk generate issue
 1. Add yarn release command to package.json

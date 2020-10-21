@@ -1,6 +1,7 @@
 package host.exp.exponent;
 
 import com.dylanvann.fastimage.FastImageViewPackage;
+import com.facebook.react.BuildConfig;
 import com.facebook.react.ReactPackage;
 
 import org.unimodules.core.interfaces.Package;
@@ -39,7 +40,7 @@ public class MainApplication extends ExpoApplication implements AppLoaderPackage
 
   @Override
   public String gcmSenderId() {
-    return getString(R.string.gcm_defaultSenderId);
+    return "";
   }
 
   public static OkHttpClient.Builder okHttpClientBuilder(OkHttpClient.Builder builder) {
