@@ -1,5 +1,5 @@
-export const KSERVERURL = 'https://uat.brew9.co/api';
-export const KURL_INFO = 'https://uat.brew9.co/info';
+export const KSERVERURL = 'https://app.brew9.co/api';
+export const KURL_INFO = 'https://app.brew9.co/info';
 //export const KSERVERURL ='http://localhost:3000/api'
 //export const KURL_INFO ='http://localhost:3000/info'
 // export const KSERVERURL ='https://3358a428.ngrok.io/api'
@@ -8,10 +8,6 @@ export const KURL_INFO = 'https://uat.brew9.co/info';
 export const KURL_TERMS_OF_SERVICE = KURL_INFO + '?page=terms_conditions';
 export const KURL_PRIVACY_POLICY = KURL_INFO + '?page=privacy';
 export const KURL_EULA = KURL_INFO + '?page=eula';
-
-export const KURL_CREDIT = 'http://www.innogix.com/co3/credit_policy.html';
-export const KURL_TERMS_CO3_GO =
-  'http://www.innogix.com/co3/co3_go_agreement.html';
 
 export const KCURRENT_API_VERSION_HEADER = 'application/dc.v7';
 

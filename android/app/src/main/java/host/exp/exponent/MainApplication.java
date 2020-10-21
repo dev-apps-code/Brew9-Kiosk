@@ -1,5 +1,6 @@
 package host.exp.exponent;
 
+import com.dylanvann.fastimage.FastImageViewPackage;
 import com.facebook.react.ReactPackage;
 
 import org.unimodules.core.interfaces.Package;
@@ -26,7 +27,7 @@ public class MainApplication extends ExpoApplication implements AppLoaderPackage
     return Arrays.<ReactPackage>asList(
         // Add your own packages here!
         // TODO: add native modules!
-
+            new FastImageViewPackage()
         // Needed for `react-native link`
         // new MainReactPackage()
     );

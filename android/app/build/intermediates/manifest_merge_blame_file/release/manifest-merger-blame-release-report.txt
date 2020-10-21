@@ -1,0 +1,1079 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.brew9.menu"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml
+10
+11    <permission
+11-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:7:3-9:42
+12        android:name="com.brew9.menu.permission.C2D_MESSAGE"
+12-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:8:5-57
+13        android:protectionLevel="signature" />
+13-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:9:5-40
+14
+15    <!-- These are required permissions to make the app run -->
+16    <uses-permission android:name="com.brew9.menu.permission.C2D_MESSAGE" />
+16-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:12:3-75
+16-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:12:20-72
+17    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+17-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:13:3-80
+17-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:13:20-77
+18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+18-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:14:3-77
+18-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:14:20-74
+19    <uses-permission android:name="android.permission.INTERNET" />
+19-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:15:3-65
+19-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:15:20-62
+20    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+20-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:16:3-76
+20-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:16:20-73
+21    <uses-permission android:name="android.permission.WAKE_LOCK" />
+21-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:17:3-66
+21-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:17:20-63
+22
+23    <!-- ADD PERMISSIONS HERE -->
+24    <!-- BEGIN OPTIONAL PERMISSIONS -->
+25
+26    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+26-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:22:3-78
+26-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:22:20-75
+27    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+27-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:23:3-73
+27-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:23:20-70
+28    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+28-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:24:3-72
+28-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:24:20-69
+29    <uses-permission android:name="android.permission.VIBRATE" />
+29-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:25:3-64
+29-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:25:20-61
+30    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+30-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:26:3-86
+30-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:26:20-83
+31    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+31-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:27:3-78
+31-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:27:20-75
+32
+33    <!-- These require runtime permissions on M -->
+34    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+34-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:30:3-79
+34-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:30:20-76
+35    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+35-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:31:3-77
+35-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:31:20-74
+36    <uses-permission android:name="android.permission.CAMERA" />
+36-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:32:3-63
+36-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:32:20-60
+37    <uses-permission android:name="android.permission.READ_CONTACTS" />
+37-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:33:3-70
+37-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:33:20-67
+38    <uses-permission android:name="android.permission.READ_CALENDAR" />
+38-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:34:3-70
+38-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:34:20-67
+39    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+39-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:35:3-71
+39-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:35:20-68
+40    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+40-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:36:3-78
+40-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:36:20-75
+41    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+41-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:37:3-69
+41-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:37:20-66
+42    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+42-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:38:3-79
+42-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:38:20-76
+43
+44    <!-- END OPTIONAL PERMISSIONS -->
+45
+46
+47    <!-- ADD TEST PERMISSIONS HERE -->
+48
+49    <uses-feature
+49-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:44:3-77
+50        android:glEsVersion="0x00020000"
+50-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:44:17-49
+51        android:required="true" />
+51-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:44:50-74
+52    <uses-feature
+52-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:45:3-85
+53        android:name="android.software.leanback"
+53-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:45:17-57
+54        android:required="false" />
+54-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:45:58-82
+55    <uses-feature
+55-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:46:3-88
+56        android:name="android.hardware.touchscreen"
+56-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:46:17-60
+57        android:required="false" />
+57-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:46:61-85
+58
+59    <!-- WHEN_VERSIONING_REMOVE_FROM_HERE -->
+60    <supports-screens
+60-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:13:5-19:24
+61        android:anyDensity="true"
+61-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:14:9-34
+62        android:largeScreens="true"
+62-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:15:9-36
+63        android:normalScreens="true"
+63-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:16:9-37
+64        android:smallScreens="true"
+64-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:17:9-36
+65        android:xlargeScreens="true" >
+65-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:18:9-37
+66    </supports-screens>
+67
+68    <uses-permission android:name="host.exp.exponent.permission.C2D_MESSAGE" />
+68-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:26:5-80
+68-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:26:22-77
+69    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" /> <!-- Used by react-native-netinfo module -->
+69-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:29:5-75
+69-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:29:22-72
+70    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+70-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:34:5-76
+70-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:34:22-73
+71
+72    <uses-feature
+72-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:47:5-49:36
+73        android:name="android.hardware.camera"
+73-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:48:9-47
+74        android:required="false" />
+74-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:49:9-33
+75    <uses-feature
+75-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:50:5-52:36
+76        android:name="android.hardware.camera.autofocus"
+76-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:51:9-57
+77        android:required="false" />
+77-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:52:9-33
+78    <uses-feature
+78-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:53:5-55:36
+79        android:name="android.hardware.location"
+79-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:54:9-49
+80        android:required="false" />
+80-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:55:9-33
+81    <uses-feature
+81-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:56:5-58:36
+82        android:name="android.hardware.location.gps"
+82-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:57:9-53
+83        android:required="false" />
+83-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:58:9-33
+84    <uses-feature
+84-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:59:5-61:36
+85        android:name="android.hardware.location.network"
+85-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:60:9-57
+86        android:required="false" />
+86-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:61:9-33
+87    <uses-feature
+87-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:62:5-64:36
+88        android:name="android.hardware.wifi"
+88-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:63:9-45
+89        android:required="false" />
+89-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:64:9-33
+90    <uses-feature
+90-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:65:5-67:36
+91        android:name="android.hardware.microphone"
+91-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:66:9-51
+92        android:required="false" />
+92-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:67:9-33
+93    <uses-feature
+93-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:68:5-70:36
+94        android:name="android.hardware.telephony"
+94-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:69:9-50
+95        android:required="false" />
+95-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:70:9-33
+96    <uses-feature
+96-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:71:5-73:36
+97        android:name="android.hardware.bluetooth"
+97-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:72:9-50
+98        android:required="false" />
+98-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:73:9-33
+99
+100    <uses-permission android:name="android.permission.STORAGE" />
+100-->[:expo-file-system] /Users/tonyvoon/Documents/Repo/brew9-menu-app/node_modules/expo/node_modules/expo-file-system/android/build/intermediates/library_manifest/release/AndroidManifest.xml:15:5-66
+100-->[:expo-file-system] /Users/tonyvoon/Documents/Repo/brew9-menu-app/node_modules/expo/node_modules/expo-file-system/android/build/intermediates/library_manifest/release/AndroidManifest.xml:15:22-63
+101    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- for android -->
+101-->[:expo-location] /Users/tonyvoon/Documents/Repo/brew9-menu-app/node_modules/expo-location/android/build/intermediates/library_manifest/release/AndroidManifest.xml:13:5-77
+101-->[:expo-location] /Users/tonyvoon/Documents/Repo/brew9-menu-app/node_modules/expo-location/android/build/intermediates/library_manifest/release/AndroidManifest.xml:13:22-74
+102    <!-- <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/> -->
+103    <!-- <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/> -->
+104    <!-- <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> -->
+105    <!-- <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" /> -->
+106    <!-- for Samsung -->
+107    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+107-->[me.leolin:ShortcutBadger:1.1.4] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/6b31787406c835abcd51ea444c73033d/jetified-ShortcutBadger-1.1.4/AndroidManifest.xml:19:5-86
+107-->[me.leolin:ShortcutBadger:1.1.4] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/6b31787406c835abcd51ea444c73033d/jetified-ShortcutBadger-1.1.4/AndroidManifest.xml:19:22-83
+108    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- for htc -->
+108-->[me.leolin:ShortcutBadger:1.1.4] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/6b31787406c835abcd51ea444c73033d/jetified-ShortcutBadger-1.1.4/AndroidManifest.xml:20:5-87
+108-->[me.leolin:ShortcutBadger:1.1.4] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/6b31787406c835abcd51ea444c73033d/jetified-ShortcutBadger-1.1.4/AndroidManifest.xml:20:22-84
+109    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+109-->[me.leolin:ShortcutBadger:1.1.4] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/6b31787406c835abcd51ea444c73033d/jetified-ShortcutBadger-1.1.4/AndroidManifest.xml:23:5-81
+109-->[me.leolin:ShortcutBadger:1.1.4] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/6b31787406c835abcd51ea444c73033d/jetified-ShortcutBadger-1.1.4/AndroidManifest.xml:23:22-78
+110    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- for sony -->
+110-->[me.leolin:ShortcutBadger:1.1.4] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/6b31787406c835abcd51ea444c73033d/jetified-ShortcutBadger-1.1.4/AndroidManifest.xml:24:5-83
+110-->[me.leolin:ShortcutBadger:1.1.4] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/6b31787406c835abcd51ea444c73033d/jetified-ShortcutBadger-1.1.4/AndroidManifest.xml:24:22-80
+111    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" /> <!-- for apex -->
+111-->[me.leolin:ShortcutBadger:1.1.4] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/6b31787406c835abcd51ea444c73033d/jetified-ShortcutBadger-1.1.4/AndroidManifest.xml:27:5-88
+111-->[me.leolin:ShortcutBadger:1.1.4] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/6b31787406c835abcd51ea444c73033d/jetified-ShortcutBadger-1.1.4/AndroidManifest.xml:27:22-85
+112    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- for solid -->
+112-->[me.leolin:ShortcutBadger:1.1.4] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/6b31787406c835abcd51ea444c73033d/jetified-ShortcutBadger-1.1.4/AndroidManifest.xml:30:5-84
+112-->[me.leolin:ShortcutBadger:1.1.4] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/6b31787406c835abcd51ea444c73033d/jetified-ShortcutBadger-1.1.4/AndroidManifest.xml:30:22-81
+113    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
+113-->[me.leolin:ShortcutBadger:1.1.4] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/6b31787406c835abcd51ea444c73033d/jetified-ShortcutBadger-1.1.4/AndroidManifest.xml:33:5-83
+113-->[me.leolin:ShortcutBadger:1.1.4] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/6b31787406c835abcd51ea444c73033d/jetified-ShortcutBadger-1.1.4/AndroidManifest.xml:33:22-80
+114    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+114-->[io.nlopez.smartlocation:library:3.2.11] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/708d8979f0cb0d015f55ed7594c5b633/jetified-library-3.2.11/AndroidManifest.xml:15:5-98
+114-->[io.nlopez.smartlocation:library:3.2.11] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/708d8979f0cb0d015f55ed7594c5b633/jetified-library-3.2.11/AndroidManifest.xml:15:22-95
+115    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+115-->[io.nlopez.smartlocation:library:3.2.11] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/708d8979f0cb0d015f55ed7594c5b633/jetified-library-3.2.11/AndroidManifest.xml:16:5-94
+115-->[io.nlopez.smartlocation:library:3.2.11] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/708d8979f0cb0d015f55ed7594c5b633/jetified-library-3.2.11/AndroidManifest.xml:16:22-91
+116    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+116-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:26:5-110
+116-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:26:22-107
+117
+118    <application
+118-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:48:3-246:17
+119        android:name="host.exp.exponent.MainApplication"
+119-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:49:5-36
+120        android:allowBackup="true"
+120-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:50:5-31
+121        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+121-->[androidx.core:core:1.1.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/b32206535d3b4f1847d7e95d3845125e/core-1.1.0/AndroidManifest.xml:24:18-86
+122        android:banner="@drawable/big_logo_dark"
+122-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:55:7-47
+123        android:icon="@mipmap/ic_launcher"
+123-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:51:5-39
+124        android:label="@string/app_name"
+124-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:52:5-37
+125        android:largeHeap="true"
+125-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:53:5-29
+126        android:supportsRtl="true"
+126-->[com.facebook.android:facebook-android-sdk:5.15.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2811e09d724c4e918b00b5f0d67de43f/jetified-facebook-android-sdk-5.15.3/AndroidManifest.xml:28:18-44
+127        android:usesCleartextTraffic="true" >
+127-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:54:5-40
+128        <activity
+128-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:57:5-62:16
+129            android:name="host.exp.exponent.LauncherActivity"
+129-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:58:7-39
+130            android:exported="true"
+130-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:59:7-30
+131            android:launchMode="singleTask"
+131-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:60:7-38
+132            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+132-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:61:7-66
+133        </activity>
+134        <activity
+134-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:64:5-69:16
+135            android:name="host.exp.exponent.experience.ExperienceActivity"
+135-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:65:7-52
+136            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+136-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:66:7-77
+137            android:theme="@style/Theme.Exponent.Light"
+137-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:67:7-50
+138            android:windowSoftInputMode="adjustResize" >
+138-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:68:7-49
+139        </activity>
+140        <activity
+140-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:71:5-91:16
+141            android:name="host.exp.exponent.MainActivity"
+141-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:72:7-35
+142            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+142-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:74:7-77
+143            android:launchMode="singleTask"
+143-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:73:7-38
+144            android:theme="@style/Theme.Exponent.Splash"
+144-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:75:7-51
+145            android:windowSoftInputMode="adjustResize" >
+145-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:76:7-49
+146            <intent-filter>
+146-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:77:7-84:23
+147                <data android:scheme="expa794768ceb8042b6a97dd99478caaf8a" />
+147-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:78:9-69
+147-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:78:15-67
+148
+149                <action android:name="android.intent.action.VIEW" />
+149-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:80:9-60
+149-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:80:17-58
+150
+151                <category android:name="android.intent.category.DEFAULT" />
+151-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:82:9-67
+151-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:82:19-65
+152                <category android:name="android.intent.category.BROWSABLE" />
+152-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:83:9-69
+152-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:83:19-67
+153            </intent-filter>
+154            <intent-filter>
+154-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:85:7-89:23
+155                <action android:name="android.intent.action.MAIN" />
+155-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:86:9-60
+155-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:86:17-58
+156
+157                <category android:name="android.intent.category.LAUNCHER" />
+157-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:88:9-68
+157-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:88:19-66
+158            </intent-filter>
+159            <!-- ADD DETACH APP SPECIFIC INTENT FILTERS -->
+160        </activity>
+161        <activity
+161-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:93:5-99:16
+162            android:name="host.exp.exponent.experience.HomeActivity"
+162-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:94:7-46
+163            android:label="@string/app_name"
+163-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:95:7-39
+164            android:launchMode="singleTask"
+164-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:96:7-38
+165            android:screenOrientation="portrait"
+165-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:97:7-43
+166            android:theme="@style/Theme.Exponent.Light" >
+166-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:98:7-50
+167        </activity>
+168        <activity
+168-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:101:5-110:15
+169            android:name="host.exp.exponent.experience.TvActivity"
+169-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:102:7-44
+170            android:label="@string/app_name"
+170-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:103:7-39
+171            android:screenOrientation="landscape"
+171-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:105:7-44
+172            android:theme="@style/Theme.Exponent.Light" >
+172-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:104:7-50
+173            <intent-filter>
+173-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:106:6-109:22
+174                <action android:name="android.intent.action.MAIN" />
+174-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:86:9-60
+174-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:86:17-58
+175
+176                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+176-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:108:8-77
+176-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:108:18-74
+177            </intent-filter>
+178        </activity>
+179        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+179-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:114:5-81
+179-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:114:15-79
+180        <!-- WHEN_PREPARING_SHELL_REMOVE_FROM_HERE -->
+181        <!-- ADD DEV SETTINGS HERE -->
+182        <!-- BEGIN_SDK_34 -->
+183
+184        <activity
+184-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:119:5-123:16
+185            android:name="host.exp.exponent.experience.ErrorActivity"
+185-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:120:7-47
+186            android:screenOrientation="portrait"
+186-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:122:7-43
+187            android:theme="@style/Theme.Exponent.Dark" >
+187-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:121:7-49
+188        </activity>
+189        <activity
+189-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:125:5-129:16
+190            android:name="host.exp.exponent.experience.InfoActivity"
+190-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:126:7-46
+191            android:screenOrientation="portrait"
+191-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:127:7-43
+192            android:theme="@style/Theme.Exponent.Light" >
+192-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:128:7-50
+193        </activity>
+194        <activity
+194-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:131:5-136:39
+195            android:name="com.facebook.FacebookActivity"
+195-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:132:7-51
+196            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+196-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:133:7-90
+197            android:label="@string/app_name"
+197-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:134:7-39
+198            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+198-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:135:7-66
+199        <activity
+199-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:138:5-142:69
+200            android:name="com.facebook.ads.InterstitialAdActivity"
+200-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:139:7-61
+201            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+201-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:140:7-90
+202            android:label="@string/app_name"
+202-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:141:7-39
+203            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+203-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:142:7-66
+204
+205        <service
+205-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:144:5-146:34
+206            android:name="host.exp.exponent.ExponentIntentService"
+206-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:145:7-44
+207            android:exported="false" />
+207-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:146:7-31
+208
+209        <!-- Analytics -->
+210        <receiver
+210-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:149:5-155:16
+211            android:name="host.exp.exponent.referrer.InstallReferrerReceiver"
+211-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:150:7-72
+212            android:exported="true" >
+212-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:151:7-30
+213            <intent-filter>
+213-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:152:7-154:23
+214                <action android:name="com.android.vending.INSTALL_REFERRER" />
+214-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:153:9-71
+214-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:153:17-68
+215            </intent-filter>
+216        </receiver>
+217
+218        <!--
+219    This crashes: https://code.google.com/p/analytics-issues/issues/detail?id=667
+220    TODO: turn it back on when it's fixed
+221    <service
+222      android:name="com.google.android.gms.analytics.CampaignTrackingService"
+223      android:enabled="true"
+224      android:exported="false" />
+225        -->
+226
+227        <receiver
+227-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:165:5-170:16
+228            android:name="com.google.android.gms.analytics.AnalyticsReceiver"
+228-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:165:15-80
+229            android:enabled="true"
+229-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:166:15-37
+230            android:exported="false" >
+230-->[com.google.android.gms:play-services-analytics:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/bab03eddaaffbe29f252e13ccdee226e/jetified-play-services-analytics-17.0.0/AndroidManifest.xml:33:13-37
+231            <intent-filter>
+231-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:167:7-169:23
+232                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
+232-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:168:9-86
+232-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:168:17-83
+233            </intent-filter>
+234        </receiver>
+235
+236        <service
+236-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:172:5-174:40
+237            android:name="com.google.android.gms.analytics.AnalyticsService"
+237-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:172:14-78
+238            android:enabled="true"
+238-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:173:14-36
+239            android:exported="false" />
+239-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:174:14-38
+240
+241        <!-- GCM -->
+242        <receiver
+242-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:177:5-187:16
+243            android:name="com.google.android.gms.gcm.GcmReceiver"
+243-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:178:7-60
+244            android:exported="true"
+244-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:179:7-30
+245            android:permission="com.google.android.c2dm.permission.SEND" >
+245-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:180:7-67
+246            <intent-filter>
+246-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:181:7-186:23
+247                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+247-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:182:9-72
+247-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:182:17-70
+248                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+248-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:183:9-77
+248-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:183:17-75
+249
+250                <category android:name="com.brew9.menu" />
+250-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:185:9-50
+250-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:185:19-48
+251            </intent-filter>
+252        </receiver>
+253
+254        <service
+254-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:189:5-195:15
+255            android:name="host.exp.exponent.gcm.ExponentGcmListenerService"
+255-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:190:7-53
+256            android:exported="false" >
+256-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:191:7-31
+257            <intent-filter>
+257-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:192:7-194:23
+258                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+258-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:182:9-72
+258-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:182:17-70
+259            </intent-filter>
+260        </service>
+261        <service
+261-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:196:5-202:15
+262            android:name="host.exp.exponent.gcm.ExponentInstanceIDListenerService"
+262-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:197:7-60
+263            android:exported="false" >
+263-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:198:7-31
+264            <intent-filter>
+264-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:199:7-201:23
+265                <action android:name="com.google.android.gms.iid.InstanceID" />
+265-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:200:9-71
+265-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:200:17-69
+266            </intent-filter>
+267        </service>
+268        <service
+268-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:203:5-206:15
+269            android:name="host.exp.exponent.gcm.GcmRegistrationIntentService"
+269-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:204:7-55
+270            android:exported="false" >
+270-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:205:7-31
+271        </service>
+272
+273        <meta-data
+273-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:208:5-210:62
+274            android:name="com.google.firebase.messaging.default_notification_icon"
+274-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:209:7-77
+275            android:resource="@drawable/shell_notification_icon" />
+275-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:210:7-59
+276        <meta-data
+276-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:211:5-213:47
+277            android:name="com.google.firebase.messaging.default_notification_color"
+277-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:212:7-78
+278            android:resource="@color/colorAccent" />
+278-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:213:7-44
+279
+280        <service
+280-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:214:5-217:15
+281            android:name="host.exp.exponent.fcm.FcmRegistrationIntentService"
+281-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:215:7-55
+282            android:exported="false" >
+282-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:216:7-31
+283        </service>
+284
+285        <!-- ImagePicker native module -->
+286        <activity
+286-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:220:5-223:16
+287            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+287-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:221:7-70
+288            android:theme="@style/Base.Theme.AppCompat" >
+288-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:222:7-50
+289        </activity>
+290
+291        <!-- ADD FABRIC CONFIG HERE -->
+292        <!-- BEGIN FABRIC CONFIG -->
+293        <meta-data
+293-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:228:5-230:65
+294            android:name="io.fabric.ApiKey"
+294-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:229:7-38
+295            android:value="a25fafe9f9edee11a9882b32e0cd7a26df6e2c42" />
+295-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:230:7-63
+296        <!-- END FABRIC CONFIG -->
+297
+298
+299        <!-- ADD GOOGLE MAPS CONFIG HERE -->
+300        <!-- BEGIN GOOGLE MAPS CONFIG -->
+301        <meta-data
+301-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:235:5-237:64
+302            android:name="com.google.android.geo.API_KEY"
+302-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:236:7-52
+303            android:value="AIzaSyDh7eDB9snEFSYtf-k0gfxA45HFoR0L--I" />
+303-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:237:7-62
+304        <!-- END GOOGLE MAPS CONFIG -->
+305
+306
+307        <!-- ADD BRANCH CONFIG HERE -->
+308
+309
+310        <!-- The Facebook SDK runs FacebookInitProvider on startup and crashes if there isn't an ID here -->
+311        <meta-data
+311-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:243:5-83
+312            android:name="com.facebook.sdk.ApplicationId"
+312-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:243:16-61
+313            android:value="fb0" />
+313-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:243:62-81
+314        <meta-data
+314-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:245:5-109
+315            android:name="standaloneStripeScheme"
+315-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:245:16-53
+316            android:value="eaa01a91-7afe-406d-a0d5-c4f7bb98cca1" />
+316-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:245:54-106
+317        <!-- WHEN_VERSIONING_REMOVE_FROM_HERE -->
+318        <!-- Scheduled notifications -->
+319        <receiver
+319-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:79:9-81:40
+320            android:name="host.exp.exponent.notifications.ScheduledNotificationReceiver"
+320-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:80:13-89
+321            android:exported="false" />
+321-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:81:13-37
+322        <receiver
+322-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:82:9-92:20
+323            android:name="host.exp.exponent.notifications.receivers.SchedulingTriggerReceiver"
+323-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:83:13-95
+324            android:exported="true" >
+324-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:84:13-36
+325            <intent-filter>
+325-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:85:13-91:29
+326                <action android:name="android.intent.action.REBOOT" />
+326-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:86:17-71
+326-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:86:25-68
+327                <action android:name="android.intent.action.BOOT_COMPLETED" />
+327-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:87:17-79
+327-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:87:25-76
+328                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+328-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:88:17-81
+328-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:88:25-78
+329                <action android:name="android.intent.action.TIME_CHANGED" />
+329-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:89:17-77
+329-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:89:25-74
+330                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+330-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:90:17-82
+330-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:90:25-79
+331            </intent-filter>
+332        </receiver> <!-- WHEN_VERSIONING_REMOVE_TO_HERE -->
+333        <provider
+333-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:96:9-104:20
+334            android:name="androidx.core.content.FileProvider"
+334-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:97:13-62
+335            android:authorities="com.brew9.menu.provider"
+335-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:98:13-60
+336            android:exported="false"
+336-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:99:13-37
+337            android:grantUriPermissions="true" >
+337-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:100:13-47
+338            <meta-data
+338-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:101:13-103:58
+339                android:name="android.support.FILE_PROVIDER_PATHS"
+339-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:102:17-67
+340                android:resource="@xml/provider_paths" />
+340-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:103:17-55
+341        </provider>
+342        <provider
+342-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:105:9-113:20
+343            android:name="versioned.host.exp.exponent.modules.api.components.webview.RNCWebViewFileProvider"
+343-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:106:13-109
+344            android:authorities="com.brew9.menu.fileprovider"
+344-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:107:13-64
+345            android:exported="false"
+345-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:108:13-37
+346            android:grantUriPermissions="true" >
+346-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:109:13-47
+347            <meta-data
+347-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:101:13-103:58
+348                android:name="android.support.FILE_PROVIDER_PATHS"
+348-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:102:17-67
+349                android:resource="@xml/provider_paths" />
+349-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:103:17-55
+350        </provider>
+351
+352        <meta-data
+352-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:115:9-118:45
+353            android:name="org.unimodules.core.AppLoader#react-native-headless"
+353-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:116:13-79
+354            android:value="host.exp.exponent.taskManager.ExpoHeadlessAppLoader" />
+354-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:117:13-80
+355
+356        <provider
+356-->[:expo-file-system] /Users/tonyvoon/Documents/Repo/brew9-menu-app/node_modules/expo/node_modules/expo-file-system/android/build/intermediates/library_manifest/release/AndroidManifest.xml:18:9-27:20
+357            android:name="expo.modules.filesystem.FileSystemFileProvider"
+357-->[:expo-file-system] /Users/tonyvoon/Documents/Repo/brew9-menu-app/node_modules/expo/node_modules/expo-file-system/android/build/intermediates/library_manifest/release/AndroidManifest.xml:19:13-74
+358            android:authorities="com.brew9.menu.FileSystemFileProvider"
+358-->[:expo-file-system] /Users/tonyvoon/Documents/Repo/brew9-menu-app/node_modules/expo/node_modules/expo-file-system/android/build/intermediates/library_manifest/release/AndroidManifest.xml:20:13-74
+359            android:exported="false"
+359-->[:expo-file-system] /Users/tonyvoon/Documents/Repo/brew9-menu-app/node_modules/expo/node_modules/expo-file-system/android/build/intermediates/library_manifest/release/AndroidManifest.xml:21:13-37
+360            android:grantUriPermissions="true" >
+360-->[:expo-file-system] /Users/tonyvoon/Documents/Repo/brew9-menu-app/node_modules/expo/node_modules/expo-file-system/android/build/intermediates/library_manifest/release/AndroidManifest.xml:22:13-47
+361            <meta-data
+361-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:101:13-103:58
+362                android:name="android.support.FILE_PROVIDER_PATHS"
+362-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:102:17-67
+363                android:resource="@xml/file_system_provider_paths" />
+363-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:103:17-55
+364        </provider> <!-- https://developer.android.com/guide/topics/manifest/provider-element.html -->
+365        <provider
+365-->[:expo-image-picker] /Users/tonyvoon/Documents/Repo/brew9-menu-app/node_modules/expo-image-picker/android/build/intermediates/library_manifest/release/AndroidManifest.xml:14:9-22:20
+366            android:name="expo.modules.imagepicker.ImagePickerFileProvider"
+366-->[:expo-image-picker] /Users/tonyvoon/Documents/Repo/brew9-menu-app/node_modules/expo-image-picker/android/build/intermediates/library_manifest/release/AndroidManifest.xml:15:13-76
+367            android:authorities="com.brew9.menu.ImagePickerFileProvider"
+367-->[:expo-image-picker] /Users/tonyvoon/Documents/Repo/brew9-menu-app/node_modules/expo-image-picker/android/build/intermediates/library_manifest/release/AndroidManifest.xml:16:13-75
+368            android:exported="false"
+368-->[:expo-image-picker] /Users/tonyvoon/Documents/Repo/brew9-menu-app/node_modules/expo-image-picker/android/build/intermediates/library_manifest/release/AndroidManifest.xml:17:13-37
+369            android:grantUriPermissions="true" >
+369-->[:expo-image-picker] /Users/tonyvoon/Documents/Repo/brew9-menu-app/node_modules/expo-image-picker/android/build/intermediates/library_manifest/release/AndroidManifest.xml:18:13-47
+370            <meta-data
+370-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:101:13-103:58
+371                android:name="android.support.FILE_PROVIDER_PATHS"
+371-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:102:17-67
+372                android:resource="@xml/image_picker_provider_paths" />
+372-->[host.exp.exponent:expoview:38.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/99781daebf01d3f9c9d72d201b7e75f5/jetified-expoview-38.0.0/AndroidManifest.xml:103:17-55
+373        </provider>
+374
+375        <service
+375-->[:expo-location] /Users/tonyvoon/Documents/Repo/brew9-menu-app/node_modules/expo-location/android/build/intermediates/library_manifest/release/AndroidManifest.xml:16:9-18:40
+376            android:name="expo.modules.location.services.LocationTaskService"
+376-->[:expo-location] /Users/tonyvoon/Documents/Repo/brew9-menu-app/node_modules/expo-location/android/build/intermediates/library_manifest/release/AndroidManifest.xml:17:13-78
+377            android:exported="false" />
+377-->[:expo-location] /Users/tonyvoon/Documents/Repo/brew9-menu-app/node_modules/expo-location/android/build/intermediates/library_manifest/release/AndroidManifest.xml:18:13-37
+378
+379        <activity android:name="com.facebook.CustomTabMainActivity" />
+379-->[com.facebook.android:facebook-common:5.15.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/1afc38edce58ac60f3cd717c74078a4a/jetified-facebook-common-5.15.3/AndroidManifest.xml:34:9-71
+379-->[com.facebook.android:facebook-common:5.15.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/1afc38edce58ac60f3cd717c74078a4a/jetified-facebook-common-5.15.3/AndroidManifest.xml:34:19-68
+380        <activity
+380-->[com.facebook.android:facebook-common:5.15.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/1afc38edce58ac60f3cd717c74078a4a/jetified-facebook-common-5.15.3/AndroidManifest.xml:35:9-49:20
+381            android:name="com.facebook.CustomTabActivity"
+381-->[com.facebook.android:facebook-common:5.15.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/1afc38edce58ac60f3cd717c74078a4a/jetified-facebook-common-5.15.3/AndroidManifest.xml:36:13-58
+382            android:exported="true" >
+382-->[com.facebook.android:facebook-common:5.15.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/1afc38edce58ac60f3cd717c74078a4a/jetified-facebook-common-5.15.3/AndroidManifest.xml:37:13-36
+383            <intent-filter>
+383-->[com.facebook.android:facebook-common:5.15.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/1afc38edce58ac60f3cd717c74078a4a/jetified-facebook-common-5.15.3/AndroidManifest.xml:39:13-48:29
+384                <action android:name="android.intent.action.VIEW" />
+384-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:80:9-60
+384-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:80:17-58
+385
+386                <category android:name="android.intent.category.DEFAULT" />
+386-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:82:9-67
+386-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:82:19-65
+387                <category android:name="android.intent.category.BROWSABLE" />
+387-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:83:9-69
+387-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:83:19-67
+388
+389                <data
+389-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:78:9-69
+390                    android:host="cct.com.brew9.menu"
+391                    android:scheme="fbconnect" />
+391-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:78:15-67
+392            </intent-filter>
+393        </activity>
+394        <activity
+394-->[com.facebook.android:audience-network-sdk:5.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d09e8824eca5b1f61d79706f681b4a8a/jetified-audience-network-sdk-5.1.1/AndroidManifest.xml:15:9-18:40
+395            android:name="com.facebook.ads.AudienceNetworkActivity"
+395-->[com.facebook.android:audience-network-sdk:5.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d09e8824eca5b1f61d79706f681b4a8a/jetified-audience-network-sdk-5.1.1/AndroidManifest.xml:16:13-68
+396            android:configChanges="keyboardHidden|orientation|screenSize"
+396-->[com.facebook.android:audience-network-sdk:5.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d09e8824eca5b1f61d79706f681b4a8a/jetified-audience-network-sdk-5.1.1/AndroidManifest.xml:17:13-74
+397            android:exported="false" />
+397-->[com.facebook.android:audience-network-sdk:5.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d09e8824eca5b1f61d79706f681b4a8a/jetified-audience-network-sdk-5.1.1/AndroidManifest.xml:18:13-37
+398        <activity
+398-->[com.facebook.android:audience-network-sdk:5.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d09e8824eca5b1f61d79706f681b4a8a/jetified-audience-network-sdk-5.1.1/AndroidManifest.xml:19:9-23:39
+399            android:name="com.facebook.ads.internal.ipc.RemoteANActivity"
+399-->[com.facebook.android:audience-network-sdk:5.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d09e8824eca5b1f61d79706f681b4a8a/jetified-audience-network-sdk-5.1.1/AndroidManifest.xml:20:13-74
+400            android:configChanges="keyboardHidden|orientation|screenSize"
+400-->[com.facebook.android:audience-network-sdk:5.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d09e8824eca5b1f61d79706f681b4a8a/jetified-audience-network-sdk-5.1.1/AndroidManifest.xml:21:13-74
+401            android:exported="false"
+401-->[com.facebook.android:audience-network-sdk:5.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d09e8824eca5b1f61d79706f681b4a8a/jetified-audience-network-sdk-5.1.1/AndroidManifest.xml:22:13-37
+402            android:process=":adnw" />
+402-->[com.facebook.android:audience-network-sdk:5.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d09e8824eca5b1f61d79706f681b4a8a/jetified-audience-network-sdk-5.1.1/AndroidManifest.xml:23:13-36
+403
+404        <service
+404-->[com.facebook.android:audience-network-sdk:5.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d09e8824eca5b1f61d79706f681b4a8a/jetified-audience-network-sdk-5.1.1/AndroidManifest.xml:25:9-27:40
+405            android:name="com.facebook.ads.internal.ipc.AdsProcessPriorityService"
+405-->[com.facebook.android:audience-network-sdk:5.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d09e8824eca5b1f61d79706f681b4a8a/jetified-audience-network-sdk-5.1.1/AndroidManifest.xml:26:13-83
+406            android:exported="false" />
+406-->[com.facebook.android:audience-network-sdk:5.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d09e8824eca5b1f61d79706f681b4a8a/jetified-audience-network-sdk-5.1.1/AndroidManifest.xml:27:13-37
+407        <service
+407-->[com.facebook.android:audience-network-sdk:5.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d09e8824eca5b1f61d79706f681b4a8a/jetified-audience-network-sdk-5.1.1/AndroidManifest.xml:28:9-31:39
+408            android:name="com.facebook.ads.internal.ipc.AdsMessengerService"
+408-->[com.facebook.android:audience-network-sdk:5.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d09e8824eca5b1f61d79706f681b4a8a/jetified-audience-network-sdk-5.1.1/AndroidManifest.xml:29:13-77
+409            android:exported="false"
+409-->[com.facebook.android:audience-network-sdk:5.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d09e8824eca5b1f61d79706f681b4a8a/jetified-audience-network-sdk-5.1.1/AndroidManifest.xml:30:13-37
+410            android:process=":adnw" />
+410-->[com.facebook.android:audience-network-sdk:5.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d09e8824eca5b1f61d79706f681b4a8a/jetified-audience-network-sdk-5.1.1/AndroidManifest.xml:31:13-36
+411        <service
+411-->[com.google.android.gms:play-services-analytics:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/bab03eddaaffbe29f252e13ccdee226e/jetified-play-services-analytics-17.0.0/AndroidManifest.xml:40:9-44:72
+412            android:name="com.google.android.gms.analytics.AnalyticsJobService"
+412-->[com.google.android.gms:play-services-analytics:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/bab03eddaaffbe29f252e13ccdee226e/jetified-play-services-analytics-17.0.0/AndroidManifest.xml:41:13-80
+413            android:enabled="true"
+413-->[com.google.android.gms:play-services-analytics:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/bab03eddaaffbe29f252e13ccdee226e/jetified-play-services-analytics-17.0.0/AndroidManifest.xml:42:13-35
+414            android:exported="false"
+414-->[com.google.android.gms:play-services-analytics:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/bab03eddaaffbe29f252e13ccdee226e/jetified-play-services-analytics-17.0.0/AndroidManifest.xml:43:13-37
+415            android:permission="android.permission.BIND_JOB_SERVICE" /> <!-- Needs to be explicitly declared on P+ -->
+415-->[com.google.android.gms:play-services-analytics:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/bab03eddaaffbe29f252e13ccdee226e/jetified-play-services-analytics-17.0.0/AndroidManifest.xml:44:13-69
+416        <uses-library
+416-->[com.google.android.gms:play-services-maps:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/9b8baa06e366541e04051c5224ec92e0/jetified-play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+417            android:name="org.apache.http.legacy"
+417-->[com.google.android.gms:play-services-maps:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/9b8baa06e366541e04051c5224ec92e0/jetified-play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
+418            android:required="false" />
+418-->[com.google.android.gms:play-services-maps:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/9b8baa06e366541e04051c5224ec92e0/jetified-play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
+419
+420        <activity
+420-->[com.google.android.gms:play-services-auth:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d91d8b53dc8613e5c809446df640f358/jetified-play-services-auth-17.0.0/AndroidManifest.xml:23:9-27:75
+421            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+421-->[com.google.android.gms:play-services-auth:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d91d8b53dc8613e5c809446df640f358/jetified-play-services-auth-17.0.0/AndroidManifest.xml:24:13-93
+422            android:excludeFromRecents="true"
+422-->[com.google.android.gms:play-services-auth:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d91d8b53dc8613e5c809446df640f358/jetified-play-services-auth-17.0.0/AndroidManifest.xml:25:13-46
+423            android:exported="false"
+423-->[com.google.android.gms:play-services-auth:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d91d8b53dc8613e5c809446df640f358/jetified-play-services-auth-17.0.0/AndroidManifest.xml:26:13-37
+424            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+424-->[com.google.android.gms:play-services-auth:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d91d8b53dc8613e5c809446df640f358/jetified-play-services-auth-17.0.0/AndroidManifest.xml:27:13-72
+425        <!--
+426            Service handling Google Sign-In user revocation. For apps that do not integrate with
+427            Google Sign-In, this service will never be started.
+428        -->
+429        <service
+429-->[com.google.android.gms:play-services-auth:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d91d8b53dc8613e5c809446df640f358/jetified-play-services-auth-17.0.0/AndroidManifest.xml:33:9-36:110
+430            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+430-->[com.google.android.gms:play-services-auth:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d91d8b53dc8613e5c809446df640f358/jetified-play-services-auth-17.0.0/AndroidManifest.xml:34:13-89
+431            android:exported="true"
+431-->[com.google.android.gms:play-services-auth:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d91d8b53dc8613e5c809446df640f358/jetified-play-services-auth-17.0.0/AndroidManifest.xml:35:13-36
+432            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+432-->[com.google.android.gms:play-services-auth:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/d91d8b53dc8613e5c809446df640f358/jetified-play-services-auth-17.0.0/AndroidManifest.xml:36:13-107
+433
+434        <activity
+434-->[net.openid:appauth:0.7.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2ef9e715e9cecde62f19b1d7bdbec1fa/jetified-appauth-0.7.1/AndroidManifest.xml:27:9-31:75
+435            android:name="net.openid.appauth.AuthorizationManagementActivity"
+435-->[net.openid:appauth:0.7.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2ef9e715e9cecde62f19b1d7bdbec1fa/jetified-appauth-0.7.1/AndroidManifest.xml:28:13-78
+436            android:exported="false"
+436-->[net.openid:appauth:0.7.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2ef9e715e9cecde62f19b1d7bdbec1fa/jetified-appauth-0.7.1/AndroidManifest.xml:29:13-37
+437            android:launchMode="singleTask"
+437-->[net.openid:appauth:0.7.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2ef9e715e9cecde62f19b1d7bdbec1fa/jetified-appauth-0.7.1/AndroidManifest.xml:30:13-44
+438            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+438-->[net.openid:appauth:0.7.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2ef9e715e9cecde62f19b1d7bdbec1fa/jetified-appauth-0.7.1/AndroidManifest.xml:31:13-72
+439        <activity
+439-->[net.openid:appauth:0.7.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2ef9e715e9cecde62f19b1d7bdbec1fa/jetified-appauth-0.7.1/AndroidManifest.xml:32:9-43:20
+440            android:name="net.openid.appauth.RedirectUriReceiverActivity"
+440-->[net.openid:appauth:0.7.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2ef9e715e9cecde62f19b1d7bdbec1fa/jetified-appauth-0.7.1/AndroidManifest.xml:33:13-74
+441            android:exported="true" >
+441-->[net.openid:appauth:0.7.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2ef9e715e9cecde62f19b1d7bdbec1fa/jetified-appauth-0.7.1/AndroidManifest.xml:34:13-36
+442            <intent-filter>
+442-->[net.openid:appauth:0.7.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2ef9e715e9cecde62f19b1d7bdbec1fa/jetified-appauth-0.7.1/AndroidManifest.xml:35:13-42:29
+443                <action android:name="android.intent.action.VIEW" />
+443-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:80:9-60
+443-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:80:17-58
+444
+445                <category android:name="android.intent.category.DEFAULT" />
+445-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:82:9-67
+445-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:82:19-65
+446                <category android:name="android.intent.category.BROWSABLE" />
+446-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:83:9-69
+446-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:83:19-67
+447
+448                <data android:scheme="host.exp.exponent" />
+448-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:78:9-69
+448-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:78:15-67
+449            </intent-filter>
+450        </activity>
+451
+452        <service
+452-->[io.nlopez.smartlocation:library:3.2.11] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/708d8979f0cb0d015f55ed7594c5b633/jetified-library-3.2.11/AndroidManifest.xml:19:9-21:40
+453            android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService"
+453-->[io.nlopez.smartlocation:library:3.2.11] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/708d8979f0cb0d015f55ed7594c5b633/jetified-library-3.2.11/AndroidManifest.xml:20:13-132
+454            android:exported="false" />
+454-->[io.nlopez.smartlocation:library:3.2.11] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/708d8979f0cb0d015f55ed7594c5b633/jetified-library-3.2.11/AndroidManifest.xml:21:13-37
+455        <service
+455-->[io.nlopez.smartlocation:library:3.2.11] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/708d8979f0cb0d015f55ed7594c5b633/jetified-library-3.2.11/AndroidManifest.xml:22:9-24:40
+456            android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService"
+456-->[io.nlopez.smartlocation:library:3.2.11] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/708d8979f0cb0d015f55ed7594c5b633/jetified-library-3.2.11/AndroidManifest.xml:23:13-127
+457            android:exported="false" />
+457-->[io.nlopez.smartlocation:library:3.2.11] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/708d8979f0cb0d015f55ed7594c5b633/jetified-library-3.2.11/AndroidManifest.xml:24:13-37
+458        <service
+458-->[io.nlopez.smartlocation:library:3.2.11] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/708d8979f0cb0d015f55ed7594c5b633/jetified-library-3.2.11/AndroidManifest.xml:25:9-27:40
+459            android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService"
+459-->[io.nlopez.smartlocation:library:3.2.11] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/708d8979f0cb0d015f55ed7594c5b633/jetified-library-3.2.11/AndroidManifest.xml:26:13-120
+460            android:exported="false" />
+460-->[io.nlopez.smartlocation:library:3.2.11] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/708d8979f0cb0d015f55ed7594c5b633/jetified-library-3.2.11/AndroidManifest.xml:27:13-37
+461
+462        <meta-data
+462-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/6b3d7dbd7b4e33e6faec0eadd4be0d28/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:11:9-13:43
+463            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+463-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/6b3d7dbd7b4e33e6faec0eadd4be0d28/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:12:13-84
+464            android:value="GlideModule" />
+464-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/6b3d7dbd7b4e33e6faec0eadd4be0d28/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:13:13-40
+465        <!--
+466             FirebaseMessagingService performs security checks at runtime,
+467             but set to not exported to explicitly avoid allowing another app to call it.
+468        -->
+469        <service
+469-->[com.google.firebase:firebase-messaging:20.1.2] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/23e42c46f383e070cbbc1994a614b07a/jetified-firebase-messaging-20.1.2/AndroidManifest.xml:28:9-34:19
+470            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+470-->[com.google.firebase:firebase-messaging:20.1.2] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/23e42c46f383e070cbbc1994a614b07a/jetified-firebase-messaging-20.1.2/AndroidManifest.xml:29:13-82
+471            android:exported="false" >
+471-->[com.google.firebase:firebase-messaging:20.1.2] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/23e42c46f383e070cbbc1994a614b07a/jetified-firebase-messaging-20.1.2/AndroidManifest.xml:30:13-37
+472            <intent-filter android:priority="-500" >
+472-->[com.google.firebase:firebase-messaging:20.1.2] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/23e42c46f383e070cbbc1994a614b07a/jetified-firebase-messaging-20.1.2/AndroidManifest.xml:31:13-33:29
+472-->[com.google.firebase:firebase-messaging:20.1.2] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/23e42c46f383e070cbbc1994a614b07a/jetified-firebase-messaging-20.1.2/AndroidManifest.xml:31:28-51
+473                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+473-->[com.google.firebase:firebase-messaging:20.1.2] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/23e42c46f383e070cbbc1994a614b07a/jetified-firebase-messaging-20.1.2/AndroidManifest.xml:32:17-78
+473-->[com.google.firebase:firebase-messaging:20.1.2] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/23e42c46f383e070cbbc1994a614b07a/jetified-firebase-messaging-20.1.2/AndroidManifest.xml:32:25-75
+474            </intent-filter>
+475        </service>
+476        <service
+476-->[com.google.firebase:firebase-messaging:20.1.2] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/23e42c46f383e070cbbc1994a614b07a/jetified-firebase-messaging-20.1.2/AndroidManifest.xml:35:9-41:19
+477            android:name="com.google.firebase.components.ComponentDiscoveryService"
+477-->[com.google.firebase:firebase-messaging:20.1.2] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/23e42c46f383e070cbbc1994a614b07a/jetified-firebase-messaging-20.1.2/AndroidManifest.xml:36:13-84
+478            android:directBootAware="true"
+478-->[com.google.firebase:firebase-common:19.3.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/5b7dc2c2ea36699256f4ca88506bd426/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
+479            android:exported="false" >
+479-->[com.google.firebase:firebase-messaging:20.1.2] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/23e42c46f383e070cbbc1994a614b07a/jetified-firebase-messaging-20.1.2/AndroidManifest.xml:37:13-37
+480            <meta-data
+480-->[com.google.firebase:firebase-messaging:20.1.2] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/23e42c46f383e070cbbc1994a614b07a/jetified-firebase-messaging-20.1.2/AndroidManifest.xml:38:13-40:85
+481                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+481-->[com.google.firebase:firebase-messaging:20.1.2] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/23e42c46f383e070cbbc1994a614b07a/jetified-firebase-messaging-20.1.2/AndroidManifest.xml:39:17-119
+482                android:value="com.google.firebase.components.ComponentRegistrar" />
+482-->[com.google.firebase:firebase-messaging:20.1.2] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/23e42c46f383e070cbbc1994a614b07a/jetified-firebase-messaging-20.1.2/AndroidManifest.xml:40:17-82
+483            <meta-data
+483-->[com.google.firebase:firebase-datatransport:17.0.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/9ce03e65df7efbed60d5d22024204225/jetified-firebase-datatransport-17.0.3/AndroidManifest.xml:28:13-30:85
+484                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+484-->[com.google.firebase:firebase-datatransport:17.0.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/9ce03e65df7efbed60d5d22024204225/jetified-firebase-datatransport-17.0.3/AndroidManifest.xml:29:17-115
+485                android:value="com.google.firebase.components.ComponentRegistrar" />
+485-->[com.google.firebase:firebase-datatransport:17.0.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/9ce03e65df7efbed60d5d22024204225/jetified-firebase-datatransport-17.0.3/AndroidManifest.xml:30:17-82
+486            <meta-data
+486-->[com.google.android.gms:play-services-measurement-api:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/393bc0bb3eaec15af2fa8fa1409850ae/jetified-play-services-measurement-api-17.2.3/AndroidManifest.xml:30:13-32:85
+487                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+487-->[com.google.android.gms:play-services-measurement-api:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/393bc0bb3eaec15af2fa8fa1409850ae/jetified-play-services-measurement-api-17.2.3/AndroidManifest.xml:31:17-139
+488                android:value="com.google.firebase.components.ComponentRegistrar" />
+488-->[com.google.android.gms:play-services-measurement-api:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/393bc0bb3eaec15af2fa8fa1409850ae/jetified-play-services-measurement-api-17.2.3/AndroidManifest.xml:32:17-82
+489            <meta-data
+489-->[com.google.firebase:firebase-iid:20.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/ceeea14f1d18810d2844a3ae6d29263c/jetified-firebase-iid-20.1.1/AndroidManifest.xml:32:13-34:85
+490                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+490-->[com.google.firebase:firebase-iid:20.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/ceeea14f1d18810d2844a3ae6d29263c/jetified-firebase-iid-20.1.1/AndroidManifest.xml:33:17-96
+491                android:value="com.google.firebase.components.ComponentRegistrar" />
+491-->[com.google.firebase:firebase-iid:20.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/ceeea14f1d18810d2844a3ae6d29263c/jetified-firebase-iid-20.1.1/AndroidManifest.xml:34:17-82
+492            <meta-data
+492-->[com.google.firebase:firebase-installations:16.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/343f00e545d981eb15a5b524449b6fff/jetified-firebase-installations-16.0.0/AndroidManifest.xml:17:13-19:85
+493                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+493-->[com.google.firebase:firebase-installations:16.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/343f00e545d981eb15a5b524449b6fff/jetified-firebase-installations-16.0.0/AndroidManifest.xml:18:17-127
+494                android:value="com.google.firebase.components.ComponentRegistrar" />
+494-->[com.google.firebase:firebase-installations:16.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/343f00e545d981eb15a5b524449b6fff/jetified-firebase-installations-16.0.0/AndroidManifest.xml:19:17-82
+495        </service>
+496        <service
+496-->[com.google.android.datatransport:transport-backend-cct:2.2.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/83d5ee0c5ce538f817e4e3e2dc3b33da/jetified-transport-backend-cct-2.2.0/AndroidManifest.xml:29:9-35:19
+497            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+497-->[com.google.android.datatransport:transport-backend-cct:2.2.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/83d5ee0c5ce538f817e4e3e2dc3b33da/jetified-transport-backend-cct-2.2.0/AndroidManifest.xml:30:13-103
+498            android:exported="false" >
+498-->[com.google.android.datatransport:transport-backend-cct:2.2.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/83d5ee0c5ce538f817e4e3e2dc3b33da/jetified-transport-backend-cct-2.2.0/AndroidManifest.xml:31:13-37
+499            <meta-data
+499-->[com.google.android.datatransport:transport-backend-cct:2.2.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/83d5ee0c5ce538f817e4e3e2dc3b33da/jetified-transport-backend-cct-2.2.0/AndroidManifest.xml:32:13-34:39
+500                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+500-->[com.google.android.datatransport:transport-backend-cct:2.2.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/83d5ee0c5ce538f817e4e3e2dc3b33da/jetified-transport-backend-cct-2.2.0/AndroidManifest.xml:33:17-94
+501                android:value="cct" />
+501-->[com.google.android.datatransport:transport-backend-cct:2.2.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/83d5ee0c5ce538f817e4e3e2dc3b33da/jetified-transport-backend-cct-2.2.0/AndroidManifest.xml:34:17-36
+502        </service>
+503        <service
+503-->[com.google.android.datatransport:transport-runtime:2.2.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/052850d4150addf6aece2841ae9a10e4/jetified-transport-runtime-2.2.0/AndroidManifest.xml:26:9-30:19
+504            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+504-->[com.google.android.datatransport:transport-runtime:2.2.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/052850d4150addf6aece2841ae9a10e4/jetified-transport-runtime-2.2.0/AndroidManifest.xml:27:13-117
+505            android:exported="false"
+505-->[com.google.android.datatransport:transport-runtime:2.2.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/052850d4150addf6aece2841ae9a10e4/jetified-transport-runtime-2.2.0/AndroidManifest.xml:28:13-37
+506            android:permission="android.permission.BIND_JOB_SERVICE" >
+506-->[com.google.android.datatransport:transport-runtime:2.2.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/052850d4150addf6aece2841ae9a10e4/jetified-transport-runtime-2.2.0/AndroidManifest.xml:29:13-69
+507        </service>
+508
+509        <receiver
+509-->[com.google.android.datatransport:transport-runtime:2.2.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/052850d4150addf6aece2841ae9a10e4/jetified-transport-runtime-2.2.0/AndroidManifest.xml:32:9-34:40
+510            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+510-->[com.google.android.datatransport:transport-runtime:2.2.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/052850d4150addf6aece2841ae9a10e4/jetified-transport-runtime-2.2.0/AndroidManifest.xml:33:13-132
+511            android:exported="false" />
+511-->[com.google.android.datatransport:transport-runtime:2.2.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/052850d4150addf6aece2841ae9a10e4/jetified-transport-runtime-2.2.0/AndroidManifest.xml:34:13-37
+512        <!--
+513         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
+514         with the application context. This config is merged in with the host app's manifest,
+515         but there can only be one provider with the same authority activated at any given
+516         point; so if the end user has two or more different apps that use Facebook SDK, only the
+517         first one will be able to use the provider. To work around this problem, we use the
+518         following placeholder in the authority to identify each host application as if it was
+519         a completely different provider.
+520        -->
+521        <provider
+521-->[com.facebook.android:facebook-core:5.15.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/34c7a6199256a5220c0daa614680813b/jetified-facebook-core-5.15.3/AndroidManifest.xml:39:9-42:40
+522            android:name="com.facebook.internal.FacebookInitProvider"
+522-->[com.facebook.android:facebook-core:5.15.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/34c7a6199256a5220c0daa614680813b/jetified-facebook-core-5.15.3/AndroidManifest.xml:40:13-70
+523            android:authorities="com.brew9.menu.FacebookInitProvider"
+523-->[com.facebook.android:facebook-core:5.15.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/34c7a6199256a5220c0daa614680813b/jetified-facebook-core-5.15.3/AndroidManifest.xml:41:13-72
+524            android:exported="false" />
+524-->[com.facebook.android:facebook-core:5.15.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/34c7a6199256a5220c0daa614680813b/jetified-facebook-core-5.15.3/AndroidManifest.xml:42:13-37
+525
+526        <receiver
+526-->[com.facebook.android:facebook-core:5.15.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/34c7a6199256a5220c0daa614680813b/jetified-facebook-core-5.15.3/AndroidManifest.xml:44:9-50:20
+527            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+527-->[com.facebook.android:facebook-core:5.15.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/34c7a6199256a5220c0daa614680813b/jetified-facebook-core-5.15.3/AndroidManifest.xml:45:13-86
+528            android:exported="false" >
+528-->[com.facebook.android:facebook-core:5.15.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/34c7a6199256a5220c0daa614680813b/jetified-facebook-core-5.15.3/AndroidManifest.xml:46:13-37
+529            <intent-filter>
+529-->[com.facebook.android:facebook-core:5.15.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/34c7a6199256a5220c0daa614680813b/jetified-facebook-core-5.15.3/AndroidManifest.xml:47:13-49:29
+530                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+530-->[com.facebook.android:facebook-core:5.15.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/34c7a6199256a5220c0daa614680813b/jetified-facebook-core-5.15.3/AndroidManifest.xml:48:17-95
+530-->[com.facebook.android:facebook-core:5.15.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/34c7a6199256a5220c0daa614680813b/jetified-facebook-core-5.15.3/AndroidManifest.xml:48:25-92
+531            </intent-filter>
+532        </receiver> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+533        <activity
+533-->[com.google.android.gms:play-services-ads-lite:15.0.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/3b1237306df69a8b2ec2460674c73a51/jetified-play-services-ads-lite-15.0.1/AndroidManifest.xml:29:9-33:64
+534            android:name="com.google.android.gms.ads.AdActivity"
+534-->[com.google.android.gms:play-services-ads-lite:15.0.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/3b1237306df69a8b2ec2460674c73a51/jetified-play-services-ads-lite-15.0.1/AndroidManifest.xml:30:13-65
+535            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+535-->[com.google.android.gms:play-services-ads-lite:15.0.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/3b1237306df69a8b2ec2460674c73a51/jetified-play-services-ads-lite-15.0.1/AndroidManifest.xml:31:13-122
+536            android:exported="false"
+536-->[com.google.android.gms:play-services-ads-lite:15.0.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/3b1237306df69a8b2ec2460674c73a51/jetified-play-services-ads-lite-15.0.1/AndroidManifest.xml:32:13-37
+537            android:theme="@android:style/Theme.Translucent" />
+537-->[com.google.android.gms:play-services-ads-lite:15.0.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/3b1237306df69a8b2ec2460674c73a51/jetified-play-services-ads-lite-15.0.1/AndroidManifest.xml:33:13-61
+538
+539        <receiver
+539-->[com.google.firebase:firebase-iid:20.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/ceeea14f1d18810d2844a3ae6d29263c/jetified-firebase-iid-20.1.1/AndroidManifest.xml:37:9-44:20
+540            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+540-->[com.google.firebase:firebase-iid:20.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/ceeea14f1d18810d2844a3ae6d29263c/jetified-firebase-iid-20.1.1/AndroidManifest.xml:38:13-78
+541            android:exported="true"
+541-->[com.google.firebase:firebase-iid:20.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/ceeea14f1d18810d2844a3ae6d29263c/jetified-firebase-iid-20.1.1/AndroidManifest.xml:39:13-36
+542            android:permission="com.google.android.c2dm.permission.SEND" >
+542-->[com.google.firebase:firebase-iid:20.1.1] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/ceeea14f1d18810d2844a3ae6d29263c/jetified-firebase-iid-20.1.1/AndroidManifest.xml:40:13-73
+543            <intent-filter>
+543-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:192:7-194:23
+544                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+544-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:182:9-72
+544-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:182:17-70
+545            </intent-filter>
+546        </receiver>
+547
+548        <activity
+548-->[com.google.android.gms:play-services-base:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/57e67eb09eebfe547af7e0dd5b02fffa/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+549            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+549-->[com.google.android.gms:play-services-base:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/57e67eb09eebfe547af7e0dd5b02fffa/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+550            android:exported="false"
+550-->[com.google.android.gms:play-services-base:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/57e67eb09eebfe547af7e0dd5b02fffa/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+551            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+551-->[com.google.android.gms:play-services-base:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/57e67eb09eebfe547af7e0dd5b02fffa/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+552
+553        <receiver
+553-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:29:9-33:20
+554            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+554-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:30:13-85
+555            android:enabled="true"
+555-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:31:13-35
+556            android:exported="false" >
+556-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:32:13-37
+557        </receiver>
+558        <receiver
+558-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:34:9-42:20
+559            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+559-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:35:13-100
+560            android:enabled="true"
+560-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:36:13-35
+561            android:exported="true"
+561-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:37:13-36
+562            android:permission="android.permission.INSTALL_PACKAGES" >
+562-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:38:13-69
+563            <intent-filter>
+563-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:152:7-154:23
+564                <action android:name="com.android.vending.INSTALL_REFERRER" />
+564-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:153:9-71
+564-->/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/AndroidManifest.xml:153:17-68
+565            </intent-filter>
+566        </receiver>
+567
+568        <service
+568-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:44:9-47:40
+569            android:name="com.google.android.gms.measurement.AppMeasurementService"
+569-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:45:13-84
+570            android:enabled="true"
+570-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:46:13-35
+571            android:exported="false" />
+571-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:47:13-37
+572        <service
+572-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:48:9-52:72
+573            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+573-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:49:13-87
+574            android:enabled="true"
+574-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:50:13-35
+575            android:exported="false"
+575-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:51:13-37
+576            android:permission="android.permission.BIND_JOB_SERVICE" />
+576-->[com.google.android.gms:play-services-measurement:17.2.3] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/2d150425c899ffec02fd14a2bab6c3c9/jetified-play-services-measurement-17.2.3/AndroidManifest.xml:52:13-69
+577
+578        <provider
+578-->[com.google.firebase:firebase-common:19.3.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/5b7dc2c2ea36699256f4ca88506bd426/jetified-firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
+579            android:name="com.google.firebase.provider.FirebaseInitProvider"
+579-->[com.google.firebase:firebase-common:19.3.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/5b7dc2c2ea36699256f4ca88506bd426/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
+580            android:authorities="com.brew9.menu.firebaseinitprovider"
+580-->[com.google.firebase:firebase-common:19.3.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/5b7dc2c2ea36699256f4ca88506bd426/jetified-firebase-common-19.3.0/AndroidManifest.xml:28:13-72
+581            android:exported="false"
+581-->[com.google.firebase:firebase-common:19.3.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/5b7dc2c2ea36699256f4ca88506bd426/jetified-firebase-common-19.3.0/AndroidManifest.xml:29:13-37
+582            android:initOrder="100" />
+582-->[com.google.firebase:firebase-common:19.3.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/5b7dc2c2ea36699256f4ca88506bd426/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
+583
+584        <meta-data
+584-->[com.google.android.gms:play-services-basement:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/688cea3a6b00cf21292d151c22623bae/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+585            android:name="com.google.android.gms.version"
+585-->[com.google.android.gms:play-services-basement:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/688cea3a6b00cf21292d151c22623bae/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+586            android:value="@integer/google_play_services_version" />
+586-->[com.google.android.gms:play-services-basement:17.0.0] /Users/tonyvoon/.gradle/caches/transforms-2/files-2.1/688cea3a6b00cf21292d151c22623bae/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+587    </application>
+588
+589</manifest>

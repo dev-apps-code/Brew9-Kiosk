@@ -1,0 +1,278 @@
+[
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xxxhdpi_shell_notification_icon.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xxxhdpi/shell_notification_icon.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xxxhdpi_big_logo_dark_filled.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xxxhdpi/big_logo_dark_filled.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/layout_error_console_list_item.xml.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/layout/error_console_list_item.xml"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-xxxhdpi-v26_ic_foreground.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-xxxhdpi-v26/ic_foreground.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_refresh_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xxhdpi/ic_refresh_white_36dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/layout_notification.xml.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/layout/notification.xml"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xxxhdpi_ic_refresh_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xxxhdpi/ic_refresh_white_36dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xxxhdpi_ic_logo_white_32dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xxxhdpi/ic_logo_white_32dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xxxhdpi_pin_white.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xxxhdpi/pin_white.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_arrow_back_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xxhdpi/ic_arrow_back_white_36dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-xxxhdpi-v26_dev_icon.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-xxxhdpi-v26/dev_icon.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_share_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xhdpi/ic_share_white_36dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/layout_error_fragment.xml.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/layout/error_fragment.xml"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-xxxhdpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-xxxhdpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-mdpi_ic_logo_white_32dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-mdpi/ic_logo_white_32dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable_splash_background.xml.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable/splash_background.xml"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-xxhdpi-v26_dev_icon.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-xxhdpi-v26/dev_icon.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-xxhdpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-xxhdpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_arrow_back_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xhdpi/ic_arrow_back_white_36dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-mdpi_ic_home_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-mdpi/ic_home_white_36dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xxxhdpi_pin_white_fade.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xxxhdpi/pin_white_fade.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xxxhdpi_ic_share_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xxxhdpi/ic_share_white_36dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-hdpi_dev_icon.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-hdpi/dev_icon.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-hdpi_ic_arrow_back_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-hdpi/ic_arrow_back_white_36dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/layout_error_console_fragment.xml.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/layout/error_console_fragment.xml"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/layout_notification_shell_app.xml.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/layout/notification_shell_app.xml"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_dev_icon.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-xxxhdpi/dev_icon.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-hdpi_ic_share_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-hdpi/ic_share_white_36dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-xxhdpi-v26_ic_foreground.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-xxhdpi-v26/ic_foreground.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/layout_error_activity_new.xml.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/layout/error_activity_new.xml"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-hdpi-v26_ic_foreground.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-hdpi-v26/ic_foreground.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_home_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xhdpi/ic_home_white_36dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_logo_white_32dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xhdpi/ic_logo_white_32dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xxxhdpi_big_logo_filled.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xxxhdpi/big_logo_filled.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xxxhdpi_ic_arrow_back_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xxxhdpi/ic_arrow_back_white_36dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/xml_global_tracker.xml.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/generated/res/google-services/release/xml/global_tracker.xml"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-hdpi-v26_dev_icon.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-hdpi-v26/dev_icon.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-hdpi_ic_refresh_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-hdpi/ic_refresh_white_36dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_logo_white_32dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xxhdpi/ic_logo_white_32dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-mdpi-v26_ic_foreground.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-mdpi-v26/ic_foreground.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-xhdpi-v26_dev_icon.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-xhdpi-v26/dev_icon.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-xhdpi-v26_ic_foreground.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-xhdpi-v26/ic_foreground.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xxxhdpi_big_logo_new_filled.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xxxhdpi/big_logo_new_filled.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-xhdpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-xhdpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xxxhdpi_notification_icon.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xxxhdpi/notification_icon.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-mdpi_ic_refresh_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-mdpi/ic_refresh_white_36dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/layout_exponent_button.xml.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/layout/exponent_button.xml"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-mdpi-v26_dev_icon.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-mdpi-v26/dev_icon.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-hdpi_ic_home_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-hdpi/ic_home_white_36dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-xxhdpi_dev_icon.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-xxhdpi/dev_icon.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xhdpi_ic_refresh_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xhdpi/ic_refresh_white_36dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-mdpi_ic_arrow_back_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-mdpi/ic_arrow_back_white_36dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xxxhdpi_ic_home_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xxxhdpi/ic_home_white_36dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-hdpi_ic_logo_white_32dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-hdpi/ic_logo_white_32dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/layout_exponent_check_box.xml.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/layout/exponent_check_box.xml"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-xhdpi_dev_icon.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-xhdpi/dev_icon.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-mdpi_ic_share_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-mdpi/ic_share_white_36dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xxxhdpi_big_logo_dark.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xxxhdpi/big_logo_dark.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-mdpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-mdpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-mdpi_dev_icon.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-mdpi/dev_icon.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/mipmap-hdpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/mipmap-hdpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/layout_exponent_dev_activity.xml.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/layout/exponent_dev_activity.xml"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_home_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xxhdpi/ic_home_white_36dp.png"
+    },
+    {
+        "merged": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/build/intermediates/res/merged/release/drawable-xxhdpi_ic_share_white_36dp.png.flat",
+        "source": "/Users/tonyvoon/Documents/Repo/brew9-menu-app/android/app/src/main/res/drawable-xxhdpi/ic_share_white_36dp.png"
+    }
+]

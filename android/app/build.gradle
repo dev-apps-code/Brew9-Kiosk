@@ -1,20 +1,16 @@
 buildscript {
   repositories {
     google()
-    maven { url 'https://maven.fabric.io/public' }
+
   }
 
-  dependencies {
-    classpath 'io.fabric.tools:gradle:1.28.0'
-  }
+
 }
 apply plugin: 'com.android.application'
-apply plugin: 'io.fabric'
+
 apply plugin: 'devicefarm'
 
-repositories {
-  maven { url 'https://maven.fabric.io/public' }
-}
+
 
 def safeExtGet(prop, fallback) {
   rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
@@ -28,6 +24,10 @@ android {
     targetCompatibility JavaVersion.VERSION_1_8
   }
 
+  packagingOptions {
+    pickFirst '**/META-INFMANIFEST.MF'
+  }
+
   defaultConfig {
     applicationId 'com.brew9.menu'
     minSdkVersion safeExtGet("minSdkVersion", 21)
@@ -39,15 +39,15 @@ android {
       // to be able to bundle old, incompatible SDKs.
 
 
-
+      
       abiFilters 'armeabi-v7a', 'x86', 'arm64-v8a', 'x86_64'
-
+      
     }
     multiDexEnabled true
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     // Deprecated. Used by net.openid:appauth
     manifestPlaceholders = [
-            'appAuthRedirectScheme': 'host.exp.exponent'
+        'appAuthRedirectScheme': 'host.exp.exponent'
     ]
   }
   dexOptions {
@@ -80,10 +80,7 @@ android {
   lintOptions {
     abortOnError false
   }
-  packagingOptions {
-    pickFirst "**"
-    pickFirst '**/META-INFMANIFEST.MF'
-  }
+
 }
 
 devicefarm {
@@ -102,6 +99,8 @@ configurations.all {
     force 'org.webkit:android-jsc:r245459'
   }
 }
+
+
 
 // WHEN_PREPARING_SHELL_REMOVE_FROM_HERE
 
@@ -185,38 +184,38 @@ dependencies {
   testImplementation 'com.android.support.test:runner:1.0.2-alpha1'
   testImplementation 'com.android.support.test:rules:1.0.2-alpha1'
 
-
+  
   implementation('host.exp.exponent:expoview:38.0.0@aar') {
     transitive = true
     exclude group: 'com.squareup.okhttp3', module: 'okhttp'
     exclude group: 'com.squareup.okhttp3', module: 'okhttp-urlconnection'
   }
+  
 
 
-
-
+  
   api 'org.webkit:android-jsc:r245459' // needs to be before react-native
   api 'com.facebook.react:react-native:38.0.0'
+  
 
 
-
-
+  
   addUnimodulesDependencies([
-          modulesPaths : [
-                  '../../node_modules'
-          ],
-          configuration: 'api',
-          target       : 'react-native',
-          exclude      : [
-                  // You can exclude unneeded modules here, eg.
-                  // 'unimodules-face-detector-interface',
-                  // 'expo-face-detector'
+      modulesPaths : [
+        '../../node_modules'
+      ],
+      configuration: 'api',
+      target       : 'react-native',
+      exclude      : [
+        // You can exclude unneeded modules here, eg.
+        // 'unimodules-face-detector-interface',
+        // 'expo-face-detector'
 
-                  // Adding a name here will also remove the package
-                  // from auto-generated BasePackageList.java
-          ]
+        // Adding a name here will also remove the package
+        // from auto-generated BasePackageList.java
+      ]
   ])
-
+  
 }
 
 // This has to be down here for some reason

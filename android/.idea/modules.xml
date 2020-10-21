@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/android.iml" filepath="$PROJECT_DIR$/.idea/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-96534290/android.expo-app-loader-provider.iml" filepath="$PROJECT_DIR$/.idea/modules/-96534290/android.expo-app-loader-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1161164513/android.expo-constants.iml" filepath="$PROJECT_DIR$/.idea/modules/1161164513/android.expo-constants.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2086303765/android.expo-error-recovery.iml" filepath="$PROJECT_DIR$/.idea/modules/-2086303765/android.expo-error-recovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1556443721/android.expo-facebook.iml" filepath="$PROJECT_DIR$/.idea/modules/-1556443721/android.expo-facebook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-293057769/android.expo-file-system.iml" filepath="$PROJECT_DIR$/.idea/modules/-293057769/android.expo-file-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1896687936/android.expo-font.iml" filepath="$PROJECT_DIR$/.idea/modules/-1896687936/android.expo-font.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/263341489/android.expo-image-picker.iml" filepath="$PROJECT_DIR$/.idea/modules/263341489/android.expo-image-picker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1915399406/android.expo-keep-awake.iml" filepath="$PROJECT_DIR$/.idea/modules/1915399406/android.expo-keep-awake.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1729010297/android.expo-linear-gradient.iml" filepath="$PROJECT_DIR$/.idea/modules/-1729010297/android.expo-linear-gradient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-427281498/android.expo-location.iml" filepath="$PROJECT_DIR$/.idea/modules/-427281498/android.expo-location.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/585484467/android.expo-permissions.iml" filepath="$PROJECT_DIR$/.idea/modules/585484467/android.expo-permissions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1472634756/android.expo-secure-store.iml" filepath="$PROJECT_DIR$/.idea/modules/-1472634756/android.expo-secure-store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1813691649/android.expo-splash-screen.iml" filepath="$PROJECT_DIR$/.idea/modules/1813691649/android.expo-splash-screen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1879104829/android.expo-sqlite.iml" filepath="$PROJECT_DIR$/.idea/modules/1879104829/android.expo-sqlite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1533754296/android.react-native-fast-image.iml" filepath="$PROJECT_DIR$/.idea/modules/-1533754296/android.react-native-fast-image.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1548379221/android.unimodules-app-loader.iml" filepath="$PROJECT_DIR$/.idea/modules/-1548379221/android.unimodules-app-loader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1827978695/android.unimodules-barcode-scanner-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/-1827978695/android.unimodules-barcode-scanner-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/663405493/android.unimodules-camera-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/663405493/android.unimodules-camera-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/496083799/android.unimodules-constants-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/496083799/android.unimodules-constants-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1328746839/android.unimodules-core.iml" filepath="$PROJECT_DIR$/.idea/modules/-1328746839/android.unimodules-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1137796478/android.unimodules-face-detector-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/1137796478/android.unimodules-face-detector-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1534770072/android.unimodules-file-system-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/-1534770072/android.unimodules-file-system-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-296208545/android.unimodules-font-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/-296208545/android.unimodules-font-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1612907947/android.unimodules-image-loader-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/-1612907947/android.unimodules-image-loader-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1716370356/android.unimodules-permissions-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/-1716370356/android.unimodules-permissions-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-480593743/android.unimodules-react-native-adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/-480593743/android.unimodules-react-native-adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1763664255/android.unimodules-sensors-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/-1763664255/android.unimodules-sensors-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/932290805/android.unimodules-task-manager-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/932290805/android.unimodules-task-manager-interface.iml" />
+    </modules>
+  </component>
+</project>

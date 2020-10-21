@@ -1434,7 +1434,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255, 255, 255, 1)',
   },
   categorylistFlatList: {
-    backgroundColor: 'transparent',
     width: '100%',
     height: '100%',
     backgroundColor: 'white',
@@ -1444,7 +1443,6 @@ const styles = StyleSheet.create({
   },
   categorylistBannerViewWrapper: {
     width: windowWidth,
-    backgroundColor: 'rgba(255, 255, 255, 1)',
     height: 115 * alpha,
     // marginBottom:10*alpha,
     backgroundColor: 'white',
