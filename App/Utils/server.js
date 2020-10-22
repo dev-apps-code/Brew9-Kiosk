@@ -1,5 +1,5 @@
-export const KSERVERURL = 'https://uat.brew9.co/api';
-export const KURL_INFO = 'https://uat.brew9.co/info';
+export const KSERVERURL = 'https://app.brew9.co/api';
+export const KURL_INFO = 'https://app.brew9.co/info';
 //export const KSERVERURL ='http://localhost:3000/api'
 //export const KURL_INFO ='http://localhost:3000/info'
 // export const KSERVERURL ='https://3358a428.ngrok.io/api'
