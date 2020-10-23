@@ -27,84 +27,24 @@ export default class ShopDetails extends Component {
     super(props);
   }
 
-  renderAvailablity = (availability) => {
-    const color = availability ? '#00B2E3' : DISABLED_COLOR;
-    const viewStyle = {...styles.availabilityView, ...{borderColor: color}};
-    const textStyle = {...styles.availabilityText, ...{color}};
-    return (
-      <View style={viewStyle}>
-        <Text style={textStyle}>{availability ? 'Open' : 'Closed'}</Text>
-      </View>
-    );
+  renderAvailablity = () => {
+    const {open, name} = this.props.details;
+    const color = open ? '#00B2E3' : DISABLED_COLOR;
+    const viewStyle = {...styles.shopName, ...{borderColor: color}};
+    const textStyle = {...styles.shopName, ...{color}};
+    return <Text style={textStyle}>{name}</Text>;
   };
 
   render() {
     const {details, onPressOrderNow, shop} = this.props;
-    const itemStyle = shop && shop.id === details.id ? styles.highlighted : {};
-    const minutes = Math.round(details.minute_drive);
-    const {start_time, end_time} = details?.opening_hour || {
-      start_time: null,
-      end_time: null,
-    };
-    let hoursText = null;
-    if (start_time && end_time) {
-      hoursText = `${start_time} - ${end_time}`;
-    }
-
+    const {open, id} = details;
+    const itemStyle = shop && shop.id === id ? styles.highlighted : {};
     return (
       <TouchableOpacity
+        disabled={!open}
         style={[styles.shopDetailView, itemStyle]}
-        onPress={() => onPressOrderNow(details.id)}>
-        <View style={styles.detailsView}>
-          <View>
-            <View style={styles.detailView}>
-              <Text style={styles.shopName}>{details.name}</Text>
-              {this.renderAvailablity(details.open)}
-            </View>
-            <View style={styles.detailView}>
-              <Text style={styles.serviceInfoDetails}>
-                {'Delivery | ' +
-                  details.kilometer_distance +
-                  ' km ' +
-                  minutes +
-                  ' mins'}
-              </Text>
-            </View>
-          </View>
-          <View style={styles.detailTextContainer}>
-            <Image
-              source={require('./../../assets/images/Fill.png')}
-              style={styles.pinImage}
-            />
-            <Text numberOfLines={2} style={styles.detailText}>
-              {details.short_address}
-            </Text>
-          </View>
-          <View style={styles.detailTextContainer}>
-            <Image
-              source={require('./../../assets/images/clock.png')}
-              style={styles.clockImage}
-            />
-            <Text numberOfLines={2} style={styles.detailText}>
-              {hoursText}
-            </Text>
-          </View>
-        </View>
-        <View style={styles.orderNowView}>
-          <View style={styles.orderButton}>
-            <Text style={styles.orderNowText}>
-              {details.open ? 'Select Shop' : 'View More'}
-            </Text>
-          </View>
-          <View style={styles.accessView}>
-            <View style={styles.accessButton}>
-              {/* <Image source={require('./../../assets/images/call.png')} /> */}
-            </View>
-            <View style={styles.accessButton}>
-              {/* <Image source={require('./../../assets/images/direction.png')} /> */}
-            </View>
-          </View>
-        </View>
+        onPress={() => onPressOrderNow(id)}>
+        {this.renderAvailablity()}
       </TouchableOpacity>
     );
   }
@@ -121,6 +61,7 @@ const styles = StyleSheet.create({
     marginBottom: alpha * 10,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
+    alignItems: 'center',
     padding: alpha * 10,
     borderRadius: DEFAULT_BORDER_RADIUS,
   },
