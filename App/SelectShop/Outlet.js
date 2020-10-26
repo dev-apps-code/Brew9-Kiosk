@@ -1,37 +1,15 @@
-import {
-  Animated,
-  Easing,
-  Image,
-  Keyboard,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  AsyncStorage,
-  View,
-} from 'react-native';
+import {StyleSheet, Text, AsyncStorage, View} from 'react-native';
 import React from 'react';
 import {connect} from 'react-redux';
-import {alpha, fontAlpha, windowWidth} from '../Common/size';
+import {alpha, fontAlpha} from '../Common/size';
 import ShopList from '../Components/ShopList';
 import NetInfo from '@react-native-community/netinfo';
-import {
-  TINT_COLOR,
-  TABBAR_INACTIVE_TINT,
-  TITLE_FONT,
-  TAB_STYLE,
-  LIGHT_GREY_BACKGROUND,
-  NON_TITLE_FONT,
-  TEXT_COLOR,
-  DISABLED_COLOR,
-  DEFAULT_BORDER_RADIUS,
-} from '../Common/common_style';
+import {TITLE_FONT, LIGHT_GREY_BACKGROUND} from '../Common/common_style';
 import {createAction} from '../Utils';
 import AllShopsRequestObject from '../Requests/all_shops_request_object';
 import SelectShopRequestObject from '../Requests/select_shop_request_object';
-import NearestShopRequestObject from '../Requests/nearest_shop_request_object';
 
-@connect(({members, shops, orders}) => ({
+@connect(({members, shops}) => ({
   allShops: shops.allShops,
   companyId: members.company_id,
   nearbyShops: shops.nearbyShops,
@@ -60,14 +38,6 @@ export default class Outlet extends React.Component {
   async componentDidMount() {
     const {navigation} = this.props;
     this.focusListener = navigation.addListener('didFocus', this._didFocus);
-    this.keyboardWillShowListener = Keyboard.addListener(
-      'keyboardWillShow',
-      this.keyboardWillShow,
-    );
-    this.keyboardWillHideListener = Keyboard.addListener(
-      'keyboardWillHide',
-      this.keyboardWillHide,
-    );
   }
 
   componentWillUnmount() {
@@ -77,11 +47,12 @@ export default class Outlet extends React.Component {
   }
 
   _didFocus = async () => {
+    //FIXME: this only checks if you have wifi/3g connection
+    // not guaranteed internet connectivity
     const connectionState = await NetInfo.fetch();
     const {isConnected} = connectionState;
     if (isConnected) {
       this.loadAllShops();
-      // this.loadCache();
     } else {
       alert('no network connection, attempting to load cache data');
       this.loadCache();
@@ -96,26 +67,12 @@ export default class Outlet extends React.Component {
     });
   };
 
-  keyboardWillHide = () => {
-    // this.resetSearchFieldWidth();
-  };
-
-  keyboardWillShow = () => {
-    this.setState({showMap: false});
-  };
-
   async loadAllShops() {
     this.setState({isLoading: true});
-    const {companyId, dispatch, location} = this.props;
-
-    const latitude = location != null ? location.coords.latitude : null;
-    const longitude = location != null ? location.coords.longitude : null;
+    const {companyId, dispatch} = this.props;
 
     const allShopsObject = new AllShopsRequestObject();
     allShopsObject.setUrlId(companyId);
-
-    //   const nearbyShopsObject = new NearestShopRequestObject(latitude, longitude);
-    //   nearbyShopsObject.setUrlId(companyId);
 
     // load all shops always
     dispatch(
@@ -124,21 +81,6 @@ export default class Outlet extends React.Component {
         callback: this.updateShopsList,
       }),
     );
-
-    //   const { status } = await Permissions.getAsync(Permissions.LOCATION);
-    //   if (latitude !== null && longitude !== null && status === 'granted') {
-    //     this.setState({ isLoading: true });
-
-    //     now load nearby shops
-    //     dispatch(
-    //       createAction('shops/loadNearbyShops')({
-    //         object: nearbyShopsObject,
-    //         callback: this.updateShopsList
-    //       })
-    //     );
-    //   } else {
-    //     dispatch(createAction('shops/clearNearbyShops')());
-    //   }
   }
 
   updateShopsList = (eventObject) => {
@@ -201,26 +143,13 @@ export default class Outlet extends React.Component {
   };
 
   onPressOrderNowCallback = (eventObject) => {
-    const {result, success} = eventObject;
-    this.saveCache(result);
-    const {
-      dispatch,
-      navigation: {navigate},
-    } = this.props;
-
-    if (success) {
-      navigate('Home');
+    if (eventObject.success) {
+      this.props.navigation.navigate('Home');
+      this.saveCache(eventObject.result);
     }
   };
 
-  cacheCallBack = (eventObject) => {
-    const {
-      dispatch,
-      navigation: {navigate},
-    } = this.props;
-
-    navigate('Home');
-  };
+  cacheCallBack = (eventObject) => this.props.navigation.navigate('Home');
 
   getShopsList = () => {
     const {allShops, nearbyShops} = this.props;
@@ -253,7 +182,6 @@ export default class Outlet extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  //view
   mainView: {
     height: '100%',
     width: '100%',
