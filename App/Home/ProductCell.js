@@ -222,12 +222,12 @@ export default class ProductCell extends React.Component {
             source={{ uri: this.props.productimage }}
             style={styles.productimageImage}
           /> */}
-          {/* <ExpoImage {...{ uri }} style={styles.productimageImage} /> */}
-          <FastImage
+          <ExpoImage {...{uri}} style={styles.productimageImage} />
+          {/* <FastImage
             style={styles.productimageImage}
-            source={{uri: this.props.productimage}}
+            source={uri}
             resizeMode={FastImage.resizeMode.contain}
-          />
+          /> */}
           <View style={styles.productDetail}>
             {this.renderStatusView()}
             {this.renderName()}
@@ -273,6 +273,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   productimageImage: {
+    flex: 1,
     resizeMode: 'cover',
     backgroundColor: 'white',
     width: 130 * alpha,
