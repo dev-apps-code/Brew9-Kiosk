@@ -47,6 +47,8 @@ export default class Outlet extends React.Component {
   }
 
   _didFocus = async () => {
+    //FIXME: this only checks if you have wifi/3g connection
+    // not guaranteed internet connectivity
     const connectionState = await NetInfo.fetch();
     const {isConnected} = connectionState;
     if (isConnected) {
@@ -141,15 +143,9 @@ export default class Outlet extends React.Component {
   };
 
   onPressOrderNowCallback = (eventObject) => {
-    const {result, success} = eventObject;
-    this.saveCache(result);
-    const {
-      dispatch,
-      navigation: {navigate},
-    } = this.props;
-
-    if (success) {
-      navigate('Home');
+    if (eventObject.success) {
+      this.props.navigation.navigate('Home');
+      this.saveCache(eventObject.result);
     }
   };
 
