@@ -1,0 +1,6 @@
+module Pods_brew9_menu {
+  umbrella header "Pods-brew9-menu-umbrella.h"
+
+  export *
+  module * { export * }
+}

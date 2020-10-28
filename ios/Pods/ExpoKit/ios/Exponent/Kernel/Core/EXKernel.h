@@ -17,9 +17,6 @@ typedef NS_ENUM(NSInteger, EXKernelErrorCode) {
   EXKernelErrorCodeModuleDeallocated,
 };
 
-// this key is set to YES when crashlytics sends a crash report.
-FOUNDATION_EXPORT NSString * const kEXKernelClearJSCacheUserDefaultsKey;
-
 @interface EXKernel : NSObject <EXViewControllerDelegate>
 
 @property (nonatomic, strong, readonly) EXKernelAppRegistry *appRegistry;
@@ -33,6 +30,7 @@ FOUNDATION_EXPORT NSString * const kEXKernelClearJSCacheUserDefaultsKey;
 - (void)switchTasks;
 - (void)reloadAppWithExperienceId:(NSString *)experienceId; // called by Updates.reload
 - (void)reloadAppFromCacheWithExperienceId:(NSString *)experienceId; // called by Updates.reloadFromCache
+- (void)reloadVisibleApp; // called in development whenever the app is reloaded
 
 /**
  *  Send a given notification.

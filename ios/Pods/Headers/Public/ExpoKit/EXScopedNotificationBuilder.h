@@ -1,0 +1,1 @@
+../../../ExpoKit/ios/Exponent/Versioned/Core/UniversalModules/EXNotifications/EXScopedNotificationBuilder.h

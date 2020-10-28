@@ -1,1 +1,1 @@
-../../../Amplitude-iOS/Sources/Amplitude/AMPIdentify.h
+../../../Amplitude-iOS/Amplitude/AMPIdentify.h

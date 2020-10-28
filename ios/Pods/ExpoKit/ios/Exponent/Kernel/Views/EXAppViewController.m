@@ -14,7 +14,14 @@
 #import "EXKernelUtil.h"
 #import "EXReactAppManager.h"
 #import "EXScreenOrientationManager.h"
+#import "EXVersions.h"
 #import "EXUpdatesManager.h"
+#import "EXUtil.h"
+#import <UMCore/UMModuleRegistryProvider.h>
+
+#if __has_include(<EXScreenOrientation/EXScreenOrientationRegistry.h>)
+#import <EXScreenOrientation/EXScreenOrientationRegistry.h>
+#endif
 
 #import <React/RCTUtils.h>
 
@@ -70,8 +77,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.view.backgroundColor = [UIColor whiteColor];
 
+  self.view.backgroundColor = [UIColor whiteColor];
   _loadingView = [[EXAppLoadingView alloc] initWithAppRecord:_appRecord];
   [self.view addSubview:_loadingView];
   _appRecord.appManager.delegate = self;
@@ -102,6 +109,24 @@ NS_ASSUME_NONNULL_BEGIN
   if (_contentView) {
     _contentView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
   }
+}
+
+/**
+ * Force presented view controllers to use the same user interface style.
+ */
+- (void)presentViewController:(UIViewController *)viewControllerToPresent animated: (BOOL)flag completion:(void (^ __nullable)(void))completion
+{
+  [super presentViewController:viewControllerToPresent animated:flag completion:completion];
+  [self _overrideUserInterfaceStyleOf:viewControllerToPresent];
+}
+
+/**
+ * Force child view controllers to use the same user interface style.
+ */
+- (void)addChildViewController:(UIViewController *)childController
+{
+  [super addChildViewController:childController];
+  [self _overrideUserInterfaceStyleOf:childController];
 }
 
 #pragma mark - Public
@@ -173,6 +198,9 @@ NS_ASSUME_NONNULL_BEGIN
 {
   dispatch_async(dispatch_get_main_queue(), ^{
     [self _enforceDesiredDeviceOrientation];
+
+    // Reset the root view background color and window color if we switch between Expo home and project
+    [self _setBackgroundColor:self.view];
   });
   [_appRecord.appManager appStateDidBecomeActive];
 }
@@ -188,7 +216,7 @@ NS_ASSUME_NONNULL_BEGIN
     self.isBridgeAlreadyLoading = YES;
     dispatch_async(dispatch_get_main_queue(), ^{
       self->_loadingView.manifest = manifest;
-      [self _overrideUserInterfaceStyle];
+      [self _overrideUserInterfaceStyleOf:self];
       [self _enforceDesiredDeviceOrientation];
       [self _rebuildBridge];
     });
@@ -270,14 +298,16 @@ NS_ASSUME_NONNULL_BEGIN
   UIView *reactView = appManager.rootView;
   reactView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
   reactView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-  reactView.backgroundColor = [UIColor clearColor];
+
   
   [_contentView removeFromSuperview];
   _contentView = reactView;
   [self.view addSubview:_contentView];
   [self.view sendSubviewToBack:_contentView];
-
   [reactView becomeFirstResponder];
+
+  // Set root view background color after adding as subview so we can access window
+  [self _setBackgroundColor:reactView];
 }
 
 - (void)reactAppManagerStartedLoadingJavaScript:(EXReactAppManager *)appManager
@@ -315,9 +345,22 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
+#if __has_include(<EXScreenOrientation/EXScreenOrientationRegistry.h>)
+  EXScreenOrientationRegistry *screenOrientationRegistry = (EXScreenOrientationRegistry *)[UMModuleRegistryProvider getSingletonModuleForClass:[EXScreenOrientationRegistry class]];
+  if (screenOrientationRegistry && [screenOrientationRegistry requiredOrientationMask] > 0) {
+    return [screenOrientationRegistry requiredOrientationMask];
+  }
+#endif
+  
+  // TODO: Remove once sdk 37 is phased out
   if (_supportedInterfaceOrientations != EX_INTERFACE_ORIENTATION_USE_MANIFEST) {
     return _supportedInterfaceOrientations;
   }
+  
+  return [self orientationMaskFromManifestOrDefault];
+}
+
+- (UIInterfaceOrientationMask)orientationMaskFromManifestOrDefault {
   if (_appRecord.appLoader.manifest) {
     NSString *orientationConfig = _appRecord.appLoader.manifest[@"orientation"];
     if ([orientationConfig isEqualToString:@"portrait"]) {
@@ -332,6 +375,7 @@ NS_ASSUME_NONNULL_BEGIN
   return UIInterfaceOrientationMaskAllButUpsideDown;
 }
 
+// TODO: Remove once sdk 37 is phased out
 - (void)setSupportedInterfaceOrientations:(UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
   _supportedInterfaceOrientations = supportedInterfaceOrientations;
@@ -342,10 +386,18 @@ NS_ASSUME_NONNULL_BEGIN
   [super traitCollectionDidChange:previousTraitCollection];
   if ((self.traitCollection.verticalSizeClass != previousTraitCollection.verticalSizeClass)
       || (self.traitCollection.horizontalSizeClass != previousTraitCollection.horizontalSizeClass)) {
+    
+    #if __has_include(<EXScreenOrientation/EXScreenOrientationRegistry.h>)
+      EXScreenOrientationRegistry *screenOrientationRegistryController = (EXScreenOrientationRegistry *)[UMModuleRegistryProvider getSingletonModuleForClass:[EXScreenOrientationRegistry class]];
+      [screenOrientationRegistryController traitCollectionDidChangeTo:self.traitCollection];
+    #endif
+      
+    // TODO: Remove once sdk 37 is phased out
     [[EXKernel sharedInstance].serviceRegistry.screenOrientationManager handleScreenOrientationChange:self.traitCollection];
   }
 }
 
+// TODO: Remove once sdk 37 is phased out
 - (void)_enforceDesiredDeviceOrientation
 {
   RCTAssertMainQueue();
@@ -391,12 +443,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - user interface style
 
-- (void)_overrideUserInterfaceStyle
+- (void)_overrideUserInterfaceStyleOf:(UIViewController *)viewController
 {
   if (@available(iOS 13.0, *)) {
-    NSString *userInterfaceStyle = _appRecord.appLoader.manifest[@"ios"][@"userInterfaceStyle"];
-    self.overrideUserInterfaceStyle = [self _userInterfaceStyleForString:userInterfaceStyle];
+    NSString *userInterfaceStyle = [self _readUserInterfaceStyleFromManifest:_appRecord.appLoader.manifest];
+    viewController.overrideUserInterfaceStyle = [self _userInterfaceStyleForString:userInterfaceStyle];
   }
+}
+
+- (NSString * _Nullable)_readUserInterfaceStyleFromManifest:(NSDictionary *)manifest
+{
+  if (manifest[@"ios"] && manifest[@"ios"][@"userInterfaceStyle"]) {
+    return manifest[@"ios"][@"userInterfaceStyle"];
+  }
+  return manifest[@"userInterfaceStyle"];
 }
 
 - (UIUserInterfaceStyle)_userInterfaceStyleForString:(NSString *)userInterfaceStyleString API_AVAILABLE(ios(12.0)) {
@@ -408,6 +468,46 @@ NS_ASSUME_NONNULL_BEGIN
   }
   return UIUserInterfaceStyleLight;
 }
+
+#pragma mark - root view and window background color
+
+- (void)_setBackgroundColor:(UIView *)view
+{
+    NSString *backgroundColorString = [self _readBackgroundColorFromManifest:_appRecord.appLoader.manifest];
+    UIColor *backgroundColor = [EXUtil colorWithHexString:backgroundColorString];
+
+    if (backgroundColor) {
+      view.backgroundColor = backgroundColor;
+      // NOTE(brentvatne): it may be desirable at some point to split the window backgroundColor out from the
+      // root view, we can do if use case is presented to us.
+      view.window.backgroundColor = backgroundColor;
+    } else {
+      view.backgroundColor = [UIColor whiteColor];
+
+      // NOTE(brentvatne): we used to use white as a default background color for window but this caused
+      // problems when using form sheet presentation style with vcs eg: <Modal /> and native-stack. Most
+      // users expect the background behind these to be black, which is the default if backgroundColor is nil.
+      view.window.backgroundColor = nil;
+
+      // NOTE(brentvatne): we may want to default to respecting the default system background color
+      // on iOS13 and higher, but if we do make this choice then we will have to implement it on Android
+      // as well. This would also be a breaking change. Leaaving this here as a placeholder for the future.
+      // if (@available(iOS 13.0, *)) {
+      //   view.backgroundColor = [UIColor systemBackgroundColor];
+      // } else {
+      //  view.backgroundColor = [UIColor whiteColor];
+      // }
+    }
+}
+
+- (NSString * _Nullable)_readBackgroundColorFromManifest:(NSDictionary *)manifest
+{
+  if (manifest[@"ios"] && manifest[@"ios"][@"backgroundColor"]) {
+    return manifest[@"ios"][@"backgroundColor"];
+  }
+  return manifest[@"backgroundColor"];
+}
+
 
 #pragma mark - Internal
 
