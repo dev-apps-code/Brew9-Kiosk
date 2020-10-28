@@ -43,6 +43,7 @@ android {
       abiFilters 'armeabi-v7a', 'x86', 'arm64-v8a', 'x86_64'
       
     }
+
     multiDexEnabled true
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     // Deprecated. Used by net.openid:appauth
@@ -113,8 +114,7 @@ apply from: "../../node_modules/react-native-unimodules/gradle.groovy"
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-  implementation 'com.android.support:multidex:1.0.1'
-
+  implementation 'com.android.support:multidex:2.0.1'
   // Our dependencies
   implementation "com.android.support:appcompat-v7:$supportLibVersion"
 
@@ -136,6 +136,7 @@ dependencies {
   implementation 'com.google.android.gms:play-services-auth:15.0.1'
   implementation 'com.google.android.gms:play-services-location:15.0.1'
   implementation 'com.google.android.gms:play-services-ads:15.0.1'
+  
   implementation project(':react-native-fast-image')
   /*
   deprecicated as of sdk34

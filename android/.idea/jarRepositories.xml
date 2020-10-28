@@ -91,5 +91,15 @@
       <option name="name" value="maven12" />
       <option name="url" value="https://maven.google.com" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven12" />
+      <option name="name" value="maven12" />
+      <option name="url" value="file:$PROJECT_DIR$/../node_modules/react-native/android" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="React Native sources" />
+      <option name="name" value="React Native sources" />
+      <option name="url" value="file:$PROJECT_DIR$/../node_modules/react-native/" />
+    </remote-repository>
   </component>
 </project>
